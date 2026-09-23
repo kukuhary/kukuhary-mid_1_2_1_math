@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>[교과서 핵심 요약] 6. 평면도형의 성질 (동아출판 수학 1) [v2]</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 4.5mm 7.5mm 4.5mm 7.5mm;
+    @bottom-center {
+      content: "- " counter(page) " -";
+      font-size: 10pt;
+      font-family: 'Malgun Gothic', sans-serif;
+      color: #000;
+    }
+  }
+  * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body {
+    font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+    color: #000;
+    line-height: 1.64;
+    letter-spacing: -0.1px;
+    font-size: 10pt;
+    margin: 0; padding: 0;
+    background: #fff;
+  }
+  .math { font-family: 'Times New Roman', 'Cambria Math', serif; font-style: italic; }
+  .frac { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; padding: 0 1.5px; line-height: 1.05; font-size: 0.95em; }
+  .frac-top { border-bottom: 1.2px solid #000; padding: 0 1px 1px 1px; }
+  .frac-bottom { padding: 1px 1px 0 1px; }
+
+  /* 1단 전폭 표제부 */
+  .header-box { border: 1.8px solid #000; padding: 3.5px 8px; margin-bottom: 4.5px; }
+  .header-title { font-size: 13.5pt; font-weight: bold; text-align: center; margin: 0 0 2.5px 0; }
+  .header-info-table { width: 100%; border-collapse: collapse; font-size: 10pt; margin-top: 1px; }
+  .header-info-table td { border: 1px solid #444; padding: 1.8px 5px; text-align: center; background-color: #f7f7f7; line-height: 1.45; }
+  .header-info-table td.label { font-weight: bold; background-color: #eaeaea; width: 14%; }
+
+  .intro-box { border: 1.1px solid #333; background-color: #f9f9f9; padding: 3.5px 8px; margin-bottom: 4.5px; font-size: 10pt; line-height: 1.62; }
+  .section-title { background-color: #000; color: #fff; font-size: 10.5pt; font-weight: bold; padding: 2.2px 7px; margin: 4.5px 0 3.5px 0; border-radius: 2px; break-after: avoid; }
+  
+  /* 1페이지 카드 및 테이블 (여유로운 줄간격 1.65) */
+  .p1-card-box { border: 1px solid #444; background-color: #fafafa; padding: 3.5px 7px; margin-bottom: 4.5px; font-size: 10pt; line-height: 1.65; break-inside: avoid; }
+  .p1-grid-table { width: 100%; border-collapse: collapse; margin-bottom: 4.5px; }
+  .p1-grid-table td { border: 1px solid #444; padding: 3.5px 6px; vertical-align: top; background-color: #fff; font-size: 10pt; line-height: 1.64; }
+  
+  .card-head { font-weight: bold; font-size: 10.2pt; background-color: #eaeaea; border-left: 3.5px solid #000; padding: 1.2px 5px; margin-bottom: 2.5px; }
+
+  .badge-frequent { display: inline-block; background-color: #000; color: #fff; font-size: 10pt; font-weight: bold; padding: 0.5px 3.5px; border-radius: 2px; margin-right: 2px; vertical-align: middle; }
+  .badge-trap { display: inline-block; border: 1.2px solid #000; background-color: #fff; color: #000; font-size: 10pt; font-weight: bold; padding: 0.5px 3px; border-radius: 2px; margin-right: 2px; vertical-align: middle; }
+  .badge-formula { display: inline-block; background-color: #222; color: #fff; font-size: 10pt; font-weight: bold; padding: 0.5px 3px; border-radius: 2px; margin-right: 2px; vertical-align: middle; }
+  .badge-tip { display: inline-block; background-color: #eaeaea; border: 1px solid #333; color: #000; font-size: 10pt; font-weight: bold; padding: 0.5px 3px; border-radius: 2px; margin-right: 2px; vertical-align: middle; }
+
+  .formula-box { border: 1.3px solid #000; background-color: #f7f7f7; padding: 2.5px 5px; margin: 2.5px 0; font-size: 10.2pt; line-height: 1.58; text-align: center; }
+  .fig-container { text-align: center; background-color: #fff; padding: 1px; }
+  .fig-caption { font-size: 10pt; font-weight: bold; color: #111; margin-top: 1.5px; }
+
+  /* 2페이지 맞춤 스타일 (쾌적한 줄간격 1.58~1.60 유지 및 2쪽 완전 정합) */
+  .p2-card-box { border: 1px solid #444; background-color: #fafafa; padding: 2.5px 6px; margin-bottom: 2.5px; font-size: 10pt; line-height: 1.60; break-inside: avoid; }
+  .p2-grid-table { width: 100%; border-collapse: collapse; margin-bottom: 2.5px; }
+  .p2-grid-table td { border: 1px solid #444; padding: 2.5px 5px; vertical-align: top; background-color: #fff; font-size: 10pt; line-height: 1.58; }
+  
+  .summary-table { width: 100%; border-collapse: collapse; margin-bottom: 2.5px; }
+  .summary-table th { border: 1px solid #000; background-color: #222; color: #fff; padding: 1.5px 3.5px; font-size: 10pt; text-align: center; }
+  .summary-table td { border: 1px solid #444; background-color: #fff; padding: 1.5px 4px; vertical-align: middle; font-size: 10pt; line-height: 1.42; }
+
+  .page-break { page-break-after: always; break-after: page; }
+</style>
+</head>
+<body>
+
+  <!-- ================= PAGE 1 ================= -->
+  <div class="page-container">
+    <div class="header-box">
+      <div class="header-title">[중1 2학기 중간대비] 교과서 핵심 요약집 — 6. 평면도형의 성질</div>
+      <table class="header-info-table">
+        <tr>
+          <td class="label">출처/단원</td>
+          <td>2022 개정 수학 1 (동아출판) • 6. 평면도형의 성질 (p.177~206)</td>
+          <td class="label">조판 규격</td>
+          <td>100% 흑백 벡터 다이어그램 • 최소 10pt 이상 2쪽 완결판</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="intro-box">
+      <b>[핵심 성취 기준]</b> 다각형의 대각선 개수와 내각·외각의 크기의 합을 논리적으로 유도하고 기하 문제에 적용하며, 원과 부채꼴의 중심각과 호의 길이·넓이의 비례 관계 및 공식 유도 원리를 완벽히 체득한다.
+    </div>
+
+    <div class="section-title">1. 다각형과 대각선의 성질 (6.1)</div>
+
+    <div class="p1-card-box">
+      • <b>다각형(Polygon)</b>: 3개 이상의 선분으로 둘러싸인 평면도형 (변의 수가 <span class="math">n</span>개 ➔ <b><span class="math">n</span>각형</b>)<br>
+      • <b>정다각형</b>: 모든 <u>변의 길이가 같고</u>, 모든 <u>내각의 크기가 같은</u> 다각형 <span class="badge-trap">[함정]</span> (둘 다 충족 필수!)<br>
+      • <b>대각선(Diagonal)</b>: 다각형에서 <u>이웃하지 않는 두 꼭짓점을 이은 선분</u>
+    </div>
+
+    <table class="p1-grid-table">
+      <tr>
+        <td style="width: 58%;">
+          <div class="card-head">(1) 대각선 공식 유도 원리</div>
+          • <b>한 꼭짓점 대각선 수</b>: <span class="badge-formula">[공식]</span> <b><span class="math">n</span> - 3 (개)</b><br>
+          &nbsp;&nbsp;&ndash; 원리: 자신(1개)과 이웃(2개)을 뺀 3개의 점 제외.<br>
+          • <b>나뉘는 삼각형 개수</b>: <span class="badge-formula">[공식]</span> <b><span class="math">n</span> - 2 (개)</b><br>
+          &nbsp;&nbsp;&ndash; 원리: 대각선 1개 그을 때마다 삼각형 1개씩 추가.<br>
+          <div class="card-head" style="margin-top:3.5px;">(2) <span class="badge-frequent">[빈출]</span> <span class="math">n</span>각형 대각선의 총 개수 공식</div>
+          <div class="formula-box">
+            <b><span class="math">n</span>각형 대각선의 총 개수</b> = 
+            <span class="frac">
+              <span class="frac-top"><b><span class="math">n</span>(<span class="math">n</span> - 3)</b></span>
+              <span class="frac-bottom"><b>2</b></span>
+            </span> (개)
+          </div>
+          • <b>원리</b>: <span class="math">n</span>개 점에서 (<span class="math">n</span>-3)개씩 그으나, <b>2번씩 중복</b>되므로 2로 나눔.
+        </td>
+        <td style="width: 42%; text-align: center; vertical-align: middle;">
+          <div class="fig-container">
+            <svg viewBox="0 0 190 125" width="180" height="118" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="95,16 46,52 65,104" fill="#f5f5f5" />
+              <polygon points="95,16 65,104 125,104" fill="#eaeaea" />
+              <polygon points="95,16 125,104 144,52" fill="#f0f0f0" />
+              <polygon points="95,16 46,52 65,104 125,104 144,52" fill="none" stroke="#000" stroke-width="1.8" />
+              <line x1="95" y1="16" x2="65" y2="104" stroke="#000" stroke-width="1.4" stroke-dasharray="4,2.5" />
+              <line x1="95" y1="16" x2="125" y2="104" stroke="#000" stroke-width="1.4" stroke-dasharray="4,2.5" />
+              <circle cx="95" cy="16" r="3" fill="#000" />
+              <text x="95" y="11" font-size="10.5pt" font-family="Times New Roman" font-style="italic" font-weight="bold" text-anchor="middle">A</text>
+              <text x="32" y="55" font-size="10.5pt" font-family="Times New Roman" font-style="italic" font-weight="bold" text-anchor="middle">B</text>
+              <text x="56" y="119" font-size="10.5pt" font-family="Times New Roman" font-style="italic" font-weight="bold" text-anchor="middle">C</text>
+              <text x="134" y="119" font-size="10.5pt" font-family="Times New Roman" font-style="italic" font-weight="bold" text-anchor="middle">D</text>
+              <text x="158" y="55" font-size="10.5pt" font-family="Times New Roman" font-style="italic" font-weight="bold" text-anchor="middle">E</text>
+              <text x="68" y="60" font-size="10pt" font-family="Malgun Gothic" font-weight="bold" text-anchor="middle">①</text>
+              <text x="95" y="80" font-size="10pt" font-family="Malgun Gothic" font-weight="bold" text-anchor="middle">②</text>
+              <text x="122" y="60" font-size="10pt" font-family="Malgun Gothic" font-weight="bold" text-anchor="middle">③</text>
+            </svg>
+            <div class="fig-caption">[도형 1] 대각선 2개(5-3), 삼각형 3개(5-2)</div>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <div class="section-title">2. 삼각형과 다각형의 내각과 외각 (6.2 ~ 6.4)</div>
+
+    <div class="p1-card-box">
+      • <b>내각과 외각 관계</b>: 다각형의 한 꼭짓점에서 <b>내각 + 외각 = 180°</b><br>
+      • <span class="badge-frequent">[빈출]</span> <b>삼각형 외각 성질</b>: <u>삼각형 한 외각은 이웃하지 않는 두 내각의 합과 같다</u>. (<b>∠ACD = ∠A + ∠B</b>)
+    </div>
+
+    <table class="p1-grid-table">
+      <tr>
+        <td style="width: 50%;">
+          <div class="card-head">(1) 삼각형 외각 성질 (평행선 증명)</div>
+          <div class="fig-container">
+            <svg viewBox="0 0 205 92" width="195" height="86" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="45,18 18,72 118,72" fill="#f7f7f7" stroke="#000" stroke-width="1.8" />
+              <line x1="118" y1="72" x2="198" y2="72" stroke="#000" stroke-width="1.4" />
+              <line x1="118" y1="72" x2="148" y2="18" stroke="#000" stroke-width="1.4" stroke-dasharray="4,2.5" />
+              <circle cx="48" cy="30" r="2.2" fill="#000" />
+              <text x="30" y="68" font-size="10pt" font-family="Malgun Gothic" font-weight="bold">×</text>
+              <circle cx="125" cy="50" r="2.2" fill="#000" />
+              <text x="140" y="68" font-size="10pt" font-family="Malgun Gothic" font-weight="bold">×</text>
+              <text x="43" y="13" font-size="10.5pt" font-family="Times New Roman" font-style="italic" font-weight="bold">A</text>
+              <text x="6" y="76" font-size="10.5pt" font-family="Times New Roman" font-style="italic" font-weight="bold">B</text>
+              <text x="115" y="85" font-size="10.5pt" font-family="Times New Roman" font-style="italic" font-weight="bold">C</text>
+              <text x="193" y="85" font-size="10.5pt" font-family="Times New Roman" font-style="italic" font-weight="bold">D</text>
+              <text x="152" y="16" font-size="10.5pt" font-family="Times New Roman" font-style="italic" font-weight="bold">E</text>
+              <text x="155" y="44" font-size="9pt" font-family="Malgun Gothic" font-weight="bold">(AB//CE)</text>
+            </svg>
+            <div class="fig-caption">[도형 2] 엇각(●)과 동위각(×)에 의한 외각 증명</div>
+          </div>
+          • <b>원리</b>: <span class="math">AB // CE</span>이므로 <b>∠ACD = ∠A + ∠B</b>
+        </td>
+        <td style="width: 50%;">
+          <div class="card-head">(2) 다각형 외각의 합 (항상 360°)</div>
+          <div class="fig-container">
+            <svg viewBox="0 0 200 96" width="190" height="90" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="80,24 42,68 122,68" fill="#f7f7f7" stroke="#000" stroke-width="1.8" />
+              <line x1="122" y1="68" x2="168" y2="68" stroke="#000" stroke-width="1.4" />
+              <path d="M 135,68 A 13 13 0 0 0 114,59" fill="none" stroke="#000" stroke-width="1.3" />
+              <text x="144" y="60" font-size="10pt" font-weight="bold">∠1</text>
+              
+              <line x1="80" y1="24" x2="65" y2="8" stroke="#000" stroke-width="1.4" />
+              <path d="M 71,14 A 13 13 0 0 0 68,31" fill="none" stroke="#000" stroke-width="1.3" />
+              <text x="46" y="20" font-size="10pt" font-weight="bold">∠2</text>
+
+              <line x1="42" y1="68" x2="28" y2="84" stroke="#000" stroke-width="1.4" />
+              <path d="M 33,78 A 13 13 0 0 0 54,68" fill="none" stroke="#000" stroke-width="1.3" />
+              <text x="24" y="93" font-size="10pt" font-weight="bold">∠3</text>
+
+              <path d="M 81,42 A 8.5 8.5 0 1 1 81,58" fill="none" stroke="#000" stroke-width="1.2" stroke-dasharray="2.5,1.5" />
+              <text x="81" y="52" font-size="9pt" font-weight="bold" text-anchor="middle">360°</text>
+            </svg>
+            <div class="fig-caption">[도형 3] 모든 외각의 합 = 한 바퀴(360°)</div>
+          </div>
+          • <b>내각 합</b> = <b>180° &times; (<span class="math">n</span> - 2)</b> (삼각형 분할)<br>
+          • <b>외각 합</b> = <b>360°</b> (다각형 종류 무관 <b>무조건 일정</b>!)
+        </td>
+      </tr>
+    </table>
+
+    <div class="p1-card-box">
+      <span class="badge-tip">[초고속 비법]</span> <b>정다각형의 한 내각을 3초 만에 구하는 법</b><br>
+      복잡한 공식 대신 <b>한 외각(<span class="frac"><span class="frac-top">360°</span><span class="frac-bottom"><span class="math">n</span></span></span>)</b>을 먼저 구한 뒤 <b>180° - (한 외각)</b>을 계산하면 암산으로 완벽 해결!<br>
+      • <b>예시</b>: 정팔각형 한 외각 = 360°&divide;8 = 45° ➔ <b>한 내각 = 180° - 45° = 135°</b>
+    </div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- ================= PAGE 2 ================= -->
+  <div class="page-container">
+    <div class="section-title" style="margin-top:0;">3. 원과 부채꼴의 기본 성질 (6.5)</div>
+
+    <table class="p2-grid-table">
+      <tr>
+        <td style="width: 48%; text-align: center; vertical-align: middle;">
+          <div class="fig-container">
+            <svg viewBox="0 0 215 125" width="205" height="118" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="82" cy="65" r="45" fill="none" stroke="#000" stroke-width="1.5" />
+              <path d="M 82 65 L 120 41 A 45 45 0 0 1 118 91 Z" fill="#eaeaea" stroke="#000" stroke-width="1.3" />
+              <path d="M 120 41 A 45 45 0 0 1 118 91" fill="none" stroke="#000" stroke-width="2.8" />
+              <path d="M 94 57 A 13 13 0 0 1 93 73" fill="none" stroke="#000" stroke-width="1.2" />
+
+              <path d="M 53 99 L 53 31 A 45 45 0 0 0 53 99 Z" fill="#d0d0d0" stroke="#000" stroke-width="1.2" />
+              <line x1="53" y1="31" x2="53" y2="99" stroke="#000" stroke-width="1.8" />
+
+              <line x1="16" y1="22" x2="148" y2="22" stroke="#444" stroke-width="1.2" stroke-dasharray="4,2.5" />
+              <text x="152" y="25" font-size="9.5pt" font-family="Malgun Gothic" font-weight="bold">할선</text>
+
+              <circle cx="82" cy="65" r="2.2" fill="#000" />
+              <text x="71" y="68" font-size="10.5pt" font-family="Times New Roman" font-style="italic" font-weight="bold">O</text>
+
+              <text x="125" y="38" font-size="10.5pt" font-family="Times New Roman" font-style="italic" font-weight="bold">A</text>
+              <text x="122" y="100" font-size="10.5pt" font-family="Times New Roman" font-style="italic" font-weight="bold">B</text>
+              <text x="49" y="24" font-size="10.5pt" font-family="Times New Roman" font-style="italic" font-weight="bold">C</text>
+              <text x="49" y="111" font-size="10.5pt" font-family="Times New Roman" font-style="italic" font-weight="bold">D</text>
+
+              <text x="96" y="68" font-size="8.5pt" font-family="Malgun Gothic">중심각</text>
+
+              <line x1="125" y1="55" x2="138" y2="55" stroke="#000" stroke-width="1.0" />
+              <text x="142" y="58" font-size="9.5pt" font-family="Malgun Gothic" font-weight="bold">호 AB(⌒AB)</text>
+
+              <line x1="110" y1="81" x2="138" y2="81" stroke="#000" stroke-width="1.0" />
+              <circle cx="110" cy="81" r="1.5" fill="#000" />
+              <text x="142" y="84" font-size="9.5pt" font-family="Malgun Gothic" font-weight="bold">부채꼴 AOB</text>
+
+              <line x1="43" y1="55" x2="26" y2="45" stroke="#000" stroke-width="1.0" />
+              <circle cx="43" cy="55" r="1.5" fill="#000" />
+              <text x="2" y="47" font-size="9.5pt" font-family="Malgun Gothic" font-weight="bold">활꼴</text>
+
+              <line x1="53" y1="81" x2="36" y2="89" stroke="#000" stroke-width="1.0" />
+              <circle cx="53" cy="81" r="1.5" fill="#000" />
+              <text x="0" y="91" font-size="9.5pt" font-family="Malgun Gothic" font-weight="bold">현 CD</text>
+            </svg>
+            <div class="fig-caption">[도형 4] 원과 부채꼴·활꼴·호·현·할선 명칭 총정리</div>
+          </div>
+        </td>
+        <td style="width: 52%;">
+          <div class="card-head">기본 기하 용어 정의</div>
+          • <b>호(Arc) AB (<span class="math">⌒</span>AB)</b>: 원 위의 두 점 A, B 사이의 원 부분.<br>
+          • <b>현(Chord) CD</b>: 원 위의 두 점 C, D를 이은 선분.<br>
+          &nbsp;&nbsp;&ndash; <b>지름</b>: 중심을 지나는 현 (원 안에서 가장 긴 현).<br>
+          • <b>활꼴(Segment)</b>: 호와 현으로 이루어진 도형.<br>
+          • <b>부채꼴(Sector) AOB</b>: 두 반지름과 호로 이루어진 도형.<br>
+          • <b>중심각</b>: 두 반지름이 이루는 각 &ang;AOB.<br>
+          • <b>할선(Secant)</b>: 원과 두 점에서 만나는 직선.
+        </td>
+      </tr>
+    </table>
+
+    <table class="p2-grid-table">
+      <tr>
+        <td style="width: 50%;">
+          <div class="card-head">■ <span class="badge-frequent">[빈출]</span> 부채꼴의 정비례 성질</div>
+          한 원(또는 합동인 원)에서:
+          <ol style="margin:1px 0 0 15px; padding:0;">
+            <li>중심각 같으면 <b>호의 길이와 넓이 각각 같다</b>.</li>
+            <li>부채꼴 <b>호의 길이는 중심각에 정비례</b>한다.</li>
+            <li>부채꼴 <b>넓이는 중심각에 정비례</b>한다.</li>
+          </ol>
+          • 중심각 2배, 3배 ➔ 호의 길이·넓이도 <b>2배, 3배</b>!
+        </td>
+        <td style="width: 50%;">
+          <div class="card-head">■ <span class="badge-trap">[함정]</span> 현의 성질과 비례 관계</div>
+          <div class="fig-container" style="float:right; margin: 0 0 1px 4px;">
+            <svg viewBox="0 0 120 74" width="112" height="68" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 16 37 L 72 12 A 58 58 0 0 1 72 62 Z" fill="#fafafa" stroke="#000" stroke-width="1.1" />
+              <line x1="16" y1="37" x2="78" y2="37" stroke="#444" stroke-width="1.0" />
+              <line x1="72" y1="12" x2="78" y2="37" stroke="#000" stroke-width="1.5" />
+              <line x1="78" y1="37" x2="72" y2="62" stroke="#000" stroke-width="1.5" />
+              <line x1="72" y1="12" x2="72" y2="62" stroke="#000" stroke-width="1.6" stroke-dasharray="3.5,2" />
+              <text x="5" y="41" font-size="9.5pt" font-family="Times New Roman" font-style="italic">O</text>
+              <text x="76" y="11" font-size="9.5pt" font-family="Times New Roman" font-style="italic">A</text>
+              <text x="82" y="40" font-size="9.5pt" font-family="Times New Roman" font-style="italic">B</text>
+              <text x="76" y="70" font-size="9.5pt" font-family="Times New Roman" font-style="italic">C</text>
+            </svg>
+            <div class="fig-caption" style="font-size:9pt;">현AC &lt; 현AB+BC</div>
+          </div>
+          1. 중심각 크기 같으면 <b>현의 길이는 같다</b>.<br>
+          2. <span class="badge-trap">[단골함정]</span> <b>현은 중심각에 정비례하지 않는다!</b><br>
+          &nbsp;&ndash; &Delta;ABC에서 <b>현 AC &lt; 2 &times; (현 AB)</b> (2배보다 작음!)
+        </td>
+      </tr>
+    </table>
+
+    <div class="section-title">4. 부채꼴의 호의 길이와 넓이 공식 (6.6)</div>
+
+    <table class="p2-grid-table">
+      <tr>
+        <td style="width: 53%;">
+          <div class="card-head">(1) 핵심 공식</div>
+          • <b>원 둘레</b>: <span class="math">l</span> = 2<span class="math">&pi;r</span> &nbsp;|&nbsp; <b>원 넓이</b>: <span class="math">S</span> = <span class="math">&pi;r</span><sup>2</sup><br>
+          • <b>부채꼴 호의 길이</b>:
+          <div class="formula-box" style="margin: 1.5px 0;">
+            <b><span class="math">l</span> = 2<span class="math">&pi;r</span> &times; <span class="frac"><span class="frac-top"><span class="math">x</span></span><span class="frac-bottom">360</span></span></b>
+          </div>
+          • <b>부채꼴 넓이</b>:
+          <div class="formula-box" style="margin: 1.5px 0;">
+            <b><span class="math">S</span> = <span class="math">&pi;r</span><sup>2</sup> &times; <span class="frac"><span class="frac-top"><span class="math">x</span></span><span class="frac-bottom">360</span></span> = <span class="frac"><span class="frac-top">1</span><span class="frac-bottom">2</span></span><span class="math">rl</span></b>
+          </div>
+          • <span class="badge-frequent">[빈출]</span> <b>중심각(<span class="math">x</span>) 모를 때</b>: <b><span class="math">S</span> = <span class="frac"><span class="frac-top">1</span><span class="frac-bottom">2</span></span><span class="math">rl</span></b> 즉통 적용!
+        </td>
+        <td style="width: 47%; text-align: center; vertical-align: middle;">
+          <div class="fig-container">
+            <svg viewBox="0 0 195 82" width="185" height="76" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 25 65 L 68 65 A 44 44 0 0 0 47 25 Z" fill="#eaeaea" stroke="#000" stroke-width="1.3" />
+              <text x="42" y="74" font-size="10pt" font-family="Times New Roman" font-style="italic">r</text>
+              <text x="24" y="44" font-size="10pt" font-family="Times New Roman" font-style="italic">r</text>
+              <text x="64" y="44" font-size="10pt" font-family="Times New Roman" font-style="italic" font-weight="bold">l</text>
+              <text x="40" y="54" font-size="10pt" font-family="Times New Roman" font-style="italic" font-weight="bold">S</text>
+              <text x="78" y="50" font-size="12pt" font-weight="bold">➔</text>
+              <rect x="98" y="30" width="75" height="36" fill="#eaeaea" stroke="#000" stroke-width="1.3" />
+              <text x="90" y="52" font-size="10pt" font-family="Times New Roman" font-style="italic">r</text>
+              <text x="130" y="25" font-size="10pt" font-family="Times New Roman" font-style="italic">&frac12; l</text>
+              <text x="130" y="76" font-size="10pt" font-family="Times New Roman" font-style="italic">&frac12; l</text>
+              <text x="122" y="52" font-size="10pt" font-family="Times New Roman" font-style="italic" font-weight="bold">S = &frac12;rl</text>
+            </svg>
+            <div class="fig-caption">[도형 6] 부채꼴 분할 전개 넓이 공식 유도</div>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <div class="section-title">5. 6단원 필수 공식 및 시험 직전 체크포인트 올인원 총괄표</div>
+
+    <table class="summary-table">
+      <tr>
+        <th style="width:24%;">구분</th>
+        <th style="width:46%;">핵심 공식 및 성질</th>
+        <th style="width:30%;">출제 포인트 및 비고</th>
+      </tr>
+      <tr>
+        <td><b>한 꼭짓점 대각선</b></td>
+        <td><span class="math">n</span> - 3 (개)</td>
+        <td>자신과 이웃 2개 제외</td>
+      </tr>
+      <tr>
+        <td><b>나뉘는 삼각형 개수</b></td>
+        <td><span class="math">n</span> - 2 (개)</td>
+        <td>내각 합 공식 유도 바탕</td>
+      </tr>
+      <tr>
+        <td><b>대각선의 총 개수</b></td>
+        <td><span class="frac"><span class="frac-top"><span class="math">n</span>(<span class="math">n</span> - 3)</span><span class="frac-bottom">2</span></span> (개)</td>
+        <td>양 끝점 중복(2로 나눔)</td>
+      </tr>
+      <tr>
+        <td><b>삼각형 외각 성질</b></td>
+        <td>한 외각 = 이웃하지 않는 두 내각의 합</td>
+        <td><b>&ang;ACD = &ang;A + &ang;B</b></td>
+      </tr>
+      <tr>
+        <td><b><span class="math">n</span>각형 내각의 합</b></td>
+        <td>180° &times; (<span class="math">n</span> - 2)</td>
+        <td>삼각형 개수 &times; 180°</td>
+      </tr>
+      <tr>
+        <td><b><span class="math">n</span>각형 외각의 합</b></td>
+        <td><b>360°</b> (변의 수와 무관 항상 일정!)</td>
+        <td>어떤 다각형이든 360°</td>
+      </tr>
+      <tr>
+        <td><b>정<span class="math">n</span>각형 한 내각</b></td>
+        <td><span class="frac"><span class="frac-top">180°&times;(<span class="math">n</span>-2)</span><span class="frac-bottom"><span class="math">n</span></span></span> = 180° - <span class="frac"><span class="frac-top">360°</span><span class="frac-bottom"><span class="math">n</span></span></span></td>
+        <td>외각(360°&divide;<span class="math">n</span>) 먼저 구하면 초고속!</td>
+      </tr>
+      <tr>
+        <td><b>부채꼴 호의 길이</b></td>
+        <td><span class="math">l</span> = 2<span class="math">&pi;r</span> &times; <span class="frac"><span class="frac-top"><span class="math">x</span></span><span class="frac-bottom">360</span></span></td>
+        <td>중심각 크기에 정확히 정비례</td>
+      </tr>
+      <tr>
+        <td><b>부채꼴의 넓이</b></td>
+        <td><span class="math">S</span> = <span class="math">&pi;r</span><sup>2</sup> &times; <span class="frac"><span class="frac-top"><span class="math">x</span></span><span class="frac-bottom">360</span></span> = <b><span class="frac"><span class="frac-top">1</span><span class="frac-bottom">2</span></span><span class="math">rl</span></b></td>
+        <td>중심각 모를 땐 <span class="frac"><span class="frac-top">1</span><span class="frac-bottom">2</span></span><span class="math">rl</span> 즉시 적용!</td>
+      </tr>
+      <tr>
+        <td><b>현의 정비례 여부</b></td>
+        <td><b>현의 길이는 중심각에 정비례하지 않는다!</b></td>
+        <td><span class="badge-trap">[함정]</span> 합답형(O, X) 단골 보기</td>
+      </tr>
+    </table>
+
+    <div class="p2-card-box" style="margin-bottom:0;">
+      <b>[시험 직전 5초 리마인드]</b><br>
+      ① 다각형 외각의 합은 변의 개수와 상관없이 무조건 <b>360°</b>이다.<br>
+      ② 삼각형 각도 문제는 <b>외각 성질(&ang;외각 = 두 내각의 합)</b>을 연쇄 적용하여 해결한다.<br>
+      ③ 부채꼴 호와 넓이는 중심각에 정비례하지만, <b>현의 길이는 중심각에 정비례하지 않는다</b>.
+    </div>
+  </div>
+
+</body>
+</html>

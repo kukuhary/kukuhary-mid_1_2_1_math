@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>[교과서 핵심 요약] 6. 평면도형의 성질 (동아출판 수학 1) [v1]</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 6.0mm 8.5mm 6.0mm 8.5mm;
+    @bottom-center {
+      content: "- " counter(page) " -";
+      font-size: 8.5pt;
+      font-family: 'Malgun Gothic', sans-serif;
+      color: #333;
+    }
+  }
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  body {
+    font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+    color: #000;
+    line-height: 1.68;
+    letter-spacing: 0.12px;
+    font-size: 8.85pt;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+  }
+
+  /* 수학 기호 및 수식 스타일 */
+  .math {
+    font-family: 'Times New Roman', 'Cambria Math', serif;
+    font-style: italic;
+    letter-spacing: 0.2px;
+  }
+  .math-op {
+    font-style: normal;
+    margin: 0 1.5px;
+  }
+  .frac {
+    display: inline-flex;
+    flex-direction: column;
+    vertical-align: middle;
+    text-align: center;
+    padding: 0 2px;
+    line-height: 1.05;
+    font-size: 0.92em;
+  }
+  .frac-top {
+    border-bottom: 1.2px solid #000;
+    padding: 0 1px 1px 1px;
+  }
+  .frac-bottom {
+    padding: 1px 1px 0 1px;
+  }
+
+  /* 1단 전폭 표제부 */
+  .header-box {
+    border: 1.8px solid #000;
+    padding: 4px 10px;
+    margin-bottom: 4px;
+    background-color: #fff;
+  }
+  .header-title {
+    font-size: 13.5pt;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 0 2px 0;
+    letter-spacing: 0.2px;
+  }
+  .header-info-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 8.1pt;
+    margin-top: 2px;
+    letter-spacing: 0.12px;
+  }
+  .header-info-table td {
+    border: 1px solid #444;
+    padding: 2px 5px;
+    text-align: center;
+    background-color: #f7f7f7;
+    line-height: 1.45;
+  }
+  .header-info-table td.label {
+    font-weight: bold;
+    background-color: #eaeaea;
+    width: 13%;
+  }
+
+  /* 단원 개관 1단 박스 */
+  .intro-box {
+    border: 1.2px solid #333;
+    background-color: #f9f9f9;
+    padding: 3.5px 8px;
+    margin-bottom: 4px;
+    font-size: 8.25pt;
+    line-height: 1.62;
+    letter-spacing: 0.12px;
+  }
+
+  /* 섹션 제목 (대주제) */
+  .section-title {
+    background-color: #000;
+    color: #fff;
+    font-size: 9.3pt;
+    font-weight: bold;
+    padding: 2.2px 6px;
+    margin: 4px 0 3px 0;
+    border-radius: 2px;
+    break-after: avoid;
+    letter-spacing: 0.12px;
+    line-height: 1.42;
+  }
+
+  /* 중제목 */
+  .sub-title {
+    font-size: 8.85pt;
+    font-weight: bold;
+    border-left: 3px solid #000;
+    padding-left: 5px;
+    margin: 3.5px 0 2px 0;
+    break-after: avoid;
+    letter-spacing: 0.12px;
+    line-height: 1.45;
+  }
+
+  /* 카드 박스 */
+  .card-box {
+    border: 1px solid #444;
+    background-color: #fafafa;
+    padding: 3.5px 6px;
+    margin-bottom: 3.5px;
+    font-size: 8.25pt;
+    line-height: 1.64;
+    letter-spacing: 0.12px;
+    break-inside: avoid;
+  }
+
+  /* 2단 분할 테이블 */
+  .grid-2col-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 3.5px;
+  }
+  .grid-2col-table td {
+    width: 50%;
+    border: 1px solid #444;
+    padding: 3.5px 5.5px;
+    vertical-align: top;
+    background-color: #fff;
+    font-size: 8.15pt;
+    line-height: 1.62;
+    letter-spacing: 0.12px;
+  }
+  .card-head {
+    font-weight: bold;
+    font-size: 8.5pt;
+    background-color: #eaeaea;
+    border-left: 3px solid #000;
+    padding: 1px 4.5px;
+    margin-bottom: 2px;
+    letter-spacing: 0.12px;
+  }
+
+  /* 배지 스타일 */
+  .badge-frequent {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    font-size: 7.5pt;
+    font-weight: bold;
+    padding: 1px 4px;
+    border-radius: 2px;
+    margin-right: 2px;
+    vertical-align: middle;
+  }
+  .badge-trap {
+    display: inline-block;
+    border: 1.3px solid #000;
+    background-color: #fff;
+    color: #000;
+    font-size: 7.5pt;
+    font-weight: bold;
+    padding: 0.5px 3.5px;
+    border-radius: 2px;
+    margin-right: 2px;
+    vertical-align: middle;
+  }
+  .badge-formula {
+    display: inline-block;
+    background-color: #222;
+    color: #fff;
+    font-size: 7.5pt;
+    font-weight: bold;
+    padding: 0.5px 3.5px;
+    border-radius: 2px;
+    margin-right: 2px;
+    vertical-align: middle;
+  }
+  .badge-tip {
+    display: inline-block;
+    background-color: #eaeaea;
+    border: 1px solid #333;
+    color: #000;
+    font-size: 7.5pt;
+    font-weight: bold;
+    padding: 0.5px 3.5px;
+    border-radius: 2px;
+    margin-right: 2px;
+    vertical-align: middle;
+  }
+
+  /* 공식 강조 박스 */
+  .formula-box {
+    border: 1.4px solid #000;
+    background-color: #f7f7f7;
+    padding: 3.5px 6px;
+    margin: 2px 0 3px 0;
+    font-size: 8.2pt;
+    line-height: 1.64;
+    text-align: center;
+  }
+
+  /* 핵심 표 */
+  .summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 3.5px;
+  }
+  .summary-table th {
+    border: 1px solid #000;
+    background-color: #222;
+    color: #fff;
+    padding: 2px 4px;
+    font-size: 7.9pt;
+    text-align: center;
+    letter-spacing: 0.12px;
+  }
+  .summary-table td {
+    border: 1px solid #444;
+    background-color: #fff;
+    padding: 2.5px 4.5px;
+    vertical-align: middle;
+    font-size: 7.85pt;
+    line-height: 1.58;
+    letter-spacing: 0.11px;
+  }
+
+  /* 강제 페이지 분할 */
+  .page-break {
+    page-break-after: always;
+    break-after: page;
+  }
+</style>
+</head>
+<body>
+
+  <!-- ================================================================= -->
+  <!-- PAGE 1: 표제부 + 단원 개관 + 1. 다각형과 대각선 + 2. 삼각형과 다각형의 각 -->
+  <!-- ================================================================= -->
+  <div class="page-container">
+
+    <!-- 상단 표제부 -->
+    <div class="header-box">
+      <div class="header-title">[중1 2학기 중간대비] 교과서 핵심 요약집 — 6. 평면도형의 성질</div>
+      <table class="header-info-table">
+        <tr>
+          <td class="label">교과서 출처</td>
+          <td>2022 개정 중학교 수학 1 (동아출판)</td>
+          <td class="label">대단원명</td>
+          <td>6. 평면도형의 성질 (p.177~206)</td>
+          <td class="label">조판 규격</td>
+          <td>100% 흑백 벡터 조판 (A4 2쪽 완전판)</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- 단원 개관 -->
+    <div class="intro-box">
+      <b>[핵심 성취 기준 및 학습 목표]</b><br>
+      • <b>다각형의 성질</b>: 다각형의 대각선의 개수 및 내각·외각의 크기의 합을 논리적으로 유도하고 문제 해결에 적용한다.<br>
+      • <b>원과 부채꼴</b>: 중심각과 호의 길이·부채꼴의 넓이 사이의 정비례 관계를 이해하고, 호의 길이와 부채꼴의 넓이 공식을 능숙하게 활용한다.
+    </div>
+
+    <!-- 1. 다각형과 대각선의 성질 -->
+    <div class="section-title">1. 다각형과 대각선의 성질 (6.1)</div>
+
+    <div class="card-box">
+      • <b>다각형(Polygon)</b>: 3개 이상의 선분으로 둘러싸인 평면도형 (변의 개수가 <span class="math">n</span>개인 다각형 ➔ <b><span class="math">n</span>각형</b>)<br>
+      • <b>정다각형(Regular Polygon)</b>: 모든 <u>변의 길이가 같고</u>, 모든 <u>내각의 크기가 같은</u> 다각형 <span class="badge-trap">[함정]</span> (두 조건 동시 충족 필수!)<br>
+      • <b>대각선(Diagonal)</b>: 다각형에서 <u>이웃하지 않는 두 꼭짓점을 이은 선분</u>
+    </div>
+
+    <!-- 대각선 공식 유도 2단 카드 -->
+    <table class="grid-2col-table">
+      <tr>
+        <td>
+          <div class="card-head">(1) 한 꼭짓점에서 그을 수 있는 대각선</div>
+          • <b>공식</b>: <span class="badge-formula">[공식]</span> <b><span class="math">n</span> - 3 (개)</b><br>
+          • <b>원리</b>: 자기 자신(1개)과 바로 이웃한 두 꼭짓점(2개)에는 대각선을 그을 수 없으므로 3개의 꼭짓점을 제외함.
+        </td>
+        <td>
+          <div class="card-head">(2) 대각선에 의해 나뉘는 삼각형의 개수</div>
+          • <b>공식</b>: <span class="badge-formula">[공식]</span> <b><span class="math">n</span> - 2 (개)</b><br>
+          • <b>원리</b>: 한 꼭짓점에서 대각선을 1개 그을 때마다 삼각형이 1개씩 늘어나므로 대각선 수(<span class="math">n</span>-3)보다 1개 더 많음.
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <div class="card-head">(3) <span class="badge-frequent">[빈출]</span> <span class="math">n</span>각형의 대각선의 총 개수 공식</div>
+          <div class="formula-box">
+            <b><span class="math">n</span>각형의 대각선의 총 개수</b> = 
+            <span class="frac">
+              <span class="frac-top"><b><span class="math">n</span>(<span class="math">n</span> - 3)</b></span>
+              <span class="frac-bottom"><b>2</b></span>
+            </span> (개)
+          </div>
+          • <b>유도 원리</b>: <span class="math">n</span>개의 꼭짓점에서 각각 (<span class="math">n</span>-3)개씩 그을 수 있으나, 한 선분의 양 끝 꼭짓점에서 <b>2번씩 중복</b>되므로 2로 나눔.
+        </td>
+      </tr>
+    </table>
+
+    <!-- 2. 삼각형과 다각형의 각 -->
+    <div class="section-title">2. 삼각형과 다각형의 내각과 외각 (6.2 ~ 6.4)</div>
+
+    <div class="card-box">
+      • <b>내각과 외각</b>: 다각형의 한 꼭짓점에서 <b>내각 + 외각 = 180°</b><br>
+      • <span class="badge-frequent">[빈출]</span> <b>삼각형의 외각의 성질</b>: <u>삼각형의 한 외각의 크기는 그와 이웃하지 않는 두 내각의 크기의 합과 같다</u>. (<b>∠ACD = ∠A + ∠B</b>)
+    </div>
+
+    <!-- 다각형 내각/외각 2단 카드 -->
+    <table class="grid-2col-table">
+      <tr>
+        <td>
+          <div class="card-head">(1) <span class="math">n</span>각형의 내각의 크기의 합</div>
+          <div class="formula-box">
+            <b>내각의 크기의 합 = 180° &times; (<span class="math">n</span> - 2)</b>
+          </div>
+          • <b>유도</b>: 한 꼭짓점에서 그은 대각선에 의해 (<span class="math">n</span>-2)개의 삼각형으로 분할되므로, 삼각형의 내각 합(180°)을 곱함.<br>
+          • <b>정<span class="math">n</span>각형의 한 내각의 크기</b>:<br>
+          &nbsp;&nbsp;<span class="frac"><span class="frac-top">180° &times; (<span class="math">n</span> - 2)</span><span class="frac-bottom"><span class="math">n</span></span></span>
+        </td>
+        <td>
+          <div class="card-head">(2) <span class="math">n</span>각형의 외각의 크기의 합</div>
+          <div class="formula-box">
+            <b>외각의 크기의 합 = 360° (항상 일정!)</b>
+          </div>
+          • <b>유도</b>: 전체 합 180°&times;<span class="math">n</span>에서 내각 합 180°&times;(<span class="math">n</span>-2)를 빼면 항상 <b>360°</b>가 됨.<br>
+          • <b>정<span class="math">n</span>각형의 한 외각의 크기</b>:<br>
+          &nbsp;&nbsp;<span class="frac"><span class="frac-top">360°</span><span class="frac-bottom"><span class="math">n</span></span></span>
+        </td>
+      </tr>
+    </table>
+
+    <div class="card-box">
+      <span class="badge-tip">[초고속 풀이 비법]</span> <b>정다각형의 한 내각을 초고속으로 구하는 법</b><br>
+      복잡한 내각 공식 <span class="frac"><span class="frac-top">180°&times;(<span class="math">n</span>-2)</span><span class="frac-bottom"><span class="math">n</span></span></span> 대신, <b>한 외각(<span class="frac"><span class="frac-top">360°</span><span class="frac-bottom"><span class="math">n</span></span></span>)</b>을 먼저 구한 뒤 <b>180° - (한 외각)</b>을 계산하면 암산으로 실수를 완전 방지할 수 있음!<br>
+      • <b>예시</b>: 정팔각형 한 외각 = 360°&divide;8 = 45° ➔ <b>한 내각 = 180° - 45° = 135°</b>
+    </div>
+
+  </div>
+  <!-- 1페이지 끝 -->
+
+  <div class="page-break"></div>
+
+  <!-- ================================================================= -->
+  <!-- PAGE 2: 3. 원과 부채꼴 + 4. 호의 길이와 넓이 + 5. 올인원 공식 총정리표 -->
+  <!-- ================================================================= -->
+  <div class="page-container">
+
+    <!-- 3. 원과 부채꼴 -->
+    <div class="section-title" style="margin-top:0;">3. 원과 부채꼴의 기본 성질 (6.5)</div>
+
+    <div class="card-box">
+      • <b>원(Circle) O</b>: 평면 위의 한 점 O로부터 일정한 거리에 있는 모든 점으로 이루어진 도형.<br>
+      • <b>호(Arc) AB (<span class="math">⌒</span>AB)</b>: 원 위의 두 점 A, B를 양 끝으로 하는 원의 일부분.<br>
+      • <b>현(Chord) CD</b>: 원 위의 두 점 C, D를 이은 선분 (원의 중심을 지나는 현 = 지름 = 가장 긴 현).<br>
+      • <b>할선(Secant)</b>: 원과 두 점에서 만나는 직선. / <b>활꼴</b>: 하나의 호와 하나의 현으로 이루어진 도형.<br>
+      • <b>부채꼴(Sector) AOB</b>: 두 반지름 OA, OB와 호 AB로 이루어진 도형. / <b>중심각</b>: 두 반지름이 이루는 각 &ang;AOB.
+    </div>
+
+    <!-- 부채꼴 정비례 vs 현의 성질 비교 -->
+    <table class="grid-2col-table">
+      <tr>
+        <td>
+          <div class="card-head">■ <span class="badge-frequent">[빈출]</span> 부채꼴의 정비례 성질</div>
+          한 원(또는 합동인 원)에서:
+          <ol style="margin:2px 0 0 16px; padding:0;">
+            <li>중심각의 크기가 같은 두 부채꼴의 <b>호의 길이와 넓이는 각각 같다</b>.</li>
+            <li>부채꼴의 <b>호의 길이는 중심각의 크기에 정비례</b>한다.</li>
+            <li>부채꼴의 <b>넓이는 중심각의 크기에 정비례</b>한다.</li>
+          </ol>
+        </td>
+        <td>
+          <div class="card-head">■ <span class="badge-trap">[함정]</span> 현의 성질과 비례 관계</div>
+          한 원(또는 합동인 원)에서:
+          <ol style="margin:2px 0 0 16px; padding:0;">
+            <li>중심각의 크기가 같으면 <b>현의 길이는 같다</b>.</li>
+            <li>길이가 같은 현에 대한 <b>중심각의 크기도 같다</b>.</li>
+            <li><b>주의: 현의 길이는 중심각에 정비례하지 않는다!</b><br>
+            (중심각이 2배가 되어도 현의 길이는 2배보다 작음)</li>
+          </ol>
+        </td>
+      </tr>
+    </table>
+
+    <!-- 4. 부채꼴의 호의 길이와 넓이 -->
+    <div class="section-title">4. 부채꼴의 호의 길이와 넓이 공식 (6.6)</div>
+
+    <div class="card-box">
+      반지름의 길이를 <span class="math">r</span>, 중심각의 크기를 <span class="math">x</span>°, 호의 길이를 <span class="math">l</span>, 넓이를 <span class="math">S</span>, 원주율을 <span class="math">&pi;</span>(파이)라 할 때:
+    </div>
+
+    <table class="grid-2col-table">
+      <tr>
+        <td>
+          <div class="card-head">(1) 원의 둘레의 길이(<span class="math">l</span>)와 넓이(<span class="math">S</span>)</div>
+          <div class="formula-box">
+            <b>둘레의 길이: <span class="math">l</span> = 2<span class="math">&pi;r</span></b><br>
+            <b>원의 넓이: <span class="math">S</span> = <span class="math">&pi;r</span><sup>2</sup></b>
+          </div>
+          • <span class="math">&pi;</span>(원주율)는 (원주)&divide;(지름)의 일정한 비율로 중학교부터는 3.14 대신 문자 <b><span class="math">&pi;</span></b>를 그대로 표기함.
+        </td>
+        <td>
+          <div class="card-head">(2) 부채꼴의 호의 길이(<span class="math">l</span>)와 넓이(<span class="math">S</span>)</div>
+          <div class="formula-box">
+            <b>호의 길이: <span class="math">l</span> = 2<span class="math">&pi;r</span> &times; <span class="frac"><span class="frac-top"><span class="math">x</span></span><span class="frac-bottom">360</span></span></b><br>
+            <b>넓이: <span class="math">S</span> = <span class="math">&pi;r</span><sup>2</sup> &times; <span class="frac"><span class="frac-top"><span class="math">x</span></span><span class="frac-bottom">360</span></span> = <span class="frac"><span class="frac-top">1</span><span class="frac-bottom">2</span></span><span class="math">rl</span></b>
+          </div>
+          • <span class="badge-frequent">[빈출]</span> <b>중심각(<span class="math">x</span>)을 모를 때</b>: 반지름(<span class="math">r</span>)과 호의 길이(<span class="math">l</span>)만 주어지면 <b><span class="math">S</span> = <span class="frac"><span class="frac-top">1</span><span class="frac-bottom">2</span></span><span class="math">rl</span></b>을 직통으로 적용!
+        </td>
+      </tr>
+    </table>
+
+    <!-- 5. 올인원 공식 총정리표 -->
+    <div class="section-title">5. 6단원 필수 공식 및 시험 직전 체크포인트 올인원 총괄표</div>
+
+    <table class="summary-table">
+      <tr>
+        <th style="width:23%;">구분</th>
+        <th style="width:47%;">핵심 공식 및 성질</th>
+        <th style="width:30%;">출제 포인트 및 비고</th>
+      </tr>
+      <tr>
+        <td><b>한 꼭짓점 대각선</b></td>
+        <td><span class="math">n</span> - 3 (개)</td>
+        <td>자기 자신과 이웃 2개 제외</td>
+      </tr>
+      <tr>
+        <td><b>나뉘는 삼각형 개수</b></td>
+        <td><span class="math">n</span> - 2 (개)</td>
+        <td>내각 합 공식 유도의 기본 바탕</td>
+      </tr>
+      <tr>
+        <td><b>대각선의 총 개수</b></td>
+        <td><span class="frac"><span class="frac-top"><span class="math">n</span>(<span class="math">n</span> - 3)</span><span class="frac-bottom">2</span></span> (개)</td>
+        <td>양 끝점 중복(2로 나눔) 주의</td>
+      </tr>
+      <tr>
+        <td><b>삼각형 외각 성질</b></td>
+        <td>한 외각 = 이웃하지 않는 두 내각의 합</td>
+        <td><b>&ang;ACD = &ang;A + &ang;B</b> (단골 킬러 문항)</td>
+      </tr>
+      <tr>
+        <td><b><span class="math">n</span>각형 내각의 합</b></td>
+        <td>180° &times; (<span class="math">n</span> - 2)</td>
+        <td>삼각형 개수(<span class="math">n</span>-2) &times; 180°</td>
+      </tr>
+      <tr>
+        <td><b><span class="math">n</span>각형 외각의 합</b></td>
+        <td><b>360°</b> (변의 수와 무관하게 항상 일정!)</td>
+        <td>오각형이든 십각형이든 무조건 360°</td>
+      </tr>
+      <tr>
+        <td><b>정<span class="math">n</span>각형 한 내각</b></td>
+        <td><span class="frac"><span class="frac-top">180° &times; (<span class="math">n</span> - 2)</span><span class="frac-bottom"><span class="math">n</span></span></span> = 180° - <span class="frac"><span class="frac-top">360°</span><span class="frac-bottom"><span class="math">n</span></span></span></td>
+        <td>외각(360°&divide;<span class="math">n</span>)을 먼저 구하면 초고속!</td>
+      </tr>
+      <tr>
+        <td><b>부채꼴 호의 길이</b></td>
+        <td><span class="math">l</span> = 2<span class="math">&pi;r</span> &times; <span class="frac"><span class="frac-top"><span class="math">x</span></span><span class="frac-bottom">360</span></span></td>
+        <td>중심각 크기에 정확히 정비례</td>
+      </tr>
+      <tr>
+        <td><b>부채꼴의 넓이</b></td>
+        <td><span class="math">S</span> = <span class="math">&pi;r</span><sup>2</sup> &times; <span class="frac"><span class="frac-top"><span class="math">x</span></span><span class="frac-bottom">360</span></span> = <b><span class="frac"><span class="frac-top">1</span><span class="frac-bottom">2</span></span><span class="math">rl</span></b></td>
+        <td>중심각 모를 땐 <span class="frac"><span class="frac-top">1</span><span class="frac-bottom">2</span></span><span class="math">rl</span> 즉시 적용!</td>
+      </tr>
+      <tr>
+        <td><b>현의 정비례 여부</b></td>
+        <td><b>현의 길이는 중심각에 정비례하지 않는다!</b></td>
+        <td><span class="badge-trap">[함정]</span> 합답형(&Omicron;, &Chi;) 단골 오답 보기</td>
+      </tr>
+    </table>
+
+    <div class="card-box" style="margin-bottom:0; font-size:8.0pt; line-height:1.58;">
+      <b>[시험 직전 5초 리마인드]</b><br>
+      ① 다각형 외각의 합은 변의 개수와 상관없이 무조건 <b>360°</b>이다.<br>
+      ② 삼각형에서 '새의 부리 모양'이나 별 모양 각도 문제는 <b>외각 성질(&ang;외각 = 두 내각의 합)</b>을 연쇄 적용하여 해결한다.<br>
+      ③ 부채꼴 호의 길이와 넓이는 중심각에 정비례하지만, <b>현의 길이는 중심각에 정비례하지 않는다</b>.
+    </div>
+
+  </div>
+  <!-- 2페이지 끝 -->
+
+</body>
+</html>

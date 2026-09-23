@@ -1,0 +1,32 @@
+# Images (사용자 요청: 이미지 제외)
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.bmp
+*.ico
+pages/
+_temp_pdf_verify/
+_temp_pdf_verify_v2/
+_temp_pdf_verify_v3/
+_temp_pdf_verify*/
+
+# Python scripts (사용자 요청: py파일 제외)
+*.py
+*.pyc
+__pycache__/
+
+# GitHub 100MB file size limit (충남여중 234MB 등 대용량 원본 기출 제외)
+기출/
+
+# Temporary, test, and scratch files
+test_*
+scratch_*
+ocr_worker.ps1
+*.bak
+*.tmp
+*.log
+debug_out.txt
+err.txt
+
