@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>2026학년도 중1 2학기 중간고사 수학 [IV. 좌표평면과 그래프] 1:1 쌍둥이 클리닉 5제 (v3)</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 11mm 15mm 11mm 15mm;
+  }
+
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body {
+    font-family: 'KoPubWorldBatang', 'Batang', 'Times New Roman', serif;
+    font-size: 10.5pt;
+    line-height: 1.62;
+    color: #000;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+  }
+
+  .page {
+    width: 100%;
+    page-break-after: always;
+    break-after: page;
+  }
+
+  .page:last-child {
+    page-break-after: auto;
+    break-after: auto;
+  }
+
+  /* 헤더 박스 (1단 전폭) */
+  .header-box {
+    border: 2px solid #000;
+    padding: 5px 10px;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  .header-title {
+    font-size: 13.2pt;
+    font-weight: bold;
+    letter-spacing: -0.3px;
+    margin-bottom: 2px;
+  }
+  .header-subtitle {
+    font-size: 10pt;
+    font-weight: bold;
+    margin-bottom: 3px;
+  }
+  .header-info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2px;
+    font-size: 10pt;
+    table-layout: fixed;
+  }
+  .header-info-table td {
+    border: 1px solid #777;
+    padding: 2px 4px;
+    text-align: center;
+    white-space: nowrap;
+  }
+  .header-info-table td.label {
+    background-color: #eaeaea;
+    font-weight: bold;
+    width: 10%;
+  }
+
+  /* 섹션 구분 바 */
+  .section-bar {
+    background-color: #222;
+    color: #fff;
+    padding: 2.5px 10px;
+    font-size: 10pt;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  /* 문항 블록 (1단 전폭, 순수 실전 시험지형) */
+  .question-block {
+    border: 1px solid #bbb;
+    padding: 12px 16px;
+    margin-bottom: 16px;
+    background-color: #fff;
+    break-inside: avoid;
+  }
+  .question-prompt {
+    font-size: 10.8pt;
+    line-height: 1.65;
+    margin-bottom: 8px;
+    text-align: justify;
+    word-break: keep-all;
+  }
+  .question-num {
+    font-weight: bold;
+    font-size: 11.5pt;
+    margin-right: 4px;
+  }
+  .math {
+    font-family: 'Times New Roman', serif;
+    font-style: italic;
+  }
+
+  /* 다이어그램 중앙 박스 */
+  .diagram-center {
+    text-align: center;
+    margin: 8px 0 10px 0;
+  }
+  .diagram-center svg {
+    display: inline-block;
+  }
+
+  /* 선택지 레이아웃 */
+  .options-grid-5 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    margin-top: 8px;
+    font-size: 10.5pt;
+  }
+  .options-list-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 6px;
+    font-size: 10.5pt;
+  }
+
+  /* 순수 백지 풀이 공간 (힌트 텍스트 0%) */
+  .blank-work-space {
+    height: 46px;
+  }
+
+  /* 해설집 테이블 */
+  .summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 6px;
+    font-size: 10pt;
+    table-layout: fixed;
+  }
+  .summary-table th {
+    border: 1px solid #000;
+    background-color: #222;
+    color: #fff;
+    padding: 2px 4px;
+    text-align: center;
+  }
+  .summary-table td {
+    border: 1px solid #444;
+    padding: 2px 4px;
+    text-align: center;
+    white-space: nowrap;
+  }
+  .summary-table td.ans {
+    font-weight: bold;
+    font-size: 10.5pt;
+    background-color: #f5f5f5;
+  }
+
+  /* 해설 카드 */
+  .solution-card {
+    border: 1.2px solid #222;
+    padding: 5px 10px;
+    margin-bottom: 6px;
+    background-color: #fff;
+    font-size: 10pt;
+    line-height: 1.44;
+    break-inside: avoid;
+  }
+  .solution-header {
+    background-color: #eaeaea;
+    border-bottom: 1.2px solid #000;
+    padding: 2px 7px;
+    margin-bottom: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 10.2pt;
+  }
+  .clinic-box {
+    border: 1px solid #555;
+    background-color: #f5f5f5;
+    padding: 3px 7px;
+    margin: 3px 0;
+    font-size: 10pt;
+    line-height: 1.42;
+  }
+  .sub-title {
+    font-weight: bold;
+    border-left: 3px solid #000;
+    padding-left: 5px;
+    margin: 3px 0 1.5px 0;
+    font-size: 10pt;
+  }
+
+  .footer-page {
+    text-align: center;
+    font-size: 10pt;
+    margin-top: 6px;
+    padding-top: 3px;
+    border-top: 1px solid #ccc;
+  }
+</style>
+</head>
+<body>
+
+  <!-- ================= [1쪽: 문제지 p.1 (01~03번 — 100% No-Hint)] ================= -->
+  <div class="page">
+    <div>
+      <div class="header-box">
+        <div class="header-title">2026학년도 1학년 2학기 중간고사 수학 실전 클리닉</div>
+        <div class="header-subtitle">
+          [단원: 교과서 p.110~135 좌표평면과 그래프 핵심 확인 5제]
+        </div>
+        <table class="header-info-table">
+          <tr>
+            <td class="label" style="width: 10%;">과 목</td>
+            <td style="width: 15%;">수학</td>
+            <td class="label" style="width: 10%;">일 시</td>
+            <td style="width: 22%;">2026년 2학기 중간</td>
+            <td class="label" style="width: 10%;">학 년</td>
+            <td style="width: 16%;">중학교 1학년</td>
+            <td class="label" style="width: 9%;">이 름</td>
+            <td style="width: 18%;"></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="section-bar">
+        <span>[제 1 교시] 수학 영역 (4. 좌표평면과 그래프 집중 클리닉)</span>
+        <span>문제지 (1 / 2)</span>
+      </div>
+
+      <!-- 01번 -->
+      <div class="question-block">
+        <div class="question-prompt">
+          <span class="question-num">01.</span> 정비례 관계 <span class="math">y = -2/5x</span>의 그래프에 대한 설명으로 옳은 것은?
+        </div>
+        <div class="options-list-1">
+          <div>① 원점 <span class="math">(0, 0)</span>을 지나고 오른쪽 위로 향하는 직선이다.</div>
+          <div>② 제1사분면과 제3사분면을 지난다.</div>
+          <div>③ <span class="math">x</span>의 값이 증가하면 <span class="math">y</span>의 값은 감소한다.</div>
+          <div>④ 점 <span class="math">(-5, -2)</span>를 지난다.</div>
+          <div>⑤ 정비례 관계 <span class="math">y = -3x</span>의 그래프보다 <span class="math">y</span>축에 더 가깝다.</div>
+        </div>
+        <div class="blank-work-space"></div>
+      </div>
+
+      <!-- 02번 -->
+      <div class="question-block">
+        <div class="question-prompt">
+          <span class="question-num">02.</span> 정비례 관계 <span class="math">y = ax</span>의 그래프가 두 점 <span class="math">A(m, 15)</span>, <span class="math">B(-3, n)</span>을 지난다. <span class="math">a = -5</span>일 때, <span class="math">m + n</span>의 값은?
+        </div>
+        <div class="options-grid-5">
+          <div>① <span class="math">-18</span></div>
+          <div>② <span class="math">-12</span></div>
+          <div>③ <span class="math">6</span></div>
+          <div>④ <span class="math">12</span></div>
+          <div>⑤ <span class="math">18</span></div>
+        </div>
+        <div class="blank-work-space"></div>
+      </div>
+
+      <!-- 03번 -->
+      <div class="question-block">
+        <div class="question-prompt">
+          <span class="question-num">03.</span> 반비례 관계 <span class="math">y = a/x</span>의 그래프가 두 점 <span class="math">P(3, -8)</span>, <span class="math">Q(b, 6)</span>을 지난다. 상수 <span class="math">a, b</span>에 대하여 <span class="math">a - b</span>의 값은?
+        </div>
+        <div class="options-grid-5">
+          <div>① <span class="math">-28</span></div>
+          <div>② <span class="math">-20</span></div>
+          <div>③ <span class="math">-12</span></div>
+          <div>④ <span class="math">20</span></div>
+          <div>⑤ <span class="math">28</span></div>
+        </div>
+        <div class="blank-work-space"></div>
+      </div>
+    </div>
+
+    <div class="footer-page">- 1 -</div>
+  </div>
+
+  <!-- ================= [2쪽: 문제지 p.2 (04~05번 — 100% No-Hint & 기하 완벽 교정)] ================= -->
+  <div class="page">
+    <div>
+      <div class="section-bar">
+        <span>[제 1 교시] 수학 영역 (4. 좌표평면과 그래프 집중 클리닉)</span>
+        <span>문제지 (2 / 2)</span>
+      </div>
+
+      <!-- 04번 -->
+      <div class="question-block" style="margin-bottom: 20px;">
+        <div class="question-prompt">
+          <span class="question-num">04.</span> 그림과 같이 정비례 관계 <span class="math">y = 2x</span>의 그래프와 반비례 관계 <span class="math">y = a/x</span> (<span class="math">a &gt; 0</span>)의 그래프가 제1사분면의 점 <span class="math">P</span>에서 만난다. 점 <span class="math">P</span>의 <span class="math">x</span>좌표가 <span class="math">3</span>일 때, 점 <span class="math">P</span>의 <span class="math">y</span>좌표를 <span class="math">b</span>, 상수 <span class="math">a</span>에 대하여 <span class="math">a + b</span>의 값은?
+        </div>
+        <div class="diagram-center">
+          <svg width="280" height="175" viewBox="0 0 280 175">
+            <!-- 축 -->
+            <line x1="30" y1="140" x2="250" y2="140" stroke="#000" stroke-width="1.5" />
+            <polygon points="250,136 260,140 250,144" fill="#000" />
+            <text x="255" y="158" font-size="10.5pt" font-family="'Times New Roman', serif" font-style="italic">x</text>
+
+            <line x1="65" y1="162" x2="65" y2="16" stroke="#000" stroke-width="1.5" />
+            <polygon points="61,16 65,6 69,16" fill="#000" />
+            <text x="48" y="18" font-size="10.5pt" font-family="'Times New Roman', serif" font-style="italic">y</text>
+            <text x="52" y="156" font-size="10.5pt" font-family="'Times New Roman', serif" font-style="italic">O</text>
+
+            <!-- 교점 P(137, 68) 수선 점선 -->
+            <line x1="137" y1="140" x2="137" y2="68" stroke="#666" stroke-width="1.1" stroke-dasharray="3,3" />
+            <line x1="65" y1="68" x2="137" y2="68" stroke="#666" stroke-width="1.1" stroke-dasharray="3,3" />
+
+            <!-- 정비례 직선 y = 2x : (65,140) -> (137,68) -> (185,20) 정확히 관통 -->
+            <line x1="65" y1="140" x2="185" y2="20" stroke="#000" stroke-width="1.8" />
+            <text x="190" y="26" font-size="10.5pt" font-family="'Times New Roman', serif" font-weight="bold">y = 2x</text>
+
+            <!-- 반비례 곡선 y = a/x : dx*dy = 72*72 = 5184 수학적 점들을 정확히 이어 점 P(137, 68)을 100% 관통 -->
+            <path d="M 107,17 C 115,43 124,57 137,68 C 154,82 185,99 240,110" fill="none" stroke="#000" stroke-width="1.8" />
+            <text x="202" y="96" font-size="10.5pt" font-family="'Times New Roman', serif" font-weight="bold">y = a/x</text>
+
+            <!-- 교점 P 및 축 눈금 (선분과 겹치지 않는 상단 중앙 V-웨지 공간 x=137, y=52에 배치) -->
+            <circle cx="137" cy="68" r="3.5" fill="#000" />
+            <text x="137" y="52" font-size="10.5pt" font-family="'Times New Roman', serif" font-weight="bold" text-anchor="middle">P</text>
+            <text x="137" y="158" font-size="10.5pt" font-family="'Times New Roman', serif" text-anchor="middle">3</text>
+            <text x="52" y="72" font-size="10.5pt" font-family="'Times New Roman', serif" text-anchor="end">b</text>
+          </svg>
+        </div>
+        <div class="options-grid-5">
+          <div>① <span class="math">24</span></div>
+          <div>② <span class="math">26</span></div>
+          <div>③ <span class="math">28</span></div>
+          <div>④ <span class="math">30</span></div>
+          <div>⑤ <span class="math">32</span></div>
+        </div>
+        <div class="blank-work-space"></div>
+      </div>
+
+      <!-- 05번 -->
+      <div class="question-block">
+        <div class="question-prompt">
+          <span class="question-num">05.</span> 그림과 같이 네 점 <span class="math">O(0, 0)</span>, <span class="math">A(8, 0)</span>, <span class="math">B(8, 6)</span>, <span class="math">C(0, 6)</span>을 꼭짓점으로 하는 직사각형 <span class="math">OABC</span>의 넓이를 정비례 관계 <span class="math">y = ax</span>의 그래프가 이등분할 때, 상수 <span class="math">a</span>의 값은? (단, <span class="math">a &gt; 0</span>)
+        </div>
+        <div class="diagram-center">
+          <svg width="290" height="175" viewBox="0 0 290 175">
+            <!-- 축 -->
+            <line x1="30" y1="140" x2="260" y2="140" stroke="#000" stroke-width="1.5" />
+            <polygon points="260,136 270,140 260,144" fill="#000" />
+            <text x="264" y="158" font-size="10.5pt" font-family="'Times New Roman', serif" font-style="italic">x</text>
+
+            <line x1="65" y1="162" x2="65" y2="16" stroke="#000" stroke-width="1.5" />
+            <polygon points="61,16 65,6 69,16" fill="#000" />
+            <text x="48" y="18" font-size="10.5pt" font-family="'Times New Roman', serif" font-style="italic">y</text>
+            <text x="52" y="156" font-size="10.5pt" font-family="'Times New Roman', serif" font-style="italic">O</text>
+
+            <!-- 직사각형 OABC (삼각형 음영 및 교점 D 힌트 완전 배제) -->
+            <rect x="65" y="44" width="140" height="96" fill="none" stroke="#000" stroke-width="1.6" />
+
+            <!-- 정비례 직선 y = ax -->
+            <line x1="65" y1="140" x2="235" y2="82" stroke="#000" stroke-width="1.8" />
+            <text x="240" y="84" font-size="10.5pt" font-family="'Times New Roman', serif" font-weight="bold">y = ax</text>
+
+            <!-- 꼭짓점 표시 -->
+            <circle cx="205" cy="140" r="3" fill="#000" />
+            <circle cx="205" cy="44" r="3" fill="#000" />
+            <circle cx="65" cy="44" r="3" fill="#000" />
+
+            <text x="205" y="158" font-size="10.5pt" font-family="'Times New Roman', serif" font-weight="bold" text-anchor="middle">A</text>
+            <text x="212" y="44" font-size="10.5pt" font-family="'Times New Roman', serif" font-weight="bold">B</text>
+            <text x="56" y="48" font-size="10.5pt" font-family="'Times New Roman', serif" font-weight="bold" text-anchor="end">C</text>
+          </svg>
+        </div>
+        <div class="options-grid-5">
+          <div>① <span class="math">1/4</span></div>
+          <div>② <span class="math">1/3</span></div>
+          <div>③ <span class="math">1/2</span></div>
+          <div>④ <span class="math">2/3</span></div>
+          <div>⑤ <span class="math">3/4</span></div>
+        </div>
+        <div class="blank-work-space"></div>
+      </div>
+    </div>
+
+    <div class="footer-page">- 2 -</div>
+  </div>
+
+  <!-- ================= [3쪽: 해설집 p.1 (총괄표 + 01~03번 해설)] ================= -->
+  <div class="page">
+    <div>
+      <div class="header-box">
+        <div class="header-title">2026학년도 중1 수학 [1:1 맞춤형 오답 클리닉 정답 및 정밀 해설집]</div>
+        <div class="header-subtitle">
+          학생 오답 원인 1:1 진단 • 실수 방지 공식 • 시험장 1초 해법 수록
+        </div>
+      </div>
+
+      <div class="section-bar">
+        <span>[해설편] 빠른 정답표 및 문항별 1:1 오답 클리닉 (01~03번)</span>
+        <span>해설지 (1 / 2)</span>
+      </div>
+
+      <!-- 빠른 정답 및 원본 매칭 총괄표 (줄바꿈 깨짐 0% 1줄 고정) -->
+      <table class="summary-table">
+        <tr>
+          <th style="width: 15%;">클리닉 문항</th>
+          <th style="width: 17%;">01번</th>
+          <th style="width: 17%;">02번</th>
+          <th style="width: 17%;">03번</th>
+          <th style="width: 17%;">04번</th>
+          <th style="width: 17%;">05번</th>
+        </tr>
+        <tr>
+          <th>원본 문항</th>
+          <td>08번 (④선택)</td>
+          <td>09번 (④선택)</td>
+          <td>12번 (미체크)</td>
+          <td>14번 (④정답!)</td>
+          <td>15번 (미체크)</td>
+        </tr>
+        <tr>
+          <th>클리닉 정답</th>
+          <td class="ans">③</td>
+          <td class="ans">④ (12)</td>
+          <td class="ans">② (-20)</td>
+          <td class="ans">① (24)</td>
+          <td class="ans">⑤ (3/4)</td>
+        </tr>
+      </table>
+
+      <!-- 01번 해설 -->
+      <div class="solution-card">
+        <div class="solution-header">
+          <span>클리닉 01번 해설 [원본 08번 1:1 쌍둥이]</span>
+          <span>정답: ③</span>
+        </div>
+        <div class="clinic-box">
+          <b>[오답 진단 — 왜 원본 08번에서 ④번을 골라 틀렸을까?]</b><br>
+          &bull; 원본 08번에서 학생이 고른 ④번은 <i>"정비례 관계 y = -3/4x는 y = -2x보다 y축에 더 가깝다"</i>였습니다.<br>
+          &bull; 음수 부호 때문에 -3/4 &gt; -2라고 단순 비교하여 생긴 오답입니다. <b>축과의 거리는 부호를 뗀 절댓값 |a|로만 판정</b>하며, <b>|a|가 클수록 경사가 가팔라져 y축(세로축)에 가깝고, |a|가 작을수록 완만해져 x축(가로축)에 가깝습니다!</b>
+        </div>
+        <div class="sub-title">단계별 정답 도출 과정</div>
+        1. <span class="math">y = -2/5x</span>에서 비례상수 <span class="math">a = -2/5 &lt; 0</span>이므로 원점을 지나고 <b>오른쪽 아래</b>로 향하며(① 거짓), <b>제2사분면과 제4사분면</b>을 지납니다(② 거짓).<br>
+        2. <span class="math">a &lt; 0</span>이므로 <b><span class="math">x</span>의 값이 증가하면 <span class="math">y</span>의 값은 감소합니다 (③번 참 — 정답)</b>.<br>
+        3. <span class="math">x = -5</span>를 대입하면 <span class="math">y = (-2/5) &times; (-5) = +2</span>이므로 점 <span class="math">(-5, 2)</span>를 지납니다(④ 거짓).<br>
+        4. 절댓값 비교: <span class="math">|-2/5| = 2/5 &lt; |-3| = 3</span>이므로 절댓값이 큰 <span class="math">y = -3x</span>가 <span class="math">y</span>축에 더 가깝습니다(⑤ 거짓).
+      </div>
+
+      <!-- 02번 해설 -->
+      <div class="solution-card">
+        <div class="solution-header">
+          <span>클리닉 02번 해설 [원본 09번 1:1 쌍둥이]</span>
+          <span>정답: ④ (12)</span>
+        </div>
+        <div class="clinic-box">
+          <b>[오답 진단 — 왜 원본 09번에서 ④번(-10)을 골라 틀렸을까?]</b><br>
+          &bull; 원본 09번(<span class="math">y = -3x</span>)에서 점 <span class="math">A(m, 12)</span>를 대입해 <span class="math">m = -4</span>까지는 정확히 구했으나, 점 <span class="math">B(-2, n)</span>을 대입할 때 <span class="math">n = (-3) &times; (-2) = +6</span>을 부호 실수로 <span class="math">-6</span>으로 계산하여 <span class="math">(-4) + (-6) = -10</span>(④번)을 골랐습니다.<br>
+          &bull; <b>[실수 방지 규칙]</b> 음수 계수에 음수 좌표를 대입할 때는 반드시 괄호를 쳐서 <b>(음수) &times; (음수) = +(양수)</b>로 바꾸세요!
+        </div>
+        <div class="sub-title">단계별 정답 도출 과정</div>
+        1. <span class="math">a = -5</span>이므로 정비례 관계식은 <span class="math">y = -5x</span>입니다.<br>
+        2. 점 <span class="math">A(m, 15)</span> 대입: <span class="math">15 = -5m &rArr; m = 15 &divide; (-5) = -3</span>.<br>
+        3. 점 <span class="math">B(-3, n)</span> 대입: <span class="math">n = (-5) &times; (-3) = +15</span>.<br>
+        4. 따라서 구하는 값은 <span class="math">m + n = (-3) + 15 = 12</span> (④번)입니다.
+      </div>
+
+      <!-- 03번 해설 -->
+      <div class="solution-card">
+        <div class="solution-header">
+          <span>클리닉 03번 해설 [원본 12번 1:1 쌍둥이]</span>
+          <span>정답: ② (-20)</span>
+        </div>
+        <div class="clinic-box">
+          <b>[미해결 진단 — 왜 원본 12번을 체크하지 못했을까?]</b><br>
+          &bull; 반비례 분수식 <span class="math">y = a/x</span>에 숫자를 그대로 넣으면 분수 방정식이 되어 헷갈립니다.<br>
+          &bull; <b>[절대 안 틀리는 1초 공식]</b> 반비례 <span class="math">y = a/x</span>가 나오면 분수로 풀지 말고 무조건 양변에 <span class="math">x</span>를 곱한 <b><span class="math">x &times; y = a</span> (두 좌표의 곱 = 일정)</b> 공식으로 바꾸어 푸세요!
+        </div>
+        <div class="sub-title">단계별 정답 도출 과정</div>
+        1. 반비례 그래프 위의 모든 점은 <b>(x좌표) &times; (y좌표) = a</b>가 일정합니다.<br>
+        2. 점 <span class="math">P(3, -8)</span>에서 두 좌표를 곱하면 곧바로 <span class="math">a</span>가 나옵니다: <span class="math">a = 3 &times; (-8) = -24</span>.<br>
+        3. 점 <span class="math">Q(b, 6)</span>도 같은 그래프 위의 점이므로 두 좌표의 곱이 <span class="math">-24</span>입니다: <span class="math">b &times; 6 = -24 &rArr; b = -4</span>.<br>
+        4. 따라서 <span class="math">a - b = -24 - (-4) = -24 + 4 = -20</span> (②번)입니다.
+      </div>
+    </div>
+
+    <div class="footer-page">- 3 -</div>
+  </div>
+
+  <!-- ================= [4쪽: 해설집 p.2 (04~05번 해설 + 핵심 요약)] ================= -->
+  <div class="page">
+    <div>
+      <div class="section-bar">
+        <span>[해설편] 문항별 1:1 오답 클리닉 (04~05번) 및 1초 마스터 공식</span>
+        <span>해설지 (2 / 2)</span>
+      </div>
+
+      <!-- 04번 해설 -->
+      <div class="solution-card" style="margin-bottom: 14px;">
+        <div class="solution-header">
+          <span>클리닉 04번 해설 [원본 14번 1:1 쌍둥이]</span>
+          <span>정답: ① (24)</span>
+        </div>
+        <div class="clinic-box">
+          <b>[원본 14번 채점 정정 안내 및 교점 2단계 해법]</b><br>
+          &bull; <b>[채점 확인]</b> 원본 모의고사(110-135_v3) 14번의 실제 정답은 학생이 체크한 <b>④번(18)이 정답 맞습니다!</b> (<span class="math">P(2, b)</span>를 <span class="math">y=3x</span>에 대입하면 <span class="math">b=6</span>, <span class="math">P(2, 6)</span>을 <span class="math">y=a/x</span>에 대입하면 <span class="math">a=12 &rArr; a+b=18</span>).<br>
+          &bull; <b>[교점 문제 불변의 법칙]</b> 두 그래프가 만나는 점(교점) <span class="math">P</span>는 <b>식이 완성된 그래프(<span class="math">y=2x</span>)에 먼저 대입해 좌표를 구한 뒤, 그 좌표를 미지수가 있는 그래프(<span class="math">y=a/x</span>)에 대입</b>하면 100% 풀립니다.
+        </div>
+        <div class="sub-title">단계별 정답 도출 과정</div>
+        1. <b>[1단계: 정비례 식에 대입하여 b 구하기]</b><br>
+           점 <span class="math">P(3, b)</span>는 직선 <span class="math">y = 2x</span> 위의 점이므로 <span class="math">x = 3, y = b</span>를 대입하면:<br>
+           <span class="math">b = 2 &times; 3 = 6 &rArr;</span> 교점 <span class="math">P</span>의 완성된 좌표는 <b><span class="math">P(3, 6)</span></b>입니다.<br>
+        2. <b>[2단계: 반비례 식에 대입하여 a 구하기]</b><br>
+           교점 <span class="math">P(3, 6)</span>은 반비례 곡선 <span class="math">y = a/x</span> 위의 점이기도 하므로 곱 일정 법칙(<span class="math">x &times; y = a</span>)을 쓰면:<br>
+           <span class="math">a = 3 &times; 6 = 18</span>.<br>
+        3. <b>[3단계: 합 구하기]</b> <span class="math">a + b = 18 + 6 = 24</span> (①번).
+      </div>
+
+      <!-- 05번 해설 -->
+      <div class="solution-card" style="margin-bottom: 14px;">
+        <div class="solution-header">
+          <span>클리닉 05번 해설 [원본 15번 1:1 쌍둥이]</span>
+          <span>정답: ⑤ (3/4)</span>
+        </div>
+        <div class="clinic-box">
+          <b>[미해결 진단 — 왜 원본 15번을 체크하지 못했을까?]</b><br>
+          &bull; 직사각형 넓이를 직선 <span class="math">y = ax</span>가 이등분한다는 조건을 수식으로 바꾸는 법을 몰랐기 때문입니다.<br>
+          &bull; 아래 <b>[정석 삼각형 넓이 풀이]</b>와 <b>[시험장 1초 중심점 공식]</b> 두 가지를 모두 익혀 두면 어떤 변형 문제도 즉시 풀 수 있습니다!
+        </div>
+        <div class="sub-title">풀이법 1 : 정석 직각삼각형 넓이 공식 (서술형 대비)</div>
+        1. 직사각형 <span class="math">OABC</span>의 가로 길이는 <span class="math">8</span>, 세로 길이는 <span class="math">6</span>이므로 <b>전체 넓이 = <span class="math">8 &times; 6 = 48</span></b>입니다.<br>
+        2. 직선 <span class="math">y = ax</span>가 직사각형 넓이를 이등분하므로, 직선과 오른쪽 변 <span class="math">AB</span>의 교점을 <span class="math">D</span>라 할 때 아래쪽 직각삼각형 <span class="math">OAD</span>의 넓이는 절반인 <b><span class="math">24</span></b>가 되어야 합니다.<br>
+        3. 점 <span class="math">D</span>는 직선 <span class="math">y = ax</span> 위의 점이고 <span class="math">x = 8</span>이므로 <b><span class="math">D(8, 8a)</span></b>입니다. (밑변 <span class="math">OA = 8</span>, 높이 <span class="math">AD = 8a</span>)<br>
+        4. 삼각형 넓이 식: <span class="math">1/2 &times; 8 &times; 8a = 24 &rArr; 32a = 24 &rArr; a = 24/32 = 3/4</span> (⑤번).
+
+        <div class="sub-title">풀이법 2 : 시험장 1초 암산 공식 (직사각형 중심점 통과 법칙)</div>
+        1. 원점 <span class="math">O(0, 0)</span>을 지나는 직선 <span class="math">y = ax</span>가 직사각형 <span class="math">OABC</span>의 넓이를 이등분하려면, 무조건 <b>직사각형의 정중앙 점(가로의 절반, 세로의 절반)</b>을 지나야 합니다!<br>
+        2. 가로 <span class="math">8</span>의 절반은 <span class="math">4</span>, 세로 <span class="math">6</span>의 절반은 <span class="math">3</span>이므로 <b>중심점의 좌표는 <span class="math">(4, 3)</span></b>입니다.<br>
+        3. <span class="math">y = ax</span>에 <span class="math">(4, 3)</span>을 대입하면 <span class="math">3 = 4a &rArr; a = 3/4</span> (원본 15번도 가로 6, 세로 4의 절반인 중심점 <span class="math">(3, 2)</span>를 대입하면 <span class="math">2 = 3a &rArr; a = 2/3</span>가 1초 만에 나옵니다!)
+      </div>
+
+      <!-- 시험 직전 3대 핵심 공식 요약 박스 -->
+      <div class="solution-card" style="background-color: #fafafa; border: 2px solid #000;">
+        <div style="font-weight: bold; font-size: 10.8pt; border-bottom: 1px solid #000; padding-bottom: 3px; margin-bottom: 5px;">
+          [시험 직전 최종 점검] 오답 0%를 만드는 4단원 3대 불변 공식
+        </div>
+        1. <b>[정비례 경사도 공식]</b> <span class="math">y = ax</span>에서 음수 부호는 무시하고 <b>절댓값 <span class="math">|a|</span>가 클수록 <span class="math">y</span>축에 가깝다!</b> (<span class="math">|-3| = 3 &gt; |-2/5| = 2/5</span>)<br>
+        2. <b>[반비례 곱 일정 공식]</b> <span class="math">y = a/x</span>가 보이면 분수로 풀지 말고 무조건 <b><span class="math">(x좌표) &times; (y좌표) = a</span></b>로 바꾸어 곱한다!<br>
+        3. <b>[직사각형 넓이 이등분 공식]</b> 원점 직선 <span class="math">y = ax</span>가 직사각형 넓이를 이등분하면 <b><span class="math">a = (세로 길이) / (가로 길이)</span></b>이다! (원본 15번: <span class="math">a = 4/6 = 2/3</span>, 클리닉 05번: <span class="math">a = 6/8 = 3/4</span>)
+      </div>
+    </div>
+
+    <div class="footer-page">- 4 -</div>
+  </div>
+
+</body>
+</html>

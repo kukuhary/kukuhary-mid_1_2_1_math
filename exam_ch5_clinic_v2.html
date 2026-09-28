@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>2026학년도 중1 2학기 중간고사 수학 [V. 기본 도형과 작도] 오답 극복 1:1 쌍둥이 클리닉 8제 (1단 전폭 v2)</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 12mm 15mm 12mm 15mm;
+  }
+
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body {
+    font-family: 'KoPubWorldBatang', 'Batang', 'Times New Roman', serif;
+    font-size: 10.5pt;
+    line-height: 1.65;
+    color: #000;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+  }
+
+  .page {
+    width: 100%;
+    height: 273mm;
+    position: relative;
+    page-break-after: always;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .page:last-child {
+    page-break-after: auto;
+  }
+
+  /* 헤더 박스 (1단 전폭) */
+  .header-box {
+    border: 2px solid #000;
+    padding: 6px 14px;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  .header-title {
+    font-size: 14pt;
+    font-weight: bold;
+    letter-spacing: -0.3px;
+    margin-bottom: 3px;
+  }
+  .header-subtitle {
+    font-size: 11pt;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  .header-info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 3px;
+    font-size: 10.5pt;
+  }
+  .header-info-table td {
+    border: 1px solid #777;
+    padding: 2px 6px;
+    text-align: center;
+  }
+  .header-info-table td.label {
+    background-color: #eaeaea;
+    font-weight: bold;
+    width: 12%;
+  }
+
+  /* 섹션 구분 바 (1단 전폭) */
+  .section-bar {
+    background-color: #222;
+    color: #fff;
+    padding: 3px 10px;
+    font-size: 10.5pt;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+
+  /* 1단 전폭 문항 레이아웃 (다단 배제) */
+  .question-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 16px;
+  }
+
+  .question-block {
+    font-size: 10.5pt;
+    line-height: 1.65;
+    padding-bottom: 6px;
+  }
+  .question-prompt {
+    font-weight: normal;
+    text-align: justify;
+    margin-bottom: 6px;
+  }
+  .question-prompt b {
+    font-size: 11pt;
+  }
+
+  /* 보기 박스 */
+  .bogi-box {
+    border: 1px solid #555;
+    padding: 8px 14px;
+    margin: 8px 0;
+    background-color: #fafafa;
+    font-size: 10.5pt;
+    line-height: 1.65;
+  }
+  .bogi-title {
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+    font-size: 10.5pt;
+  }
+
+  /* 선택지 (5지선다) */
+  .choices-grid-5 {
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 10.5pt;
+  }
+  .choices-grid-3-2 {
+    margin-top: 8px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 5px;
+    font-size: 10.5pt;
+  }
+  .choices-vertical {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 10.5pt;
+  }
+
+  /* 수학 기호 이탤릭 서체 */
+  .math {
+    font-family: 'Times New Roman', serif;
+    font-style: italic;
+  }
+
+  /* 문제 내부 분할: 지문/조건(좌) + 그림(우) 시원한 전폭 배치 */
+  .question-body-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+  .question-text-area {
+    flex: 1;
+  }
+  .question-diagram-area {
+    flex-shrink: 0;
+    text-align: center;
+  }
+
+  /* 푸터 */
+  .page-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #bbb;
+    padding-top: 4px;
+    font-size: 10pt;
+    color: #444;
+  }
+
+  /* 해설용 스타일 */
+  .solution-block {
+    border: 1px solid #ccc;
+    background-color: #fcfcfc;
+    padding: 6px 12px;
+    margin-bottom: 7px;
+    font-size: 10pt;
+    line-height: 1.52;
+  }
+  .solution-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    border-bottom: 1.2px solid #666;
+    padding-bottom: 3px;
+    margin-bottom: 4px;
+    font-size: 10.5pt;
+  }
+  .solution-step {
+    margin-bottom: 3px;
+  }
+  .solution-step-title {
+    font-weight: bold;
+    color: #111;
+  }
+  .trap-tip {
+    background-color: #f2f2f2;
+    border-left: 3px solid #333;
+    padding: 3px 7px;
+    margin-top: 4px;
+    font-size: 10pt;
+  }
+
+  /* 빠른 정답표 */
+  .quick-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 8px;
+    font-size: 10pt;
+    text-align: center;
+  }
+  .quick-table th, .quick-table td {
+    border: 1px solid #666;
+    padding: 5px 3px;
+  }
+  .quick-table th {
+    background-color: #e5e5e5;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================================================== -->
+<!-- PAGE 1: 문제편 (1번, 2번, 3번) - 1단 전폭                      -->
+<!-- ============================================================== -->
+<div class="page">
+  <div>
+    <div class="header-box">
+      <div class="header-title">2026학년도 1학년 2학기 중간고사 수학 [V. 기본 도형과 작도]</div>
+      <div class="header-subtitle">8대 취약 유형 오답 극복 1:1 맞춤형 쌍둥이 클리닉 문제지 (1단 전폭)</div>
+      <table class="header-info-table">
+        <tr>
+          <td class="label">과 목</td><td>수 학</td>
+          <td class="label">대 상</td><td>중학교 1학년</td>
+          <td class="label">단 원</td><td>V. 기본 도형과 작도</td>
+          <td class="label">문항수</td><td>총 8문항 (객관식)</td>
+        </tr>
+      </table>
+    </div>
+    <div class="section-bar">
+      <span>[문제편] 실전 문제 (1번 ~ 3번) | 1단 전폭</span>
+      <span>※ 모든 문항은 정답이 하나입니다.</span>
+    </div>
+  </div>
+
+  <div class="question-container">
+    <!-- 1번 문항 -->
+    <div class="question-block">
+      <div class="question-prompt">
+        <b>1.</b> 다음 중 작도에 대한 설명으로 옳은 것만을 &lt;보기&gt;에서 있는 대로 고른 것은? (원본 3번 연계)
+      </div>
+      <div class="bogi-box">
+        <div class="bogi-title">&lt; 보 기 &gt;</div>
+        <div>ㄱ. 눈금 없는 자를 사용하여 선분의 길이를 정확히 잴 수 있다.</div>
+        <div>ㄴ. 컴퍼스를 사용하여 주어진 선분의 길이를 다른 직선 위로 옮길 수 있다.</div>
+        <div>ㄷ. 두 점을 연결하는 직선을 긋거나 선분을 연장할 때에는 눈금 없는 자를 사용한다.</div>
+        <div>ㄹ. 각도기를 사용하여 주어진 각과 크기가 같은 각을 그리는 것도 작도에 해당한다.</div>
+      </div>
+      <div class="choices-grid-5">
+        <span>① ㄱ, ㄴ</span>
+        <span>② ㄴ, ㄷ</span>
+        <span>③ ㄷ, ㄹ</span>
+        <span>④ ㄱ, ㄴ, ㄷ</span>
+        <span>⑤ ㄴ, ㄷ, ㄹ</span>
+      </div>
+    </div>
+
+    <!-- 2번 문항 (좌: 텍스트 / 우: 큼직한 직육면체 다이어그램) -->
+    <div class="question-block">
+      <div class="question-body-flex">
+        <div class="question-text-area">
+          <div class="question-prompt">
+            <b>2.</b> 오른쪽 그림과 같은 직육면체 <span class="math">ABCD-EFGH</span>에서 모서리 <span class="math">AB</span>와 꼬인 위치에 있는 모서리의 개수를 <span class="math">x</span>, 면 <span class="math">ABCD</span>와 평행한 모서리의 개수를 <span class="math">y</span>라 할 때, <span class="math">x + y</span>의 값은? (원본 5번 연계)
+          </div>
+          <div class="choices-grid-5" style="margin-top: 18px;">
+            <span>① 6</span>
+            <span>② 7</span>
+            <span>③ 8</span>
+            <span>④ 9</span>
+            <span>⑤ 10</span>
+          </div>
+        </div>
+        <div class="question-diagram-area">
+          <svg width="220" height="135" viewBox="0 0 200 130">
+            <!-- 직육면체 뒷면 점선 -->
+            <line x1="40" y1="30" x2="140" y2="30" stroke="#777" stroke-width="1.3" stroke-dasharray="4,3" />
+            <line x1="40" y1="30" x2="40" y2="100" stroke="#777" stroke-width="1.3" stroke-dasharray="4,3" />
+            <line x1="40" y1="100" x2="140" y2="100" stroke="#777" stroke-width="1.3" stroke-dasharray="4,3" />
+            <line x1="40" y1="100" x2="15" y2="120" stroke="#777" stroke-width="1.3" stroke-dasharray="4,3" />
+            <!-- 실선 앞면 및 모서리 -->
+            <polygon points="15,50 115,50 115,120 15,120" fill="none" stroke="#000" stroke-width="1.8" />
+            <line x1="15" y1="50" x2="40" y2="30" stroke="#000" stroke-width="1.8" />
+            <line x1="115" y1="50" x2="140" y2="30" stroke="#000" stroke-width="1.8" />
+            <line x1="140" y1="30" x2="140" y2="100" stroke="#000" stroke-width="1.8" />
+            <line x1="115" y1="120" x2="140" y2="100" stroke="#000" stroke-width="1.8" />
+            <!-- 꼭짓점 텍스트 (최소 10.5pt) -->
+            <text x="5" y="47" font-size="11pt" font-family="'Times New Roman', serif" font-weight="bold">A</text>
+            <text x="120" y="47" font-size="11pt" font-family="'Times New Roman', serif" font-weight="bold">B</text>
+            <text x="145" y="28" font-size="11pt" font-family="'Times New Roman', serif" font-weight="bold">C</text>
+            <text x="32" y="26" font-size="11pt" font-family="'Times New Roman', serif" font-weight="bold">D</text>
+            <text x="3" y="128" font-size="11pt" font-family="'Times New Roman', serif" font-weight="bold">E</text>
+            <text x="120" y="128" font-size="11pt" font-family="'Times New Roman', serif" font-weight="bold">F</text>
+            <text x="145" y="108" font-size="11pt" font-family="'Times New Roman', serif" font-weight="bold">G</text>
+            <text x="44" y="108" font-size="11pt" font-family="'Times New Roman', serif" font-weight="bold">H</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3번 문항 (좌: 텍스트 / 우: 꺾인 선 다이어그램) -->
+    <div class="question-block">
+      <div class="question-body-flex">
+        <div class="question-text-area">
+          <div class="question-prompt">
+            <b>3.</b> 오른쪽 그림에서 두 직선 <span class="math">l</span>과 <span class="math">m</span>이 서로 평행할 때, <span class="math">x</span>의 값은? (원본 6번 연계)
+          </div>
+          <div class="choices-grid-5" style="margin-top: 18px;">
+            <span>① 30</span>
+            <span>② 32</span>
+            <span>③ 35</span>
+            <span>④ 38</span>
+            <span>⑤ 40</span>
+          </div>
+        </div>
+        <div class="question-diagram-area">
+          <svg width="250" height="135" viewBox="0 0 240 135">
+            <!-- 평행선 l, m -->
+            <line x1="10" y1="18" x2="230" y2="18" stroke="#000" stroke-width="1.6" />
+            <line x1="10" y1="120" x2="230" y2="120" stroke="#000" stroke-width="1.6" />
+            <text x="15" y="14" font-size="11pt" font-family="'Times New Roman', serif" font-style="italic">l</text>
+            <text x="15" y="115" font-size="11pt" font-family="'Times New Roman', serif" font-style="italic">m</text>
+            <!-- 꺾인 선 APQC -->
+            <line x1="60" y1="18" x2="140" y2="52" stroke="#000" stroke-width="1.8" />
+            <line x1="140" y1="52" x2="80" y2="88" stroke="#000" stroke-width="1.8" />
+            <line x1="80" y1="88" x2="165" y2="120" stroke="#000" stroke-width="1.8" />
+            <!-- 꼭짓점 레이블 및 점 -->
+            <circle cx="60" cy="18" r="2.5" fill="#000" />
+            <circle cx="140" cy="52" r="2.5" fill="#000" />
+            <circle cx="80" cy="88" r="2.5" fill="#000" />
+            <circle cx="165" cy="120" r="2.5" fill="#000" />
+            <text x="50" y="13" font-size="11pt" font-family="'Times New Roman', serif">A</text>
+            <text x="147" y="52" font-size="11pt" font-family="'Times New Roman', serif">P</text>
+            <text x="63" y="93" font-size="11pt" font-family="'Times New Roman', serif">Q</text>
+            <text x="170" y="115" font-size="11pt" font-family="'Times New Roman', serif">C</text>
+            <!-- 각도 표시 -->
+            <path d="M 85,18 A 25,25 0 0,1 74,25" fill="none" stroke="#444" stroke-width="1.3" />
+            <text x="84" y="32" font-size="10.5pt">30°</text>
+            <text x="148" y="67" font-size="10.5pt">(3x-15)°</text>
+            <text x="90" y="86" font-size="10.5pt">95°</text>
+            <path d="M 140,120 A 25,25 0 0,1 151,114" fill="none" stroke="#444" stroke-width="1.3" />
+            <text x="130" y="113" font-size="10.5pt">x°</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>중등 수학 [V. 기본 도형과 작도] 쌍둥이 클리닉 8제 (1단 전폭)</span>
+    <span>- 1 -</span>
+    <span>문제편 (1쪽 / 총 3쪽)</span>
+  </div>
+</div>
+
+<!-- ============================================================== -->
+<!-- PAGE 2: 문제편 (4번, 5번, 6번) - 1단 전폭                      -->
+<!-- ============================================================== -->
+<div class="page">
+  <div>
+    <div class="section-bar">
+      <span>[문제편] 실전 문제 (4번 ~ 6번) | 1단 전폭</span>
+      <span>※ 검토 철저 및 계산 실수 유의</span>
+    </div>
+  </div>
+
+  <div class="question-container">
+    <!-- 4번 문항 -->
+    <div class="question-block">
+      <div class="question-prompt">
+        <b>4.</b> 다음 &lt;보기&gt; 중 △<span class="math">ABC</span>가 오직 하나로 정해지는 것만을 있는 대로 고른 것은? (원본 8번 연계)
+      </div>
+      <div class="bogi-box">
+        <div class="bogi-title">&lt; 보 기 &gt;</div>
+        <div>ㄱ. <span class="math">AB = 5 cm, BC = 6 cm, CA = 12 cm</span></div>
+        <div>ㄴ. <span class="math">AB = 8 cm, AC = 10 cm</span>, ∠<span class="math">A</span> = 55°</div>
+        <div>ㄷ. <span class="math">AB = 8 cm, BC = 6 cm</span>, ∠<span class="math">A</span> = 40°</div>
+        <div>ㄹ. ∠<span class="math">A</span> = 50°, ∠<span class="math">B</span> = 70°, ∠<span class="math">C</span> = 60°</div>
+        <div>ㅁ. <span class="math">BC = 10 cm</span>, ∠<span class="math">A</span> = 40°, ∠<span class="math">B</span> = 65°</div>
+      </div>
+      <div class="choices-grid-5">
+        <span>① ㄱ, ㄴ</span>
+        <span>② ㄴ, ㅁ</span>
+        <span>③ ㄷ, ㅁ</span>
+        <span>④ ㄴ, ㄷ, ㅁ</span>
+        <span>⑤ ㄱ, ㄴ, ㅁ</span>
+      </div>
+    </div>
+
+    <!-- 5번 문항 (좌: 텍스트 / 우: 다이어그램) -->
+    <div class="question-block">
+      <div class="question-body-flex">
+        <div class="question-text-area">
+          <div class="question-prompt">
+            <b>5.</b> 오른쪽 그림과 같이 직선 <span class="math">l</span> 위에 서로 다른 세 점 <span class="math">A, B, C</span>가 있고, 직선 <span class="math">l</span> 밖에 두 점 <span class="math">P, Q</span>가 있다. (단, 두 점 <span class="math">P, Q</span>를 지나는 직선은 직선 <span class="math">l</span> 위의 점을 지나지 않는다.) 이 5개의 점 중 서로 다른 두 점을 이어서 만들 수 있는 서로 다른 직선의 개수를 <span class="math">x</span>, 서로 다른 선분의 개수를 <span class="math">y</span>라 할 때, <span class="math">x + y</span>의 값은? (원본 9번 연계)
+          </div>
+          <div class="choices-grid-5" style="margin-top: 18px;">
+            <span>① 15</span>
+            <span>② 16</span>
+            <span>③ 17</span>
+            <span>④ 18</span>
+            <span>⑤ 19</span>
+          </div>
+        </div>
+        <div class="question-diagram-area">
+          <svg width="240" height="120" viewBox="0 0 220 110">
+            <!-- 직선 l -->
+            <line x1="10" y1="80" x2="210" y2="80" stroke="#000" stroke-width="1.8" />
+            <text x="212" y="84" font-size="11pt" font-family="'Times New Roman', serif" font-style="italic">l</text>
+            <!-- 점 A, B, C -->
+            <circle cx="50" cy="80" r="3" fill="#000" />
+            <text x="46" y="100" font-size="11pt" font-family="'Times New Roman', serif">A</text>
+            <circle cx="105" cy="80" r="3" fill="#000" />
+            <text x="101" y="100" font-size="11pt" font-family="'Times New Roman', serif">B</text>
+            <circle cx="160" cy="80" r="3" fill="#000" />
+            <text x="156" y="100" font-size="11pt" font-family="'Times New Roman', serif">C</text>
+            <!-- 점 P, Q -->
+            <circle cx="75" cy="25" r="3" fill="#000" />
+            <text x="71" y="17" font-size="11pt" font-family="'Times New Roman', serif">P</text>
+            <circle cx="140" cy="35" r="3" fill="#000" />
+            <text x="144" y="32" font-size="11pt" font-family="'Times New Roman', serif">Q</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6번 문항 -->
+    <div class="question-block">
+      <div class="question-prompt">
+        <b>6.</b> 공간에서 서로 다른 세 직선 <span class="math">l, m, n</span>과 서로 다른 두 평면 <span class="math">P, Q</span>에 대한 설명 중 항상 옳은 것만을 &lt;보기&gt;에서 있는 대로 고른 것은? (원본 11번 연계)
+      </div>
+      <div class="bogi-box">
+        <div class="bogi-title">&lt; 보 기 &gt;</div>
+        <div>ㄱ. <span class="math">l ⊥ P</span>이고 <span class="math">m ⊥ P</span>이면 <span class="math">l ∥ m</span>이다.</div>
+        <div>ㄴ. <span class="math">l ∥ m</span>이고 <span class="math">m ∥ n</span>이면 <span class="math">l ∥ n</span>이다.</div>
+        <div>ㄷ. <span class="math">P ⊥ Q</span>이고 <span class="math">l ⊥ P</span>이면 <span class="math">l ∥ Q</span>이다.</div>
+        <div>ㄹ. <span class="math">l ⊥ m</span>이고 <span class="math">l ⊥ n</span>이면 <span class="math">m ∥ n</span>이다.</div>
+      </div>
+      <div class="choices-grid-5">
+        <span>① ㄱ</span>
+        <span>② ㄱ, ㄴ</span>
+        <span>③ ㄱ, ㄷ</span>
+        <span>④ ㄴ, ㄹ</span>
+        <span>⑤ ㄱ, ㄴ, ㄷ</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>중등 수학 [V. 기본 도형과 작도] 쌍둥이 클리닉 8제 (1단 전폭)</span>
+    <span>- 2 -</span>
+    <span>문제편 (2쪽 / 총 3쪽)</span>
+  </div>
+</div>
+
+<!-- ============================================================== -->
+<!-- PAGE 3: 문제편 (7번, 8번) - 1단 전폭                            -->
+<!-- ============================================================== -->
+<div class="page">
+  <div>
+    <div class="section-bar">
+      <span>[문제편] 실전 문제 (7번 ~ 8번) | 1단 전폭</span>
+      <span>※ 기하 심화 및 작도 추론 집중</span>
+    </div>
+  </div>
+
+  <div class="question-container">
+    <!-- 7번 문항 (1단 전폭의 넓은 공간 활용) -->
+    <div class="question-block">
+      <div class="question-prompt">
+        <b>7.</b> 다음 그림은 ∠<span class="math">XOY</span>와 크기가 같은 각을 반직선 <span class="math">AB</span>를 한 변으로 하여 작도하는 과정에서 컴퍼스와 눈금 없는 자를 사용한 흔적을 나타낸 것이다. 이에 대한 설명으로 옳은 것만을 &lt;보기&gt;에서 있는 대로 고른 것은? (원본 14번 연계)
+      </div>
+      
+      <div style="display: flex; justify-content: center; margin: 8px 0;">
+        <svg width="340" height="115" viewBox="0 0 260 95">
+          <!-- 왼쪽 원각 XOY -->
+          <line x1="20" y1="75" x2="105" y2="75" stroke="#000" stroke-width="1.6" />
+          <line x1="20" y1="75" x2="88" y2="15" stroke="#000" stroke-width="1.6" />
+          <text x="8" y="80" font-size="11pt" font-family="'Times New Roman', serif">O</text>
+          <text x="107" y="79" font-size="10.5pt" font-family="'Times New Roman', serif">X</text>
+          <text x="90" y="13" font-size="10.5pt" font-family="'Times New Roman', serif">Y</text>
+          <path d="M 58,75 A 38,38 0 0,0 47,51" fill="none" stroke="#444" stroke-width="1.3" stroke-dasharray="3,2" />
+          <circle cx="58" cy="75" r="2.5" fill="#000" />
+          <text x="55" y="90" font-size="10.5pt" font-family="'Times New Roman', serif">C</text>
+          <circle cx="47" cy="51" r="2.5" fill="#000" />
+          <text x="35" y="51" font-size="10.5pt" font-family="'Times New Roman', serif">D</text>
+
+          <!-- 오른쪽 작도각 PAQ -->
+          <line x1="150" y1="75" x2="235" y2="75" stroke="#000" stroke-width="1.6" />
+          <line x1="150" y1="75" x2="218" y2="15" stroke="#000" stroke-width="1.6" />
+          <text x="138" y="80" font-size="11pt" font-family="'Times New Roman', serif">A</text>
+          <text x="237" y="79" font-size="10.5pt" font-family="'Times New Roman', serif">B</text>
+          <path d="M 188,75 A 38,38 0 0,0 177,51" fill="none" stroke="#444" stroke-width="1.3" stroke-dasharray="3,2" />
+          <path d="M 172,46 A 25,25 0 0,1 184,57" fill="none" stroke="#444" stroke-width="1.3" stroke-dasharray="3,2" />
+          <circle cx="188" cy="75" r="2.5" fill="#000" />
+          <text x="185" y="90" font-size="10.5pt" font-family="'Times New Roman', serif">P</text>
+          <circle cx="177" cy="51" r="2.5" fill="#000" />
+          <text x="165" y="51" font-size="10.5pt" font-family="'Times New Roman', serif">Q</text>
+        </svg>
+      </div>
+
+      <div class="bogi-box">
+        <div class="bogi-title">&lt; 작도에 사용된 각 단계의 작업 (무작위 나열) &gt;</div>
+        <div style="font-size: 10.5pt; line-height: 1.6;">
+          ㉠ 점 O를 중심으로 원호를 그려 두 변과의 교점 C, D를 잡는다.<br>
+          ㉡ 컴퍼스로 선분 CD의 길이를 잰다.<br>
+          ㉢ 두 점 A, Q를 지나는 반직선 AQ를 긋는다.<br>
+          ㉣ 점 A를 중심으로 반지름이 OC인 원호를 그려 반직선 AB와의 교점 P를 잡는다.<br>
+          ㉤ 점 P를 중심으로 반지름이 CD인 원호를 그려 ㉣의 원호와의 교점 Q를 잡는다.
+        </div>
+        <div class="bogi-title" style="margin-top: 6px;">&lt; 보 기 &gt;</div>
+        <div style="font-size: 10.5pt; line-height: 1.6;">
+          ㄱ. 가장 마지막에 수행하는 작도 과정은 ㉢이다.<br>
+          ㄴ. 선분 OC, OD, AP, AQ의 길이는 모두 서로 같다.<br>
+          ㄷ. 선분 CD와 선분 PQ의 길이는 서로 같다.<br>
+          ㄹ. 작도 과정에서 두 삼각형이 합동임을 이용하여 각의 크기가 같음을 설명할 수 있다.
+        </div>
+      </div>
+      <div class="choices-grid-5">
+        <span>① ㄱ, ㄴ</span>
+        <span>② ㄴ, ㄷ</span>
+        <span>③ ㄱ, ㄴ, ㄷ</span>
+        <span>④ ㄴ, ㄷ, ㄹ</span>
+        <span>⑤ ㄱ, ㄴ, ㄷ, ㄹ</span>
+      </div>
+    </div>
+
+    <!-- 8번 문항 (1단 전폭 좌우 분할 배치) -->
+    <div class="question-block" style="margin-top: 10px;">
+      <div class="question-body-flex">
+        <div class="question-text-area">
+          <div class="question-prompt">
+            <b>8.</b> 오른쪽 그림과 같이 한 변의 길이가 12 cm인 정사각형 <span class="math">ABCD</span>에서 변 <span class="math">BC</span> 위의 점 <span class="math">E</span>와 변 <span class="math">CD</span> 위의 점 <span class="math">F</span>에 대하여 <span class="math">BE = CF = 5 cm</span>이다. 선분 <span class="math">AE</span>와 선분 <span class="math">BF</span>의 교점을 <span class="math">P</span>라 할 때, 다음 설명 중 옳은 것만을 &lt;보기&gt;에서 있는 대로 고른 것은? (원본 15번 연계)
+          </div>
+          <div class="bogi-box">
+            <div class="bogi-title">&lt; 보 기 &gt;</div>
+            <div>ㄱ. △<span class="math">ABE</span>와 △<span class="math">BCF</span>는 서로 합동이다.</div>
+            <div>ㄴ. 선분 <span class="math">AE</span>와 선분 <span class="math">BF</span>의 길이는 서로 같다.</div>
+            <div>ㄷ. 두 선분 <span class="math">AE</span>와 <span class="math">BF</span>는 서로 수직으로 만난다.</div>
+          </div>
+          <div class="choices-grid-5">
+            <span>① ㄱ</span>
+            <span>② ㄱ, ㄴ</span>
+            <span>③ ㄱ, ㄷ</span>
+            <span>④ ㄴ, ㄷ</span>
+            <span>⑤ ㄱ, ㄴ, ㄷ</span>
+          </div>
+        </div>
+        <div class="question-diagram-area">
+          <svg width="180" height="150" viewBox="0 0 150 130">
+            <!-- 정사각형 ABCD -->
+            <polygon points="20,15 125,15 125,120 20,120" fill="none" stroke="#000" stroke-width="1.8" />
+            <!-- 선분 AE, BF -->
+            <line x1="20" y1="15" x2="62" y2="120" stroke="#000" stroke-width="1.8" />
+            <line x1="20" y1="120" x2="125" y2="78" stroke="#000" stroke-width="1.8" />
+            <!-- 교점 P -->
+            <circle cx="47" cy="83" r="2.5" fill="#000" />
+            <!-- 꼭짓점 텍스트 -->
+            <text x="8" y="17" font-size="11pt" font-family="'Times New Roman', serif" font-weight="bold">A</text>
+            <text x="8" y="127" font-size="11pt" font-family="'Times New Roman', serif" font-weight="bold">B</text>
+            <text x="129" y="127" font-size="11pt" font-family="'Times New Roman', serif" font-weight="bold">C</text>
+            <text x="129" y="17" font-size="11pt" font-family="'Times New Roman', serif" font-weight="bold">D</text>
+            <text x="60" y="132" font-size="10.5pt" font-family="'Times New Roman', serif">E</text>
+            <text x="130" y="82" font-size="10.5pt" font-family="'Times New Roman', serif">F</text>
+            <text x="36" y="84" font-size="10.5pt" font-family="'Times New Roman', serif">P</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>중등 수학 [V. 기본 도형과 작도] 쌍둥이 클리닉 8제 (1단 전폭)</span>
+    <span>- 3 -</span>
+    <span>문제편 (3쪽 / 총 3쪽)</span>
+  </div>
+</div>
+
+<!-- ============================================================== -->
+<!-- PAGE 4: 해설편 (빠른 정답표 및 1, 2, 3번 해설) - 1단 전폭      -->
+<!-- ============================================================== -->
+<div class="page">
+  <div>
+    <div class="header-box" style="padding: 3px 10px; margin-bottom: 5px;">
+      <div class="header-title" style="font-size: 12.5pt; margin-bottom: 1px;">2026학년도 1학년 2학기 중간고사 수학 [V. 기본 도형과 작도]</div>
+      <div class="header-subtitle" style="font-size: 10pt; margin-bottom: 1px;">정답 및 1:1 정밀 오답 클리닉 해설집 (1단 전폭)</div>
+    </div>
+    <div class="section-bar" style="margin-bottom: 7px; padding: 2px 8px;">
+      <span>[정답 및 해설편] 빠른 정답 및 문항 1번 ~ 3번 해설 | 1단 전폭</span>
+      <span>※ 단일 진실 공급원(SSOT) 감수 완료</span>
+    </div>
+
+    <!-- 빠른 정답표 (1단 전폭 테이블) -->
+    <table class="quick-table" style="margin-bottom: 7px;">
+      <tr>
+        <th style="width: 12%;">문항</th><th>1번</th><th>2번</th><th>3번</th><th>4번</th><th>5번</th><th>6번</th><th>7번</th><th>8번</th>
+      </tr>
+      <tr>
+        <td style="font-weight: bold; background-color: #f7f7f7;">정답</td>
+        <td style="font-weight: bold;">②</td>
+        <td style="font-weight: bold;">③</td>
+        <td style="font-weight: bold;">③</td>
+        <td style="font-weight: bold;">②</td>
+        <td style="font-weight: bold;">④</td>
+        <td style="font-weight: bold;">②</td>
+        <td style="font-weight: bold;">⑤</td>
+        <td style="font-weight: bold;">⑤</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="question-container" style="gap: 8px;">
+    <!-- 1번 해설 -->
+    <div class="solution-block">
+      <div class="solution-header">
+        <span>문항 1번 상세 해설 (작도의 기본 도구와 성질)</span>
+        <span>정답: ②번 (ㄴ, ㄷ)</span>
+      </div>
+      <div class="solution-step">
+        <span class="solution-step-title">[개념 분석]</span> 작도(Construction)는 오직 <b>눈금 없는 자</b>와 <b>컴퍼스</b>만을 사용하여 도형을 그리는 것을 뜻합니다.
+      </div>
+      <div class="solution-step">
+        <span class="solution-step-title">[보기 판정]</span><br>
+        • ㄱ: [거짓] 눈금 없는 자에는 눈금이 없으므로 길이를 직접 잴 수 없습니다.<br>
+        • ㄴ: [참] 컴퍼스로 선분의 길이를 재어서 다른 직선 위로 옮깁니다.<br>
+        • ㄷ: [참] 두 점을 잇는 직선이나 선분의 연장선을 그을 때는 눈금 없는 자를 사용합니다.<br>
+        • ㄹ: [거짓] 각도기를 사용하는 것은 작도에 포함되지 않습니다. (각도기 사용 절대 금지)
+      </div>
+      <div class="trap-tip">
+        <b>[오답 탈출 Tip]</b> '각도기', '눈금으로 재기'는 작도 시험의 1순위 오답 함정 선지입니다!
+      </div>
+    </div>
+
+    <!-- 2번 해설 -->
+    <div class="solution-block">
+      <div class="solution-header">
+        <span>문항 2번 상세 해설 (직육면체의 위치 관계)</span>
+        <span>정답: ③번 (8)</span>
+      </div>
+      <div class="solution-step">
+        <span class="solution-step-title">[1단계: 모서리 AB와 꼬인 위치에 있는 모서리 개수 (x)]</span><br>
+        직육면체 모서리 총 12개 중:<br>
+        - 만나는 모서리 (4개): <span class="math">AD, BC, AE, BF</span><br>
+        - 평행한 모서리 (3개): <span class="math">CD, EF, GH</span><br>
+        - 자기 자신 (1개): <span class="math">AB</span><br>
+        따라서 꼬인 위치는 12 - (4 + 3 + 1) = <b>4</b>개 (<span class="math">DH, CG, EH, FG</span>)입니다. ➔ x = 4
+      </div>
+      <div class="solution-step">
+        <span class="solution-step-title">[2단계: 면 ABCD와 평행한 모서리 개수 (y)]</span><br>
+        윗면 <span class="math">ABCD</span>와 만나지 않는 평행 밑면 <span class="math">EFGH</span>의 4개 모서리: <span class="math">EF, FG, GH, HE</span> ➔ y = <b>4</b>개
+      </div>
+      <div class="solution-step">
+        <span class="solution-step-title">[3단계: 계산]</span> <span class="math">x + y = 4 + 4 = </span> <b>8</b>
+      </div>
+      <div class="trap-tip">
+        <b>[오답 탈출 Tip]</b> 꼬인 위치 계산 시 평행한 모서리 3개를 누락 없이 제외해야 합니다.
+      </div>
+    </div>
+
+    <!-- 3번 해설 -->
+    <div class="solution-block">
+      <div class="solution-header">
+        <span>문항 3번 상세 해설 (평행선 사이 꺾인 선의 각도)</span>
+        <span>정답: ③번 (35)</span>
+      </div>
+      <div class="solution-step">
+        <span class="solution-step-title">[1단계: 평행 보조선 긋기]</span><br>
+        두 꺾인 점 <span class="math">P, Q</span>를 지나며 두 직선 <span class="math">l, m</span>에 평행한 보조선을 각각 긋습니다.
+      </div>
+      <div class="solution-step">
+        <span class="solution-step-title">[2단계: 엇각을 이용한 계단식 각도 분할]</span><br>
+        • 점 <span class="math">P</span> 위쪽 각 = 직선 <span class="math">l</span>과의 엇각 = 30°<br>
+        • 점 <span class="math">P</span> 아래쪽 각 = $(3x - 15^\circ) - 30^\circ = 3x - 45^\circ$<br>
+        • 점 <span class="math">Q</span> 위쪽 각 = 점 <span class="math">P</span> 아래쪽 각과의 엇각 = $3x - 45^\circ$<br>
+        • 점 <span class="math">Q</span> 아래쪽 각 = 직선 <span class="math">m</span>과의 엇각 = $x^\circ$
+      </div>
+      <div class="solution-step">
+        <span class="solution-step-title">[3단계: 일차방정식 수립 및 풀이]</span><br>
+        $(3x - 45^\circ) + x^\circ = 95^\circ \implies 4x - 45 = 95 \implies 4x = 140 \implies \mathbf{x = 35}$
+      </div>
+      <div class="trap-tip">
+        <b>[오답 탈출 Tip]</b> $(3x - 15^\circ) - 30^\circ$의 부호 계산 실수에 주의하세요.
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>중등 수학 [V. 기본 도형과 작도] 쌍둥이 클리닉 8제 (1단 전폭)</span>
+    <span>- 4 -</span>
+    <span>해설편 (1쪽 / 총 3쪽)</span>
+  </div>
+</div>
+
+<!-- ============================================================== -->
+<!-- PAGE 5: 해설편 (4번, 5번, 6번 해설) - 1단 전폭                  -->
+<!-- ============================================================== -->
+<div class="page">
+  <div>
+    <div class="section-bar" style="margin-bottom: 7px; padding: 2px 8px;">
+      <span>[정답 및 해설편] 문항 4번 ~ 6번 상세 해설 | 1단 전폭</span>
+      <span>※ 취약 개념 완전 극복 및 실전 1등급 완성</span>
+    </div>
+  </div>
+
+  <div class="question-container" style="gap: 8px;">
+    <!-- 4번 해설 -->
+    <div class="solution-block">
+      <div class="solution-header">
+        <span>문항 4번 상세 해설 (삼각형이 오직 하나로 정해질 조건)</span>
+        <span>정답: ②번 (ㄴ, ㅁ)</span>
+      </div>
+      <div class="solution-step">
+        <span class="solution-step-title">[보기별 정밀 판정]</span><br>
+        • ㄱ: [거짓] $5 + 6 = 11 < 12$ 이므로 가장 긴 변이 나머지 두 변의 합보다 커서 삼각형 자체가 성립하지 않습니다.<br>
+        • ㄴ: [참] 두 변 <span class="math">AB, AC</span>와 그 <b>끼인각 ∠<span class="math">A</span></b>가 주어졌으므로 오직 하나로 정해집니다 (SAS 조건).<br>
+        • ㄷ: [거짓 - 킬러 함정] 두 변 <span class="math">AB, BC</span>의 끼인각은 공통 꼭짓점인 ∠<span class="math">B</span>여야 합니다. 주어진 각이 ∠<span class="math">A</span>이므로 점 <span class="math">C</span>가 2개 생겨 오직 하나로 결정되지 않습니다!<br>
+        • ㄹ: [거짓] 세 각의 크기만 주어지면 크기가 다른 삼각형이 무수히 많이 만들어집니다.<br>
+        • ㅁ: [참] ∠<span class="math">C</span> = 180° - (40° + 65°) = 75°이므로, 한 변 <span class="math">BC</span>와 그 양 끝 각 ∠<span class="math">B</span>, ∠<span class="math">C</span>가 확정되어 오직 하나로 정해집니다 (ASA 조건).
+      </div>
+      <div class="trap-tip">
+        <b>[오답 탈출 Tip]</b> 두 변이 주어졌을 때는 선분 알파벳의 공통 문자가 각의 이름과 일치하는지 반드시 확인하세요!
+      </div>
+    </div>
+
+    <!-- 5번 해설 -->
+    <div class="solution-block">
+      <div class="solution-header">
+        <span>문항 5번 상세 해설 (직선과 선분의 개수 구하기)</span>
+        <span>정답: ④번 (18)</span>
+      </div>
+      <div class="solution-step">
+        <span class="solution-step-title">[1단계: 서로 다른 직선의 개수 (x)]</span><br>
+        • 직선 <span class="math">l</span> 위의 세 점 <span class="math">A, B, C</span>로 만드는 직선: 직선 <span class="math">l</span> 자체 ➔ <b>1</b>개<br>
+        • 직선 밖 두 점 <span class="math">P, Q</span>를 잇는 직선: 직선 <span class="math">PQ</span> ➔ <b>1</b>개<br>
+        • 점 <span class="math">P</span>와 직선 <span class="math">l</span> 위의 점 3개를 잇는 직선: <span class="math">PA, PB, PC</span> ➔ <b>3</b>개<br>
+        • 점 <span class="math">Q</span>와 직선 <span class="math">l</span> 위의 점 3개를 잇는 직선: <span class="math">QA, QB, QC</span> ➔ <b>3</b>개<br>
+        따라서 서로 다른 직선의 총 개수는 x = 1 + 1 + 3 + 3 = <b>8</b>개입니다.
+      </div>
+      <div class="solution-step">
+        <span class="solution-step-title">[2단계: 서로 다른 선분의 개수 (y)]</span><br>
+        선분은 양 끝점이 다르면 모두 다른 선분이므로, 5개의 점 중 2개를 택하는 모든 조합의 수:<br>
+        y = (5 × 4) / 2 = <b>10</b>개
+      </div>
+      <div class="solution-step">
+        <span class="solution-step-title">[3단계: 계산]</span> <span class="math">x + y = 8 + 10 = </span> <b>18</b>
+      </div>
+      <div class="trap-tip">
+        <b>[오답 탈출 Tip]</b> 직선 <span class="math">l</span> 자체(1개)와 두 외부점을 잇는 직선 <span class="math">PQ</span>(1개)를 절대 누락하지 마세요!
+      </div>
+    </div>
+
+    <!-- 6번 해설 -->
+    <div class="solution-block">
+      <div class="solution-header">
+        <span>문항 6번 상세 해설 (공간에서 위치 관계 참·거짓 명제)</span>
+        <span>정답: ②번 (ㄱ, ㄴ)</span>
+      </div>
+      <div class="solution-step">
+        <span class="solution-step-title">[직육면체 모형을 이용한 정밀 판정]</span><br>
+        • ㄱ: [참] 한 평면에 수직인 서로 다른 두 직선은 평행합니다. (직육면체 바닥면에 서 있는 높이 모서리들)<br>
+        • ㄴ: [참] 평행선 추이성은 공간에서도 항상 성립합니다.<br>
+        • ㄷ: [거짓] 바닥면 <span class="math">P</span>에 수직인 높이 모서리 <span class="math">l</span>은 옆면 <span class="math">Q</span>에 <b>포함</b>될 수 있으므로 항상 평행한 것은 아닙니다.<br>
+        • ㄹ: [거짓 - 대표 함정!] 높이 모서리 <span class="math">l</span>에 수직인 가로 모서리 <span class="math">m</span>과 세로 모서리 <span class="math">n</span>은 서로 평행한 것이 아니라 직교(<span class="math">m ⊥ n</span>)합니다.
+      </div>
+      <div class="trap-tip">
+        <b>[오답 탈출 Tip]</b> 공간 위치 관계 문제는 머리로 상상하지 말고 직육면체를 그려 모서리를 직접 대입하세요!
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>중등 수학 [V. 기본 도형과 작도] 쌍둥이 클리닉 8제 (1단 전폭)</span>
+    <span>- 5 -</span>
+    <span>해설편 (2쪽 / 총 3쪽)</span>
+  </div>
+</div>
+
+<!-- ============================================================== -->
+<!-- PAGE 6: 해설편 (7번, 8번 해설) - 1단 전폭                      -->
+<!-- ============================================================== -->
+<div class="page">
+  <div>
+    <div class="section-bar" style="margin-bottom: 7px; padding: 2px 8px;">
+      <span>[정답 및 해설편] 문항 7번 ~ 8번 상세 해설 | 1단 전폭</span>
+      <span>※ 작도와 합동 최종 완벽 정리 (끝)</span>
+    </div>
+  </div>
+
+  <div class="question-container" style="gap: 8px;">
+    <!-- 7번 해설 -->
+    <div class="solution-block">
+      <div class="solution-header">
+        <span>문항 7번 상세 해설 (크기가 같은 각의 작도 원리)</span>
+        <span>정답: ⑤번 (ㄱ, ㄴ, ㄷ, ㄹ)</span>
+      </div>
+      <div class="solution-step">
+        <span class="solution-step-title">[1단계: 작도 순서 검증]</span><br>
+        점 O 중심 호(㉠) ➔ 점 A 중심 호(㉣) ➔ 선분 CD 길이 재기(㉡) ➔ 점 P 중심 호(㉤) ➔ 반직선 AQ 긋기(㉢)<br>
+        따라서 가장 마지막에 수행하는 작도 과정은 ㉢이 맞습니다. (ㄱ 참)
+      </div>
+      <div class="solution-step">
+        <span class="solution-step-title">[2단계: 선분의 길이 관계 판정]</span><br>
+        • 점 O와 점 A에서 같은 반지름으로 컴퍼스를 벌려 그렸으므로 <span class="math">OC = OD = AP = AQ</span>가 성립합니다. (ㄴ 참)<br>
+        • 컴퍼스로 선분 <span class="math">CD</span>의 길이를 재어 점 P에서 원호를 그려 교점 Q를 잡았으므로 <span class="math">CD = PQ</span>입니다. (ㄷ 참)
+      </div>
+      <div class="solution-step">
+        <span class="solution-step-title">[3단계: 이용된 합동 원리]</span><br>
+        △<span class="math">OCD</span>와 △<span class="math">APQ</span>에서 세 대응변의 길이가 각각 같으므로 SSS 합동에 의해 ∠<span class="math">XOY</span> = ∠<span class="math">PAQ</span>가 성립합니다. (ㄹ 참)
+      </div>
+      <div class="trap-tip">
+        <b>[오답 탈출 Tip]</b> <span class="math">CD = PQ</span> 및 SSS 합동 원리를 놓치지 말고 끝까지 꼼꼼히 확인하세요!
+      </div>
+    </div>
+
+    <!-- 8번 해설 -->
+    <div class="solution-block">
+      <div class="solution-header">
+        <span>문항 8번 상세 해설 (정사각형 내부 직각삼각형 합동)</span>
+        <span>정답: ⑤번 (ㄱ, ㄴ, ㄷ)</span>
+      </div>
+      <div class="solution-step">
+        <span class="solution-step-title">[1단계: △ABE 와 △BCF 의 합동 증명 (ㄱ 참)]</span><br>
+        정사각형이므로 <span class="math">AB = BC = 12 cm</span>, ∠<span class="math">B</span> = ∠<span class="math">C</span> = 90°이고, 조건에서 <span class="math">BE = CF = 5 cm</span>입니다.<br>
+        두 변의 길이와 그 끼인각이 각각 같으므로 △<span class="math">ABE</span> ≡ △<span class="math">BCF</span> (SAS 합동)입니다.
+      </div>
+      <div class="solution-step">
+        <span class="solution-step-title">[2단계: 대응변의 길이 (ㄴ 참)]</span><br>
+        합동인 두 삼각형의 대응변의 길이는 서로 같으므로 선분 <span class="math">AE</span>와 선분 <span class="math">BF</span>의 길이는 같습니다 (<span class="math">AE = BF</span>).
+      </div>
+      <div class="solution-step">
+        <span class="solution-step-title">[3단계: 두 선분의 수직 교차 증명 (ㄷ 참)]</span><br>
+        직각삼각형 <span class="math">ABE</span>에서 ∠<span class="math">BAE</span> = •, ∠<span class="math">AEB</span> = ×라 하면 • + × = 90°입니다.<br>
+        합동에 의해 ∠<span class="math">CBF</span> = ∠<span class="math">BAE</span> = •이므로, 교점 <span class="math">P</span>를 포함하는 △<span class="math">PBE</span>에서:<br>
+        ∠<span class="math">BPE</span> = 180° - (∠<span class="math">PBE</span> + ∠<span class="math">PEB</span>) = 180° - (• + ×) = 180° - 90° = 90° ➔ <span class="math">AE ⊥ BF</span>
+      </div>
+      <div class="trap-tip">
+        <b>[오답 탈출 Tip]</b> 합동을 증명했다면 대응변의 길이(<span class="math">AE = BF</span>)는 당연히 참으로 체크해야 합니다!
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>중등 수학 [V. 기본 도형과 작도] 쌍둥이 클리닉 8제 (1단 전폭)</span>
+    <span>- 6 -</span>
+    <span>해설편 (3쪽 / 총 3쪽) (끝)</span>
+  </div>
+</div>
+
+</body>
+</html>

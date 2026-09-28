@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>[교과서 핵심 요약] 4. 좌표평면과 그래프 (교과서 p.110~135) [v1]</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 4.2mm 7.2mm 4.2mm 7.2mm;
+    @bottom-center {
+      content: "- " counter(page) " -";
+      font-size: 10pt;
+      font-family: 'Malgun Gothic', sans-serif;
+      color: #000;
+    }
+  }
+  * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body {
+    font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+    color: #000;
+    line-height: 1.52;
+    letter-spacing: -0.18px;
+    font-size: 10pt;
+    margin: 0; padding: 0;
+    background: #fff;
+  }
+  .math { font-family: 'Times New Roman', 'Cambria Math', serif; font-style: italic; }
+  .frac { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; padding: 0 1px; line-height: 1.02; font-size: 0.95em; }
+  .frac-top { border-bottom: 1.2px solid #000; padding: 0 1px 1px 1px; }
+  .frac-bottom { padding: 1px 1px 0 1px; }
+
+  /* 표제부 */
+  .header-box { border: 1.8px solid #000; padding: 2.5px 7px; margin-bottom: 3px; }
+  .header-title { font-size: 12pt; font-weight: bold; text-align: center; margin: 0 0 1.5px 0; }
+  .header-info-table { width: 100%; border-collapse: collapse; font-size: 10pt; margin-top: 1px; }
+  .header-info-table td { border: 1px solid #444; padding: 1.2px 3.5px; text-align: center; background-color: #f7f7f7; line-height: 1.35; }
+  .header-info-table td.label { font-weight: bold; background-color: #eaeaea; width: 14%; }
+
+  .intro-box { border: 1.1px solid #333; background-color: #f9f9f9; padding: 2px 6px; margin-bottom: 3px; font-size: 10pt; line-height: 1.48; }
+  .section-title { background-color: #000; color: #fff; font-size: 10pt; font-weight: bold; padding: 1.5px 6px; margin: 2.5px 0 2px 0; border-radius: 2px; break-after: avoid; }
+  
+  .card-box { border: 1px solid #444; background-color: #fafafa; padding: 2px 5px; margin-bottom: 2.5px; font-size: 10pt; line-height: 1.50; break-inside: avoid; }
+  .grid-table { width: 100%; border-collapse: collapse; margin-bottom: 2.5px; }
+  .grid-table td { border: 1px solid #444; padding: 2px 4px; vertical-align: top; background-color: #fff; font-size: 10pt; line-height: 1.48; }
+  
+  .card-head { font-weight: bold; font-size: 10pt; background-color: #eaeaea; border-left: 3.5px solid #000; padding: 0.8px 4px; margin-bottom: 1.5px; }
+
+  .badge-frequent { display: inline-block; background-color: #000; color: #fff; font-size: 10pt; font-weight: bold; padding: 0.5px 3px; border-radius: 2px; margin-right: 2px; vertical-align: middle; }
+  .badge-trap { display: inline-block; border: 1.2px solid #000; background-color: #fff; color: #000; font-size: 10pt; font-weight: bold; padding: 0.5px 2.5px; border-radius: 2px; margin-right: 2px; vertical-align: middle; }
+  .badge-formula { display: inline-block; background-color: #222; color: #fff; font-size: 10pt; font-weight: bold; padding: 0.5px 3px; border-radius: 2px; margin-right: 2px; vertical-align: middle; }
+  .badge-tip { display: inline-block; background-color: #eaeaea; border: 1px solid #333; color: #000; font-size: 10pt; font-weight: bold; padding: 0.5px 2.5px; border-radius: 2px; margin-right: 2px; vertical-align: middle; }
+
+  .formula-box { border: 1.3px solid #000; background-color: #f7f7f7; padding: 1.5px 3px; margin: 1.5px 0; font-size: 10pt; line-height: 1.45; text-align: center; }
+  .fig-container { text-align: center; background-color: #fff; padding: 1px; }
+
+  .summary-table { width: 100%; border-collapse: collapse; margin-bottom: 2px; }
+  .summary-table th { border: 1px solid #000; background-color: #222; color: #fff; padding: 1.2px 2.5px; font-size: 10pt; text-align: center; }
+  .summary-table td { border: 1px solid #444; background-color: #fff; padding: 1px 3.5px; vertical-align: middle; font-size: 10pt; line-height: 1.38; }
+
+  .page-break { page-break-after: always; break-after: page; }
+</style>
+</head>
+<body>
+
+  <!-- ================= PAGE 1 ================= -->
+  <div class="page-container">
+    <div class="header-box">
+      <div class="header-title">[중1 2학기 중간대비] 교과서 핵심 요약집 — 4. 좌표평면과 그래프 (p.110~135)</div>
+      <table class="header-info-table">
+        <tr>
+          <td class="label">교과서 출처</td>
+          <td>2022 개정 중학 수학 1 (동아출판 박교식 외) • 4단원 4.1 ~ 4.4 (p.110~135)</td>
+          <td class="label">조판 규격</td>
+          <td>100% 흑백 벡터 다이어그램 • 최소 10pt 이상 2쪽 완결판</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="intro-box">
+      <b>[단원 성취 기준]</b> 순서쌍과 좌표를 이해하고 좌표평면 위에 점을 나타낼 수 있으며, 다양한 상황을 그래프로 표현하고 해석할 수 있다. 정비례·반비례 관계를 이해하고 식과 그래프로 능숙하게 변환한다.
+    </div>
+
+    <!-- 1. 순서쌍과 좌표 -->
+    <div class="section-title">1. 순서쌍과 좌표평면 (4.1 / 교과서 p.110~113)</div>
+
+    <table class="grid-table">
+      <tr>
+        <td style="width: 53%;">
+          <div class="card-head">1) 좌표와 순서쌍의 정의</div>
+          • <b>수직선 위의 좌표</b>: 수직선 위 점에 대응하는 수 ➔ <span class="math">P(a)</span>, 원점 <span class="math">O(0)</span><br>
+          • <b>순서쌍(Ordered Pair)</b>: 두 수의 순서를 정하여 짝 지어 나타낸 것 <span class="math">(a, b)</span><br>
+          &nbsp;&nbsp;<span class="badge-trap">[함정]</span> 순서가 바뀌면 다른 점임: <span class="math">(a, b) &ne; (b, a)</span> (단, <span class="math">a=b</span> 제외)<br>
+          • <b>좌표평면</b>: 두 수직선이 점 <span class="math">O</span>에서 서로 수직으로 만나는 평면<br>
+          &nbsp;&nbsp;- <b><span class="math">x</span>축</b>(가로) + <b><span class="math">y</span>축</b>(세로) = <b>좌표축</b>, 만나는 점 = <b>원점 <span class="math">O(0, 0)</span></b><br>
+          &nbsp;&nbsp;- 점 <span class="math">P</span>의 좌표: <span class="math">x</span>축 수선 <span class="math">a</span>, <span class="math">y</span>축 수선 <span class="math">b</span> ➔ <b><span class="math">P(a, b)</span></b><br>
+          • <span class="badge-trap">[함정]</span> <b>좌표축 위의 점</b>: <span class="math">x</span>축 위의 점은 <b><span class="math">(a, 0)</span></b> (<span class="math">y=0</span>), <span class="math">y</span>축 위의 점은 <b><span class="math">(0, b)</span></b> (<span class="math">x=0</span>)
+        </td>
+        <td style="width: 47%;">
+          <div class="card-head">2) 사분면과 대칭점 공식</div>
+          • <b>사분면(Quadrant) 부호 체계</b>:
+          <table style="width: 100%; border-collapse: collapse; font-size: 10pt; text-align: center; margin: 1px 0;">
+            <tr style="background-color: #eee;">
+              <td style="border: 1px solid #444; width: 25%;"><b>제1사분면</b></td>
+              <td style="border: 1px solid #444; width: 25%;"><b>제2사분면</b></td>
+              <td style="border: 1px solid #444; width: 25%;"><b>제3사분면</b></td>
+              <td style="border: 1px solid #444; width: 25%;"><b>제4사분면</b></td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #444;"><b>(+, +)</b></td>
+              <td style="border: 1px solid #444;"><b>(-, +)</b></td>
+              <td style="border: 1px solid #444;"><b>(-, -)</b></td>
+              <td style="border: 1px solid #444;"><b>(+, -)</b></td>
+            </tr>
+          </table>
+          • <span class="badge-trap">[함정]</span> <b>"좌표축(<span class="math">x</span>축, <span class="math">y</span>축) 위의 점은 어느 사분면에도 속하지 않는다."</b><br>
+          • <b>대칭인 점의 좌표</b>: 점 <span class="math">P(a, b)</span>에 대하여<br>
+          &nbsp;&nbsp;① <b><span class="math">x</span>축 대칭</b> ➔ <span class="math">y</span>부호 반대: <b><span class="math">(a, -b)</span></b><br>
+          &nbsp;&nbsp;② <b><span class="math">y</span>축 대칭</b> ➔ <span class="math">x</span>부호 반대: <b><span class="math">(-a, b)</span></b><br>
+          &nbsp;&nbsp;③ <b>원점 대칭</b> ➔ 둘 다 부호 반대: <b><span class="math">(-a, -b)</span></b>
+        </td>
+      </tr>
+    </table>
+
+    <!-- 벡터 다이어그램 1: 좌표평면 및 사분면 & 대칭점 -->
+    <div class="card-box" style="padding: 1.5px 3px;">
+      <div class="fig-container">
+        <svg width="680" height="88" viewBox="0 0 680 88" style="display:inline-block; vertical-align:middle;">
+          <!-- Left: 사분면 체계 -->
+          <g transform="translate(10, 0)">
+            <line x1="20" y1="44" x2="190" y2="44" stroke="#000" stroke-width="1.3" />
+            <polygon points="190,44 184,41 184,47" fill="#000" />
+            <line x1="105" y1="82" x2="105" y2="6" stroke="#000" stroke-width="1.3" />
+            <polygon points="105,6 102,12 108,12" fill="#000" />
+            <text x="186" y="40" font-size="10pt" font-weight="bold" font-family="'Times New Roman', serif">x</text>
+            <text x="110" y="12" font-size="10pt" font-weight="bold" font-family="'Times New Roman', serif">y</text>
+            <text x="96" y="56" font-size="10pt" font-weight="bold">O</text>
+            <!-- 사분면 텍스트 -->
+            <rect x="112" y="10" width="70" height="26" fill="#f5f5f5" stroke="#666" stroke-dasharray="2,2" rx="2" />
+            <text x="147" y="22" font-size="10pt" font-weight="bold" text-anchor="middle">제1사분면</text>
+            <text x="147" y="33" font-size="10pt" text-anchor="middle">(+, +)</text>
+            
+            <rect x="26" y="10" width="70" height="26" fill="#f5f5f5" stroke="#666" stroke-dasharray="2,2" rx="2" />
+            <text x="61" y="22" font-size="10pt" font-weight="bold" text-anchor="middle">제2사분면</text>
+            <text x="61" y="33" font-size="10pt" text-anchor="middle">(-, +)</text>
+
+            <rect x="26" y="50" width="70" height="26" fill="#f5f5f5" stroke="#666" stroke-dasharray="2,2" rx="2" />
+            <text x="61" y="62" font-size="10pt" font-weight="bold" text-anchor="middle">제3사분면</text>
+            <text x="61" y="73" font-size="10pt" text-anchor="middle">(-, -)</text>
+
+            <rect x="112" y="50" width="70" height="26" fill="#f5f5f5" stroke="#666" stroke-dasharray="2,2" rx="2" />
+            <text x="147" y="62" font-size="10pt" font-weight="bold" text-anchor="middle">제4사분면</text>
+            <text x="147" y="73" font-size="10pt" text-anchor="middle">(+, -)</text>
+          </g>
+
+          <!-- Middle Divider -->
+          <line x1="225" y1="6" x2="225" y2="82" stroke="#999" stroke-dasharray="3,3" />
+
+          <!-- Right: 대칭점 다이어그램 & 축 위의 점 -->
+          <g transform="translate(245, 0)">
+            <line x1="20" y1="44" x2="220" y2="44" stroke="#000" stroke-width="1.3" />
+            <polygon points="220,44 214,41 214,47" fill="#000" />
+            <line x1="120" y1="82" x2="120" y2="6" stroke="#000" stroke-width="1.3" />
+            <polygon points="120,6 117,12 123,12" fill="#000" />
+            <text x="216" y="40" font-size="10pt" font-weight="bold" font-family="'Times New Roman', serif">x</text>
+            <text x="125" y="12" font-size="10pt" font-weight="bold" font-family="'Times New Roman', serif">y</text>
+            <text x="111" y="56" font-size="10pt" font-weight="bold">O</text>
+
+            <rect x="60" y="18" width="120" height="52" fill="none" stroke="#777" stroke-dasharray="2,2" />
+            <line x1="60" y1="70" x2="180" y2="18" stroke="#aaa" stroke-dasharray="2,2" />
+
+            <circle cx="180" cy="18" r="3" fill="#000" />
+            <text x="185" y="16" font-size="10pt" font-weight="bold">P(a, b)</text>
+
+            <circle cx="180" cy="70" r="3" fill="#000" />
+            <text x="185" y="78" font-size="10pt">x축 대칭 (a, -b)</text>
+
+            <circle cx="60" cy="18" r="3" fill="#000" />
+            <text x="5" y="16" font-size="10pt">y축 대칭 (-a, b)</text>
+
+            <circle cx="60" cy="70" r="3" fill="#000" />
+            <text x="5" y="78" font-size="10pt">원점 대칭 (-a, -b)</text>
+          </g>
+
+          <!-- Far Right: 핵심 박스 -->
+          <g transform="translate(505, 6)">
+            <rect x="0" y="0" width="165" height="74" fill="#f7f7f7" stroke="#333" stroke-width="1.2" rx="3" />
+            <text x="82" y="17" font-size="10pt" font-weight="bold" text-anchor="middle">[핵심 판별 팁]</text>
+            <text x="10" y="33" font-size="10pt">• x축 위 점: y=0 ➔ (a, 0)</text>
+            <text x="10" y="49" font-size="10pt">• y축 위 점: x=0 ➔ (0, b)</text>
+            <text x="10" y="65" font-size="10pt">• 축 위 점은 사분면 X</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <!-- 2. 그래프의 뜻과 표현 -->
+    <div class="section-title">2. 그래프의 뜻과 다양한 상황 표현 (4.2 / 교과서 p.114~119)</div>
+
+    <table class="grid-table">
+      <tr>
+        <td style="width: 50%;">
+          <div class="card-head">1) 변수와 그래프의 해석 기본</div>
+          • <b>변수(Variable)</b>: 여러 가지로 변하는 값을 나타내는 문자 (<span class="math">x, y</span>)<br>
+          • <b>그래프(Graph)</b>: 변화와 상태를 한눈에 알아볼 수 있도록 좌표평면 위에 점, 직선, 곡선 등으로 나타낸 그림<br>
+          • <b>그래프 모양의 의미</b>:
+          <table style="width: 100%; border-collapse: collapse; font-size: 10pt; margin-top: 1.5px;">
+            <tr>
+              <td style="border: 1px solid #666; background-color: #eee; width: 22%; text-align: center; font-weight: bold;">우상향</td>
+              <td style="border: 1px solid #666; padding-left: 4px;">시간이 지남에 따라 값이 <b>증가</b></td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #666; background-color: #eee; text-align: center; font-weight: bold;">수평선</td>
+              <td style="border: 1px solid #666; padding-left: 4px;">값의 <b>변화 없음</b> (정지, 머무름, 유지)</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #666; background-color: #eee; text-align: center; font-weight: bold;">우하향</td>
+              <td style="border: 1px solid #666; padding-left: 4px;">시간이 지남에 따라 값이 <b>감소</b></td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #666; background-color: #eee; text-align: center; font-weight: bold;">기울기</td>
+              <td style="border: 1px solid #666; padding-left: 4px;"><b>가파를수록</b> 빠른 변화, <b>완만할수록</b> 느린 변화</td>
+            </tr>
+          </table>
+        </td>
+        <td style="width: 50%;">
+          <div class="card-head">2) 실생활 비교·반복 모델 (p.116~119)</div>
+          • <span class="badge-frequent">[빈출]</span> <b>거리-시간 그래프 완벽 독해</b>:
+          <table style="width: 100%; border-collapse: collapse; font-size: 10pt; margin-top: 1.5px;">
+            <tr>
+              <td style="border: 1px solid #666; background-color: #eee; width: 28%; text-align: center; font-weight: bold;">두 그래프 교점</td>
+              <td style="border: 1px solid #666; padding-left: 4px;"><b>같은 시각에 같은 위치에서 만남</b></td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #666; background-color: #eee; text-align: center; font-weight: bold;">수평 구간</td>
+              <td style="border: 1px solid #666; padding-left: 4px;">거리 변화 없음 ➔ <b>휴식(정지) 시간</b></td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #666; background-color: #eee; text-align: center; font-weight: bold;">결승선 도달</td>
+              <td style="border: 1px solid #666; padding-left: 4px;">먼저 목표 거리에 닿은 사람이 승리</td>
+            </tr>
+          </table>
+          • <b>주기적 반복 그래프</b> (바이올린 음파, 회전목마, 조석 간만):<br>
+          &nbsp;&nbsp;- 최댓값·최솟값 파악 및 1회 반복 주기 시간 측정
+        </td>
+      </tr>
+    </table>
+
+    <!-- 벡터 다이어그램 2: 물통 모양과 높이 그래프 4대 모델 -->
+    <div class="card-box" style="padding: 1.5px 3px;">
+      <div class="card-head"><span class="badge-trap">[함정/빈출]</span> 물통 모양에 따른 시간에 따른 수면 높이 변화 4대 모델 (p.115 문제 2)</div>
+      <div class="fig-container">
+        <svg width="680" height="92" viewBox="0 0 680 92" style="display:inline-block; vertical-align:middle;">
+          <!-- Model 1: 직육면체/원기둥 (폭 일정) -->
+          <g transform="translate(10, 0)">
+            <rect x="5" y="8" width="30" height="42" fill="#f2f2f2" stroke="#000" stroke-width="1.3" />
+            <text x="20" y="62" font-size="10pt" text-anchor="middle" font-weight="bold">폭 일정</text>
+            <line x1="50" y1="50" x2="135" y2="50" stroke="#000" stroke-width="1.2" />
+            <line x1="50" y1="50" x2="50" y2="8" stroke="#000" stroke-width="1.2" />
+            <line x1="50" y1="50" x2="130" y2="12" stroke="#000" stroke-width="1.8" />
+            <text x="138" y="53" font-size="10pt">t</text>
+            <text x="47" y="6" font-size="10pt">h</text>
+            <text x="92" y="68" font-size="10pt" text-anchor="middle" font-weight="bold">① 일정한 직선</text>
+            <text x="92" y="81" font-size="10pt" text-anchor="middle">일정 속도 상승</text>
+          </g>
+
+          <!-- Model 2: 위로 갈수록 넓어짐 -->
+          <g transform="translate(175, 0)">
+            <polygon points="5,8 35,8 28,50 12,50" fill="#f2f2f2" stroke="#000" stroke-width="1.3" />
+            <text x="20" y="62" font-size="10pt" text-anchor="middle" font-weight="bold">위로 넓어짐</text>
+            <line x1="50" y1="50" x2="135" y2="50" stroke="#000" stroke-width="1.2" />
+            <line x1="50" y1="50" x2="50" y2="8" stroke="#000" stroke-width="1.2" />
+            <path d="M 50,50 Q 80,16 130,12" fill="none" stroke="#000" stroke-width="1.8" />
+            <text x="138" y="53" font-size="10pt">t</text>
+            <text x="47" y="6" font-size="10pt">h</text>
+            <text x="92" y="68" font-size="10pt" text-anchor="middle" font-weight="bold">② 위로 볼록 곡선</text>
+            <text x="92" y="81" font-size="10pt" text-anchor="middle">점점 완만하게 상승</text>
+          </g>
+
+          <!-- Model 3: 위로 갈수록 좁아짐 -->
+          <g transform="translate(340, 0)">
+            <polygon points="12,8 28,8 35,50 5,50" fill="#f2f2f2" stroke="#000" stroke-width="1.3" />
+            <text x="20" y="62" font-size="10pt" text-anchor="middle" font-weight="bold">위로 좁아짐</text>
+            <line x1="50" y1="50" x2="135" y2="50" stroke="#000" stroke-width="1.2" />
+            <line x1="50" y1="50" x2="50" y2="8" stroke="#000" stroke-width="1.2" />
+            <path d="M 50,50 Q 100,46 130,12" fill="none" stroke="#000" stroke-width="1.8" />
+            <text x="138" y="53" font-size="10pt">t</text>
+            <text x="47" y="6" font-size="10pt">h</text>
+            <text x="92" y="68" font-size="10pt" text-anchor="middle" font-weight="bold">③ 아래로 볼록 곡선</text>
+            <text x="92" y="81" font-size="10pt" text-anchor="middle">점점 빠르게 급상승</text>
+          </g>
+
+          <!-- Model 4: 2단 계단형 물통 -->
+          <g transform="translate(505, 0)">
+            <polygon points="7,8 33,8 33,30 26,30 26,50 14,50 14,30 7,30" fill="#f2f2f2" stroke="#000" stroke-width="1.3" />
+            <text x="20" y="62" font-size="10pt" text-anchor="middle" font-weight="bold">아래좁고 위넓음</text>
+            <line x1="50" y1="50" x2="135" y2="50" stroke="#000" stroke-width="1.2" />
+            <line x1="50" y1="50" x2="50" y2="8" stroke="#000" stroke-width="1.2" />
+            <line x1="50" y1="50" x2="85" y2="26" stroke="#000" stroke-width="1.8" />
+            <line x1="85" y1="26" x2="130" y2="12" stroke="#000" stroke-width="1.8" />
+            <circle cx="85" cy="26" r="2" fill="#000" />
+            <text x="138" y="53" font-size="10pt">t</text>
+            <text x="47" y="6" font-size="10pt">h</text>
+            <text x="92" y="68" font-size="10pt" text-anchor="middle" font-weight="bold">④ 꺾인 두 직선</text>
+            <text x="92" y="81" font-size="10pt" text-anchor="middle">가파름 ➔ 완만함</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- ================= PAGE 2 ================= -->
+  <div class="page-container">
+    <!-- 3. 정비례와 그 그래프 -->
+    <div class="section-title">3. 정비례와 그 그래프 (4.3 / 교과서 p.120~125)</div>
+
+    <table class="grid-table">
+      <tr>
+        <td style="width: 48%;">
+          <div class="card-head">1) 정비례의 뜻과 관계식</div>
+          • <b>정비례(Direct Proportion)</b>: <span class="math">x</span>의 값이 2배, 3배, 4배, … 변함에 따라 <span class="math">y</span>의 값도 <b>2배, 3배, 4배, …</b> 변하는 관계<br>
+          • <b>정비례 관계식</b>: <span class="badge-formula"><b><span class="math">y = ax</span> (<span class="math">a &ne; 0</span>)</b></span> ➔ <span class="badge-tip">변형</span> <b><span class="frac"><span class="frac-top"><span class="math">y</span></span><span class="frac-bottom"><span class="math">x</span></span></span> = <span class="math">a</span></b> (비율 일정)<br>
+          • <span class="badge-trap">[함정]</span> <span class="math">y = ax + b</span> (<span class="math">b &ne; 0</span>)는 정비례가 아님! (예: <span class="math">y = 2x + 1</span> X)<br>
+          • <b>그래프 그리기 팁</b>: 원점 <span class="math">(0, 0)</span>과 다른 한 점 <span class="math">(1, a)</span>을 직선으로 연결
+        </td>
+        <td style="width: 52%;">
+          <div class="card-head">2) <span class="math">y = ax</span> (<span class="math">a &ne; 0</span>) 그래프의 핵심 성질</div>
+          • <b>기본 모양</b>: 반드시 <b>원점 <span class="math">O(0, 0)</span>을 지나는 직선</b><br>
+          • <b>부호 <span class="math">a</span>에 따른 방향과 지나는 사분면</b>:
+          <table style="width: 100%; border-collapse: collapse; font-size: 10pt; margin: 1.5px 0;">
+            <tr style="background-color: #eee;">
+              <td style="border: 1px solid #444; width: 18%; text-align: center; font-weight: bold;"><span class="math">a > 0</span></td>
+              <td style="border: 1px solid #444; padding-left: 3px;"><b>제1, 3사분면</b> 지남 | <b>오른쪽 위</b>를 향함 | <span class="math">x &uarr; &rArr; y &uarr;</span> (증가)</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #444; width: 18%; text-align: center; font-weight: bold;"><span class="math">a < 0</span></td>
+              <td style="border: 1px solid #444; padding-left: 3px;"><b>제2, 4사분면</b> 지남 | <b>오른쪽 아래</b>를 향함 | <span class="math">x &uarr; &rArr; y &darr;</span> (감소)</td>
+            </tr>
+          </table>
+          • <span class="badge-frequent">[빈출]</span> <b>절댓값의 의미</b>: <b><span class="math">|a|</span>의 값이 클수록 <span class="math">y</span>축에 더 가깝다</b> (가파름)
+        </td>
+      </tr>
+    </table>
+
+    <!-- 4. 반비례와 그 그래프 -->
+    <div class="section-title">4. 반비례와 그 그래프 (4.4 / 교과서 p.126~131)</div>
+
+    <table class="grid-table">
+      <tr>
+        <td style="width: 48%;">
+          <div class="card-head">1) 반비례의 뜻과 관계식</div>
+          • <b>반비례(Inverse Proportion)</b>: <span class="math">x</span>의 값이 2배, 3배, 4배, … 변함에 따라 <span class="math">y</span>의 값은 <b><span class="frac"><span class="frac-top">1</span><span class="frac-bottom">2</span></span>배, <span class="frac"><span class="frac-top">1</span><span class="frac-bottom">3</span></span>배, <span class="frac"><span class="frac-top">1</span><span class="frac-bottom">4</span></span>배, …</b> 변하는 관계<br>
+          • <b>반비례 관계식</b>: <span class="badge-formula"><b><span class="math">y = <span class="frac"><span class="frac-top">a</span><span class="frac-bottom">x</span></span></span> (<span class="math">a &ne; 0</span>)</b></span> ➔ <span class="badge-tip">변형</span> <b><span class="math">x &times; y = a</span></b> (곱 일정)<br>
+          • <span class="badge-trap">[함정]</span> <span class="math">y = <span class="frac"><span class="frac-top">x</span><span class="frac-bottom">a</span></span></span>는 <span class="math">(<span class="frac"><span class="frac-top">1</span><span class="frac-bottom">a</span></span>)x</span>이므로 <b>정비례</b>임! 분모에 <span class="math">x</span>가 있어야 반비례!
+        </td>
+        <td style="width: 52%;">
+          <div class="card-head">2) <span class="math">y = <span class="frac"><span class="frac-top">a</span><span class="frac-bottom">x</span></span></span> (<span class="math">a &ne; 0</span>) 그래프의 핵심 성질</div>
+          • <b>기본 모양</b>: 좌표축에 닿지 않는 <b>한 쌍의 매끄러운 곡선</b> (쌍곡선)<br>
+          • <span class="badge-trap">[함정]</span> <b>원점을 지나지 않으며, <span class="math">x</span>축·<span class="math">y</span>축과 절대 만나지 않는다!</b><br>
+          • <b>부호 <span class="math">a</span>에 따른 위치와 사분면</b>:
+          <table style="width: 100%; border-collapse: collapse; font-size: 10pt; margin: 1.5px 0;">
+            <tr style="background-color: #eee;">
+              <td style="border: 1px solid #444; width: 18%; text-align: center; font-weight: bold;"><span class="math">a > 0</span></td>
+              <td style="border: 1px solid #444; padding-left: 3px;"><b>제1, 3사분면</b> 위치 | 각 사분면에서 <span class="math">x &uarr; &rArr; y &darr;</span> (감소)</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid #444; width: 18%; text-align: center; font-weight: bold;"><span class="math">a < 0</span></td>
+              <td style="border: 1px solid #444; padding-left: 3px;"><b>제2, 4사분면</b> 위치 | 각 사분면에서 <span class="math">x &uarr; &rArr; y &uarr;</span> (증가)</td>
+            </tr>
+          </table>
+          • <span class="badge-frequent">[빈출]</span> <b>절댓값의 의미</b>: <b><span class="math">|a|</span>의 값이 클수록 원점에서 더 멀어진다</b>
+        </td>
+      </tr>
+    </table>
+
+    <!-- 벡터 다이어그램 3: 정비례 그래프 vs 반비례 그래프 및 직사각형 넓이 -->
+    <div class="card-box" style="padding: 1.5px 3px;">
+      <div class="fig-container">
+        <svg width="680" height="82" viewBox="0 0 680 82" style="display:inline-block; vertical-align:middle;">
+          <!-- Left: 정비례 y = ax (a>0 vs a<0) -->
+          <g transform="translate(10, 0)">
+            <line x1="10" y1="40" x2="190" y2="40" stroke="#000" stroke-width="1.2" />
+            <polygon points="190,40 184,37 184,43" fill="#000" />
+            <line x1="100" y1="76" x2="100" y2="6" stroke="#000" stroke-width="1.2" />
+            <polygon points="100,6 97,12 103,12" fill="#000" />
+            <text x="186" y="36" font-size="10pt" font-family="'Times New Roman', serif">x</text>
+            <text x="105" y="12" font-size="10pt" font-family="'Times New Roman', serif">y</text>
+            <text x="91" y="52" font-size="10pt" font-weight="bold">O</text>
+            
+            <!-- y = ax (a > 0) -->
+            <line x1="30" y1="70" x2="170" y2="10" stroke="#000" stroke-width="2" />
+            <text x="145" y="20" font-size="10pt" font-weight="bold">y=ax (a>0)</text>
+            
+            <!-- y = ax (a < 0) -->
+            <line x1="30" y1="10" x2="170" y2="70" stroke="#555" stroke-width="1.5" stroke-dasharray="3,2" />
+            <text x="25" y="20" font-size="10pt" font-weight="bold">y=ax (a<0)</text>
+            
+            <text x="100" y="80" font-size="10pt" text-anchor="middle" font-weight="bold">[정비례: 원점을 지나는 직선]</text>
+          </g>
+
+          <!-- Middle Divider -->
+          <line x1="225" y1="6" x2="225" y2="76" stroke="#999" stroke-dasharray="3,3" />
+
+          <!-- Right: 반비례 y = a/x & 직사각형 불변 성질 -->
+          <g transform="translate(245, 0)">
+            <line x1="10" y1="40" x2="210" y2="40" stroke="#000" stroke-width="1.2" />
+            <polygon points="210,40 204,37 204,43" fill="#000" />
+            <line x1="110" y1="76" x2="110" y2="6" stroke="#000" stroke-width="1.2" />
+            <polygon points="110,6 107,12 113,12" fill="#000" />
+            <text x="206" y="36" font-size="10pt" font-family="'Times New Roman', serif">x</text>
+            <text x="115" y="12" font-size="10pt" font-family="'Times New Roman', serif">y</text>
+            <text x="101" y="52" font-size="10pt" font-weight="bold">O</text>
+
+            <!-- 쌍곡선 a > 0 (1사분면, 3사분면) -->
+            <path d="M 122,10 Q 130,30 195,36" fill="none" stroke="#000" stroke-width="2" />
+            <path d="M 25,44 Q 90,50 98,70" fill="none" stroke="#000" stroke-width="2" />
+
+            <!-- 직사각형 색칠 영역 (p.134 12번 핵심) -->
+            <rect x="110" y="20" width="45" height="20" fill="#e8e8e8" stroke="#000" stroke-width="1.2" stroke-dasharray="2,2" />
+            <circle cx="155" cy="20" r="3" fill="#000" />
+            <text x="160" y="18" font-size="10pt" font-weight="bold">P(p, q)</text>
+            <text x="132" y="34" font-size="10pt" font-weight="bold" text-anchor="middle">S = a</text>
+            
+            <text x="110" y="80" font-size="10pt" text-anchor="middle" font-weight="bold">[반비례: 축에 닿지 않는 쌍곡선 & 직사각형 넓이 불변]</text>
+          </g>
+
+          <!-- Far Right: 넓이 공식 박스 -->
+          <g transform="translate(505, 4)">
+            <rect x="0" y="0" width="165" height="72" fill="#f7f7f7" stroke="#333" stroke-width="1.2" rx="3" />
+            <text x="82" y="16" font-size="10pt" font-weight="bold" text-anchor="middle">[반비례 넓이 불변 법칙]</text>
+            <text x="10" y="32" font-size="10pt">• 점 P(p, q)가 곡선 위 점일 때</text>
+            <text x="10" y="48" font-size="10pt">• 가로 p &times; 세로 q = a</text>
+            <text x="10" y="64" font-size="10pt">➔ <b>직사각형 넓이 = |a| (일정)</b></text>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <!-- 5. 총괄 비교표 -->
+    <div class="section-title">5. [총괄 비교표] 정비례 vs 반비례 올인원 마스터 매핑</div>
+
+    <table class="summary-table">
+      <tr>
+        <th style="width: 15%;">비교 항목</th>
+        <th style="width: 42%;">정비례 (Direct Proportion)</th>
+        <th style="width: 43%;">반비례 (Inverse Proportion)</th>
+      </tr>
+      <tr>
+        <td style="text-align: center; font-weight: bold; background-color: #f7f7f7;">기본 정의</td>
+        <td><span class="math">x</span>가 2, 3, 4배 ➔ <span class="math">y</span>도 <b>2, 3, 4배</b> 변함</td>
+        <td><span class="math">x</span>가 2, 3, 4배 ➔ <span class="math">y</span>는 <b><span class="frac"><span class="frac-top">1</span><span class="frac-bottom">2</span></span>, <span class="frac"><span class="frac-top">1</span><span class="frac-bottom">3</span></span>, <span class="frac"><span class="frac-top">1</span><span class="frac-bottom">4</span></span>배</b> 변함</td>
+      </tr>
+      <tr>
+        <td style="text-align: center; font-weight: bold; background-color: #f7f7f7;">관계식 및 변형</td>
+        <td><b><span class="math">y = ax</span></b> (<span class="math">a &ne; 0</span>) &nbsp;|&nbsp; <b><span class="frac"><span class="frac-top"><span class="math">y</span></span><span class="frac-bottom"><span class="math">x</span></span></span> = <span class="math">a</span></b> (비율 일정)</td>
+        <td><b><span class="math">y = <span class="frac"><span class="frac-top">a</span><span class="frac-bottom">x</span></span></span></b> (<span class="math">a &ne; 0</span>) &nbsp;|&nbsp; <b><span class="math">x &times; y = a</span></b> (곱 일정)</td>
+      </tr>
+      <tr>
+        <td style="text-align: center; font-weight: bold; background-color: #f7f7f7;">그래프 형태</td>
+        <td><b>원점 <span class="math">O(0, 0)</span>을 지나는 직선</b></td>
+        <td><b>좌표축에 닿지 않는 한 쌍의 매끄러운 곡선</b> (쌍곡선)</td>
+      </tr>
+      <tr>
+        <td style="text-align: center; font-weight: bold; background-color: #f7f7f7;"><span class="math">a > 0</span> 성질</td>
+        <td><b>제1, 3사분면</b> (오른쪽 위 향함) | <span class="math">x &uarr; &rArr; y &uarr;</span> (증가)</td>
+        <td><b>제1, 3사분면</b> 위치 | 각 사분면에서 <span class="math">x &uarr; &rArr; y &darr;</span> (감소)</td>
+      </tr>
+      <tr>
+        <td style="text-align: center; font-weight: bold; background-color: #f7f7f7;"><span class="math">a < 0</span> 성질</td>
+        <td><b>제2, 4사분면</b> (오른쪽 아래 향함) | <span class="math">x &uarr; &rArr; y &darr;</span> (감소)</td>
+        <td><b>제2, 4사분면</b> 위치 | 각 사분면에서 <span class="math">x &uarr; &rArr; y &uarr;</span> (증가)</td>
+      </tr>
+      <tr>
+        <td style="text-align: center; font-weight: bold; background-color: #f7f7f7;">절댓값 <span class="math">|a|</span> 의미</td>
+        <td><span class="math">|a|</span>가 클수록 <b><span class="math">y</span>축에 가깝다</b> (가파름)</td>
+        <td><span class="math">|a|</span>가 클수록 <b>원점 <span class="math">O</span>에서 멀어진다</b></td>
+      </tr>
+      <tr>
+        <td style="text-align: center; font-weight: bold; background-color: #f7f7f7;">기하학적 특징</td>
+        <td>원점과 임의의 점을 잇는 기울기가 <span class="math">a</span>로 일정</td>
+        <td>곡선 위 점에서 축에 내린 <b>직사각형 넓이 <span class="math">S = |a|</span></b>로 일정</td>
+      </tr>
+    </table>
+
+    <!-- 6. 시험 직전 5초 리마인드 -->
+    <div class="section-title">6. [시험 직전 5초 리마인드 5대 킬러 공식]</div>
+
+    <div class="card-box" style="padding: 2px 5px; line-height: 1.48;">
+      1. <b>좌표축 위 점의 사분면</b>: <span class="math">x</span>축 위 점 <span class="math">(a, 0)</span>, <span class="math">y</span>축 위 점 <span class="math">(0, b)</span>는 <b>어느 사분면에도 속하지 않는다</b>.<br>
+      2. <b>대칭점 부호 공식</b>: <span class="math">x</span>축 대칭 ➔ <span class="math">y</span> 반대, <span class="math">y</span>축 대칭 ➔ <span class="math">x</span> 반대, 원점 대칭 ➔ 둘 다 반대.<br>
+      3. <b>물통 모양과 기울기</b>: 폭 일정 ➔ 직선, 위가 넓어짐 ➔ 완만(위로 볼록), 위가 좁아짐 ➔ 가파름(아래로 볼록).<br>
+      4. <b>식의 판별</b>: <span class="frac"><span class="frac-top"><span class="math">y</span></span><span class="frac-bottom"><span class="math">x</span></span></span> = 일정 ➔ 정비례 (<span class="math">y=ax</span>), <span class="math">x &times; y</span> = 일정 ➔ 반비례 (<span class="math">y=<span class="frac"><span class="frac-top">a</span><span class="frac-bottom">x</span></span></span>). (<span class="math">y=ax+b</span>는 둘 다 아님!)<br>
+      5. <b>반비례 직사각형 넓이</b>: <span class="math">y = <span class="frac"><span class="frac-top">a</span><span class="frac-bottom">x</span></span></span> 위의 임의의 점에서 축에 내린 직사각형의 넓이는 점의 위치와 무관하게 항상 <b><span class="math">|a|</span></b>이다!
+    </div>
+  </div>
+
+</body>
+</html>

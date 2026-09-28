@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>2026학년도 중1 2학기 중간고사 수학 실전 모의고사 15제 [110-135_v2]</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 9mm 12mm 9mm 12mm;
+    @bottom-center {
+      content: "- " counter(page) " -";
+      font-size: 10pt;
+      font-family: 'KoPubWorldBatang', 'Batang', serif;
+    }
+  }
+
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body {
+    font-family: 'KoPubWorldBatang', 'Batang', 'Times New Roman', serif;
+    font-size: 10pt;
+    line-height: 1.52;
+    color: #000;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* 헤더 박스 */
+  .header-box {
+    border: 2px solid #000;
+    padding: 3px 8px;
+    margin-bottom: 4px;
+    text-align: center;
+  }
+  .header-title {
+    font-size: 13.5pt;
+    font-weight: bold;
+    letter-spacing: -0.3px;
+    margin-bottom: 2px;
+  }
+  .header-info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2px;
+    font-size: 10pt;
+  }
+  .header-info-table td {
+    border: 1px solid #777;
+    padding: 1px 4px;
+    text-align: center;
+  }
+  .header-info-table td.label {
+    background-color: #eaeaea;
+    font-weight: bold;
+    width: 12%;
+  }
+
+  /* 구분 막대 */
+  .section-bar {
+    background-color: #222;
+    color: #fff;
+    padding: 2px 8px;
+    font-size: 10pt;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+  }
+
+  /* 좌우 2단 분할 레이아웃 */
+  .two-column-layout {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 18px;
+    width: 100%;
+  }
+  .column {
+    width: 48.4%;
+    display: flex;
+    flex-direction: column;
+  }
+  .divider-line {
+    width: 0.8px;
+    background-color: #999;
+  }
+
+  /* 문항 블록 (문제 사이 간격 대폭 확장 적용) */
+  .question-block {
+    font-size: 10pt;
+    line-height: 1.50;
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .question-prompt {
+    margin-bottom: 3px;
+    text-align: justify;
+    word-break: keep-all;
+  }
+  .question-num {
+    font-weight: bold;
+    font-size: 10.8pt;
+    margin-right: 3px;
+  }
+  .math {
+    font-family: 'Times New Roman', serif;
+    font-style: italic;
+  }
+
+  /* 기하 SVG 그림 박스 */
+  .fig-box {
+    text-align: center;
+    margin: 2px 0 3px 0;
+  }
+  .fig-box svg {
+    display: inline-block;
+  }
+
+  /* 선택지 그리드 */
+  .options-list {
+    margin-top: 3px;
+    font-size: 10pt;
+    line-height: 1.48;
+  }
+  .options-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2.5px;
+    column-gap: 8px;
+  }
+  .options-grid-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  /* 박스 보기 */
+  .box-view {
+    border: 1px solid #555;
+    background-color: #fafafa;
+    padding: 3px 7px;
+    margin: 2.5px 0 3.5px 0;
+    font-size: 10pt;
+    line-height: 1.44;
+  }
+  .box-view-title {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 2px;
+    font-size: 10pt;
+  }
+
+  /* 해설 카드 스타일 */
+  .solution-card {
+    border: 1px solid #444;
+    background-color: #fff;
+    padding: 3px 6px;
+    margin-bottom: 5px;
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    font-size: 10pt;
+    line-height: 1.44;
+  }
+  .solution-header {
+    background-color: #f0f0f0;
+    border-bottom: 1.2px solid #000;
+    padding: 1.5px 4px;
+    margin-bottom: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 10pt;
+  }
+  .badge-diff {
+    background-color: #000;
+    color: #fff;
+    font-size: 10pt;
+    padding: 0 4px;
+    border-radius: 2px;
+    margin-left: 4px;
+  }
+  .sub-title {
+    font-weight: bold;
+    color: #000;
+    margin-top: 1.5px;
+    margin-bottom: 0.5px;
+    border-left: 2.5px solid #000;
+    padding-left: 3px;
+    font-size: 10pt;
+  }
+
+  /* 총괄표 테이블 */
+  .summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 5px;
+    font-size: 10pt;
+  }
+  .summary-table th {
+    border: 1px solid #000;
+    background-color: #222;
+    color: #fff;
+    padding: 1.5px 2px;
+    text-align: center;
+  }
+  .summary-table td {
+    border: 1px solid #444;
+    padding: 1.2px 2px;
+    text-align: center;
+  }
+  .summary-table td.ans {
+    font-weight: bold;
+  }
+
+  .page-break {
+    page-break-after: always;
+    break-after: page;
+  }
+</style>
+</head>
+<body>
+
+  <!-- ================= [1면: 문제지 p.1 (01~05)] ================= -->
+  <div class="header-box">
+    <div class="header-title">2026학년도 1학년 2학기 중간고사 수학 실전 모의고사</div>
+    <div style="font-size: 10pt; font-weight: bold; margin-top: 1px;">
+      [단원: 교과서 p.110~135 좌표평면과 그래프 대단원 15제] • 동아출판 & 2025 최신 기출 100% 실증 연계
+    </div>
+    <table class="header-info-table">
+      <tr>
+        <td class="label">과 목</td>
+        <td style="width: 21%;">수학</td>
+        <td class="label">일 시</td>
+        <td style="width: 21%;">2026년 2학기 중간</td>
+        <td class="label">반 / 번호</td>
+        <td style="width: 16%;">1학년 &nbsp;&nbsp;반 &nbsp;&nbsp;번</td>
+        <td class="label">이 름</td>
+        <td style="width: 16%;"></td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="section-bar">
+    <span>[제 1 교시] 수학 영역 (4. 좌표평면과 그래프 종합 15제)</span>
+    <span>문제지 (1/3)</span>
+  </div>
+
+  <div class="two-column-layout">
+    <!-- 좌측 컬럼 (01, 02) -->
+    <div class="column">
+      <!-- 01번 -->
+      <div class="question-block" style="margin-bottom: 18px;">
+        <div class="question-prompt">
+          <span class="question-num">01.</span> 그림의 좌표평면 위에 나타낸 다섯 개의 점 <span class="math">A, B, C, D, E</span>의 좌표로 옳은 것은?
+        </div>
+        <div class="fig-box">
+          <svg width="180" height="112" viewBox="0 0 180 112">
+            <line x1="12" y1="56" x2="168" y2="56" stroke="#000" stroke-width="1.2" />
+            <polygon points="168,54 174,56 168,58" fill="#000" />
+            <text x="168" y="68" font-size="10" font-family="'Times New Roman', serif">x</text>
+            <line x1="90" y1="104" x2="90" y2="8" stroke="#000" stroke-width="1.2" />
+            <polygon points="88,8 90,2 92,8" fill="#000" />
+            <text x="79" y="11" font-size="10" font-family="'Times New Roman', serif">y</text>
+            <text x="80" y="68" font-size="10" font-family="'Times New Roman', serif">O</text>
+            <!-- 눈금선 가이드 및 점들 -->
+            <line x1="42" y1="56" x2="42" y2="34" stroke="#888" stroke-width="0.8" stroke-dasharray="2,2" />
+            <line x1="42" y1="34" x2="90" y2="34" stroke="#888" stroke-width="0.8" stroke-dasharray="2,2" />
+            <circle cx="42" cy="34" r="2.5" fill="#000" />
+            <text x="32" y="32" font-size="10.5" font-weight="bold" font-family="'Times New Roman', serif">A</text>
+            <line x1="122" y1="56" x2="122" y2="14" stroke="#888" stroke-width="0.8" stroke-dasharray="2,2" />
+            <line x1="90" y1="14" x2="122" y2="14" stroke="#888" stroke-width="0.8" stroke-dasharray="2,2" />
+            <circle cx="122" cy="14" r="2.5" fill="#000" />
+            <text x="126" y="15" font-size="10.5" font-weight="bold" font-family="'Times New Roman', serif">B</text>
+            <line x1="58" y1="56" x2="58" y2="88" stroke="#888" stroke-width="0.8" stroke-dasharray="2,2" />
+            <line x1="58" y1="88" x2="90" y2="88" stroke="#888" stroke-width="0.8" stroke-dasharray="2,2" />
+            <circle cx="58" cy="88" r="2.5" fill="#000" />
+            <text x="48" y="92" font-size="10.5" font-weight="bold" font-family="'Times New Roman', serif">C</text>
+            <circle cx="138" cy="56" r="2.5" fill="#000" />
+            <text x="138" y="49" font-size="10.5" font-weight="bold" font-family="'Times New Roman', serif">D</text>
+            <circle cx="90" cy="78" r="2.5" fill="#000" />
+            <text x="96" y="80" font-size="10.5" font-weight="bold" font-family="'Times New Roman', serif">E</text>
+            <!-- 축 눈금 숫자 (최소 10pt 준수) -->
+            <text x="42" y="68" font-size="10" font-family="'Times New Roman', serif" text-anchor="middle">-3</text>
+            <text x="58" y="68" font-size="10" font-family="'Times New Roman', serif" text-anchor="middle">-2</text>
+            <text x="122" y="68" font-size="10" font-family="'Times New Roman', serif" text-anchor="middle">2</text>
+            <text x="138" y="68" font-size="10" font-family="'Times New Roman', serif" text-anchor="middle">3</text>
+            <text x="85" y="37" font-size="10" font-family="'Times New Roman', serif" text-anchor="end">2</text>
+            <text x="85" y="17" font-size="10" font-family="'Times New Roman', serif" text-anchor="end">4</text>
+            <text x="85" y="81" font-size="10" font-family="'Times New Roman', serif" text-anchor="end">-2</text>
+            <text x="85" y="92" font-size="10" font-family="'Times New Roman', serif" text-anchor="end">-3</text>
+          </svg>
+        </div>
+        <div class="options-list options-grid-2">
+          <div>① <span class="math">A(2, -3)</span></div>
+          <div>② <span class="math">B(2, 4)</span></div>
+          <div>③ <span class="math">C(3, -2)</span></div>
+          <div>④ <span class="math">D(0, 3)</span></div>
+          <div>⑤ <span class="math">E(-2, 0)</span></div>
+        </div>
+      </div>
+
+      <!-- 02번 -->
+      <div class="question-block">
+        <div class="question-prompt">
+          <span class="question-num">02.</span> 좌표평면과 사분면에 대한 다음 설명 중 옳은 것은?
+        </div>
+        <div class="options-list options-grid-1" style="margin-top: 6px;">
+          <div>① 점 <span class="math">(0, 5)</span>는 <span class="math">x</span>축 위의 점이다.</div>
+          <div>② 점 <span class="math">(-4, 0)</span>은 제2사분면 위의 점이다.</div>
+          <div>③ 점 <span class="math">O(0, 0)</span>은 어느 사분면에도 속하지 않는다.</div>
+          <div>④ <span class="math">y</span>축 위의 점의 <span class="math">y</span>좌표는 항상 <span class="math">0</span>이다.</div>
+          <div>⑤ 점 <span class="math">(3, -2)</span>는 제2사분면 위의 점이다.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider-line"></div>
+
+    <!-- 우측 컬럼 (03, 04, 05) -->
+    <div class="column">
+      <!-- 03번 -->
+      <div class="question-block" style="margin-bottom: 14px;">
+        <div class="question-prompt">
+          <span class="question-num">03.</span> 점 <span class="math">P(-3, 5)</span>를 원점에 대하여 대칭이동한 점을 <span class="math">Q</span>라 할 때, 다음 설명 중 옳은 것은?
+        </div>
+        <div class="options-list options-grid-1" style="margin-top: 4px;">
+          <div>① 점 <span class="math">Q</span>의 좌표는 <span class="math">(-3, -5)</span>이다.</div>
+          <div>② 점 <span class="math">Q</span>의 좌표는 <span class="math">(3, 5)</span>이다.</div>
+          <div>③ 점 <span class="math">Q</span>는 제1사분면 위의 점이다.</div>
+          <div>④ 점 <span class="math">Q</span>는 제3사분면 위의 점이다.</div>
+          <div>⑤ 점 <span class="math">Q</span>는 제4사분면 위의 점이다.</div>
+        </div>
+      </div>
+
+      <!-- 04번 -->
+      <div class="question-block" style="margin-bottom: 14px;">
+        <div class="question-prompt">
+          <span class="question-num">04.</span> 좌표평면 위의 세 점 <span class="math">A(2, 5)</span>, <span class="math">B(-3, -1)</span>, <span class="math">C(2, -1)</span>을 꼭짓점으로 하는 삼각형 <span class="math">ABC</span>의 넓이는?
+        </div>
+        <div class="fig-box">
+          <svg width="155" height="92" viewBox="0 0 155 92">
+            <line x1="12" y1="62" x2="145" y2="62" stroke="#000" stroke-width="1.2" />
+            <polygon points="145,60 151,62 145,64" fill="#000" />
+            <text x="145" y="74" font-size="10" font-family="'Times New Roman', serif">x</text>
+            <line x1="68" y1="88" x2="68" y2="8" stroke="#000" stroke-width="1.2" />
+            <polygon points="66,8 68,2 70,8" fill="#000" />
+            <text x="59" y="11" font-size="10" font-family="'Times New Roman', serif">y</text>
+            <text x="58" y="73" font-size="10" font-family="'Times New Roman', serif">O</text>
+            <polygon points="104,16 24,76 104,76" fill="#eaeaea" stroke="#000" stroke-width="1" />
+            <circle cx="104" cy="16" r="2.4" fill="#000" />
+            <circle cx="24" cy="76" r="2.4" fill="#000" />
+            <circle cx="104" cy="76" r="2.4" fill="#000" />
+            <text x="108" y="16" font-size="10" font-weight="bold" font-family="'Times New Roman', serif">A(2,5)</text>
+            <text x="12" y="88" font-size="10" font-weight="bold" font-family="'Times New Roman', serif">B(-3,-1)</text>
+            <text x="108" y="88" font-size="10" font-weight="bold" font-family="'Times New Roman', serif">C(2,-1)</text>
+            <rect x="98" y="70" width="6" height="6" fill="none" stroke="#000" stroke-width="0.7" />
+          </svg>
+        </div>
+        <div class="options-list options-grid-2">
+          <div>① <span class="math">11</span></div>
+          <div>② <span class="math">13</span></div>
+          <div>③ <span class="math">15</span></div>
+          <div>④ <span class="math">18</span></div>
+          <div>⑤ <span class="math">30</span></div>
+        </div>
+      </div>
+
+      <!-- 05번 -->
+      <div class="question-block">
+        <div class="question-prompt">
+          <span class="question-num">05.</span> 그림과 같이 아랫부분은 둥근 구 모양이고, 윗부분은 폭이 일정한 좁은 원기둥 모양인 빈 병이 있다. 이 병에 매분 일정한 양의 물을 가득 찰 때까지 넣을 때, 물을 넣은 시간 <span class="math">x</span>에 따른 수면의 높이 <span class="math">y</span>의 변화를 나타낸 그래프의 모양으로 가장 알맞은 것은?
+        </div>
+        <div class="fig-box">
+          <svg width="120" height="76" viewBox="0 0 120 76">
+            <path d="M 50,6 L 50,26 C 32,32 26,46 26,57 C 26,69 38,74 60,74 C 82,74 94,69 94,57 C 94,46 88,32 70,26 L 70,6 Z" fill="#f5f5f5" stroke="#000" stroke-width="1.5" />
+            <line x1="50" y1="26" x2="70" y2="26" stroke="#000" stroke-width="0.8" stroke-dasharray="2,2" />
+            <path d="M 60,0 L 60,5" stroke="#000" stroke-width="1.3" />
+            <polygon points="58,4 60,7 62,4" fill="#000" />
+            <text x="60" y="18" font-size="10" font-family="'KoPubWorldBatang', serif" text-anchor="middle">원기둥</text>
+            <text x="60" y="55" font-size="10" font-family="'KoPubWorldBatang', serif" text-anchor="middle">구 모양</text>
+          </svg>
+        </div>
+        <div class="options-list options-grid-1">
+          <div>① 처음에는 완만해지다가 가파르게 증가하는 곡선 형태이고, 나중에는 일정한 기울기의 곧은 직선 형태로 증가한다.</div>
+          <div>② 처음에는 곧은 직선 형태로 증가하다가, 나중에는 완만해지는 곡선 형태로 증가한다.</div>
+          <div>③ 시작부터 끝까지 일정한 속도로 곧게 뻗은 직선 형태로 증가한다.</div>
+          <div>④ 처음에는 가파르게 증가하다가, 나중에는 높이가 변하지 않고 일정하게 유지된다.</div>
+          <div>⑤ 시간에 따라 높이가 증가하다가 일정해진 후 다시 감소하는 형태를 나타낸다.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- ================= [2면: 문제지 p.2 (06~10)] ================= -->
+  <div class="section-bar">
+    <span>[제 1 교시] 수학 영역 (4. 좌표평면과 그래프 종합 15제)</span>
+    <span>문제지 (2/3)</span>
+  </div>
+
+  <div class="two-column-layout">
+    <!-- 좌측 컬럼 (06, 07, 08) -->
+    <div class="column">
+      <!-- 06번 -->
+      <div class="question-block" style="margin-bottom: 16px;">
+        <div class="question-prompt">
+          <span class="question-num">06.</span> 그래프는 수현이가 집에서 출발하여 도서관까지 갈 때, 경과 시간 <span class="math">x</span>(분)에 따른 집에서 떨어진 거리 <span class="math">y</span>를 나타낸 것이다. 수현이는 도서관에 가다가 도중에 서점에 들러 책을 사고 다시 도서관으로 갔다. 이에 대한 설명 중 옳지 않은 것은?
+        </div>
+        <div class="fig-box">
+          <svg width="220" height="98" viewBox="0 0 220 98">
+            <line x1="38" y1="18" x2="190" y2="18" stroke="#ddd" stroke-width="0.7" stroke-dasharray="2,2" />
+            <line x1="38" y1="52" x2="120" y2="52" stroke="#ddd" stroke-width="0.7" stroke-dasharray="2,2" />
+            <line x1="88" y1="76" x2="88" y2="52" stroke="#ddd" stroke-width="0.7" stroke-dasharray="2,2" />
+            <line x1="120" y1="76" x2="120" y2="52" stroke="#ddd" stroke-width="0.7" stroke-dasharray="2,2" />
+            <line x1="190" y1="76" x2="190" y2="18" stroke="#ddd" stroke-width="0.7" stroke-dasharray="2,2" />
+            <line x1="38" y1="76" x2="206" y2="76" stroke="#000" stroke-width="1.3" />
+            <polygon points="206,74 212,76 206,78" fill="#000" />
+            <text x="178" y="90" font-size="10" font-family="'KoPubWorldBatang', serif">시간(분)</text>
+            <line x1="38" y1="76" x2="38" y2="8" stroke="#000" stroke-width="1.3" />
+            <polygon points="36,8 38,2 40,8" fill="#000" />
+            <text x="14" y="12" font-size="10" font-family="'KoPubWorldBatang', serif">거리</text>
+            <text x="30" y="80" font-size="10" font-family="'Times New Roman', serif" text-anchor="end">0</text>
+            <text x="88" y="89" font-size="10" font-family="'Times New Roman', serif" text-anchor="middle">10</text>
+            <text x="120" y="89" font-size="10" font-family="'Times New Roman', serif" text-anchor="middle">15</text>
+            <text x="190" y="89" font-size="10" font-family="'Times New Roman', serif" text-anchor="middle">25</text>
+            <text x="32" y="56" font-size="10" font-family="'Times New Roman', serif" text-anchor="end">600</text>
+            <text x="32" y="22" font-size="10" font-family="'Times New Roman', serif" text-anchor="end">1500</text>
+            <polyline points="38,76 88,52 120,52 190,18" fill="none" stroke="#000" stroke-width="1.7" />
+            <circle cx="38" cy="76" r="2.5" fill="#000" />
+            <circle cx="88" cy="52" r="2.5" fill="#000" />
+            <circle cx="120" cy="52" r="2.5" fill="#000" />
+            <circle cx="190" cy="18" r="2.5" fill="#000" />
+          </svg>
+        </div>
+        <div class="options-list options-grid-1">
+          <div>① 집에서 도서관까지의 거리는 <span class="math">1500</span>이다.</div>
+          <div>② 수현이가 서점에 머문 시간은 <span class="math">5</span>분이다.</div>
+          <div>③ 집에서 서점까지 갈 때의 속력은 1분에 <span class="math">60</span>이다.</div>
+          <div>④ 수현이가 집에서 출발하여 도서관에 도착할 때까지 실제로 이동한 총 거리는 <span class="math">2400</span>이다.</div>
+          <div>⑤ 서점에서 도서관까지 갈 때의 속력은 1분에 <span class="math">90</span>이다.</div>
+        </div>
+      </div>
+
+      <!-- 07번 -->
+      <div class="question-block" style="margin-bottom: 16px;">
+        <div class="question-prompt">
+          <span class="question-num">07.</span> 다음 보기 중 <span class="math">y</span>가 <span class="math">x</span>에 정비례하는 것을 모두 고른 것은?
+        </div>
+        <div class="box-view">
+          <div class="box-view-title">&lt; 보 기 &gt;</div>
+          <div>ㄱ. 한 변의 길이가 <span class="math">x</span>인 정사각형의 둘레의 길이 <span class="math">y</span></div>
+          <div>ㄴ. 넓이가 <span class="math">24</span>인 평행사변형의 밑변의 길이 <span class="math">x</span>와 높이 <span class="math">y</span></div>
+          <div>ㄷ. <span class="math">500</span>원짜리 음료수 <span class="math">x</span>개의 가격 <span class="math">y</span></div>
+          <div>ㄹ. 시속 <span class="math">x</span>로 <span class="math">3</span>시간 동안 달린 거리 <span class="math">y</span></div>
+          <div>ㅁ. 전체 <span class="math">50</span>쪽인 책을 하루에 <span class="math">x</span>쪽씩 읽을 때 다 읽는 데 걸리는 날수 <span class="math">y</span></div>
+        </div>
+        <div class="options-list options-grid-2">
+          <div>① ㄱ, ㄴ</div>
+          <div>② ㄴ, ㄷ, ㅁ</div>
+          <div>③ ㄱ, ㄷ, ㄹ</div>
+          <div>④ ㄱ, ㄹ, ㅁ</div>
+          <div>⑤ ㄱ, ㄴ, ㄷ, ㄹ</div>
+        </div>
+      </div>
+
+      <!-- 08번 -->
+      <div class="question-block">
+        <div class="question-prompt">
+          <span class="question-num">08.</span> 정비례 관계 <span class="math">y = -3/4x</span>의 그래프에 대한 설명으로 옳은 것은?
+        </div>
+        <div class="options-list options-grid-1" style="margin-top: 5px;">
+          <div>① 제1사분면과 제3사분면을 지난다.</div>
+          <div>② <span class="math">x</span>의 값이 증가하면 <span class="math">y</span>의 값도 증가한다.</div>
+          <div>③ 점 <span class="math">(-4, -3)</span>을 지난다.</div>
+          <div>④ 정비례 관계 <span class="math">y = -2x</span>의 그래프보다 <span class="math">y</span>축에 더 가깝다.</div>
+          <div>⑤ 원점 <span class="math">(0, 0)</span>을 지나고 오른쪽 아래로 향하는 직선이다.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider-line"></div>
+
+    <!-- 우측 컬럼 (09, 10) -->
+    <div class="column">
+      <!-- 09번 -->
+      <div class="question-block" style="margin-bottom: 20px;">
+        <div class="question-prompt">
+          <span class="question-num">09.</span> 정비례 관계 <span class="math">y = ax</span>의 그래프가 두 점 <span class="math">A(m, 12)</span>, <span class="math">B(-2, n)</span>을 지난다. <span class="math">a = -3</span>일 때, <span class="math">m + n</span>의 값은?
+        </div>
+        <div class="options-list options-grid-2" style="margin-top: 6px;">
+          <div>① <span class="math">2</span></div>
+          <div>② <span class="math">-2</span></div>
+          <div>③ <span class="math">4</span></div>
+          <div>④ <span class="math">-10</span></div>
+          <div>⑤ <span class="math">10</span></div>
+        </div>
+      </div>
+
+      <!-- 10번 -->
+      <div class="question-block">
+        <div class="question-prompt">
+          <span class="question-num">10.</span> 그림과 같이 정비례 관계 <span class="math">y = 3/2x</span>의 그래프 위의 점 <span class="math">A</span>에서 <span class="math">x</span>축에 내린 수선의 발을 <span class="math">B</span>라 하자. 점 <span class="math">B</span>의 <span class="math">x</span>좌표가 <span class="math">4</span>일 때, 삼각형 <span class="math">AOB</span>의 넓이는? (단, <span class="math">O</span>는 원점이다.)
+        </div>
+        <div class="fig-box">
+          <svg width="155" height="96" viewBox="0 0 155 96">
+            <line x1="15" y1="76" x2="145" y2="76" stroke="#000" stroke-width="1.2" />
+            <polygon points="145,74 151,76 145,78" fill="#000" />
+            <text x="145" y="88" font-size="10" font-family="'Times New Roman', serif">x</text>
+            <line x1="45" y1="88" x2="45" y2="10" stroke="#000" stroke-width="1.2" />
+            <polygon points="43,10 45,4 47,10" fill="#000" />
+            <text x="36" y="12" font-size="10" font-family="'Times New Roman', serif">y</text>
+            <text x="36" y="87" font-size="10" font-family="'Times New Roman', serif">O</text>
+            <polygon points="45,76 112,76 112,22" fill="#eaeaea" stroke="#000" stroke-width="1" />
+            <line x1="45" y1="76" x2="130" y2="10" stroke="#000" stroke-width="1.6" />
+            <circle cx="112" cy="22" r="2.5" fill="#000" />
+            <circle cx="112" cy="76" r="2.5" fill="#000" />
+            <text x="116" y="23" font-size="10.5" font-family="'Times New Roman', serif" font-weight="bold">A</text>
+            <text x="112" y="89" font-size="10" font-family="'Times New Roman', serif" font-weight="bold" text-anchor="middle">B(4)</text>
+            <text x="95" y="16" font-size="10" font-family="'Times New Roman', serif">y=3/2x</text>
+            <rect x="106" y="70" width="6" height="6" fill="none" stroke="#000" stroke-width="0.7" />
+          </svg>
+        </div>
+        <div class="options-list options-grid-2">
+          <div>① <span class="math">6</span></div>
+          <div>② <span class="math">8</span></div>
+          <div>③ <span class="math">12</span></div>
+          <div>④ <span class="math">16</span></div>
+          <div>⑤ <span class="math">24</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- ================= [3면: 문제지 p.3 (11~15)] ================= -->
+  <div class="section-bar">
+    <span>[제 1 교시] 수학 영역 (4. 좌표평면과 그래프 종합 15제)</span>
+    <span>문제지 (3/3)</span>
+  </div>
+
+  <div class="two-column-layout">
+    <!-- 좌측 컬럼 (11, 12, 13) -->
+    <div class="column">
+      <!-- 11번 -->
+      <div class="question-block" style="margin-bottom: 16px;">
+        <div class="question-prompt">
+          <span class="question-num">11.</span> 다음 중 <span class="math">y</span>가 <span class="math">x</span>에 반비례하는 관계식을 모두 고른 것은?
+        </div>
+        <div class="box-view">
+          <div class="box-view-title">&lt; 보 기 &gt;</div>
+          <div>ㄱ. <span class="math">y = 8/x</span></div>
+          <div>ㄴ. <span class="math">xy = -12</span></div>
+          <div>ㄷ. <span class="math">y = x/5</span></div>
+          <div>ㄹ. <span class="math">y = -3/x</span></div>
+          <div>ㅁ. <span class="math">y = 2x - 1</span></div>
+        </div>
+        <div class="options-list options-grid-2">
+          <div>① ㄱ, ㄷ</div>
+          <div>② ㄴ, ㄹ</div>
+          <div>③ ㄱ, ㄴ, ㄷ</div>
+          <div>④ ㄱ, ㄴ, ㄹ</div>
+          <div>⑤ ㄱ, ㄴ, ㄹ, ㅁ</div>
+        </div>
+      </div>
+
+      <!-- 12번 -->
+      <div class="question-block" style="margin-bottom: 16px;">
+        <div class="question-prompt">
+          <span class="question-num">12.</span> 반비례 관계 <span class="math">y = a/x</span>의 그래프가 두 점 <span class="math">P(2, -6)</span>, <span class="math">Q(b, 4)</span>를 지난다. 상수 <span class="math">a, b</span>에 대하여 <span class="math">a - b</span>의 값은?
+        </div>
+        <div class="options-list options-grid-2" style="margin-top: 5px;">
+          <div>① <span class="math">-9</span></div>
+          <div>② <span class="math">-15</span></div>
+          <div>③ <span class="math">-6</span></div>
+          <div>④ <span class="math">3</span></div>
+          <div>⑤ <span class="math">9</span></div>
+        </div>
+      </div>
+
+      <!-- 13번 -->
+      <div class="question-block">
+        <div class="question-prompt">
+          <span class="question-num">13.</span> 그림과 같이 반비례 관계 <span class="math">y = a/x</span> (<span class="math">a &gt; 0</span>)의 그래프 위의 점 <span class="math">P</span>에서 <span class="math">x</span>축, <span class="math">y</span>축에 각각 수선을 내려 생긴 직사각형 <span class="math">OAPB</span>의 넓이가 <span class="math">16</span>일 때, 상수 <span class="math">a</span>의 값은? (단, <span class="math">O</span>는 원점이다.)
+        </div>
+        <div class="fig-box">
+          <svg width="155" height="96" viewBox="0 0 155 96">
+            <line x1="15" y1="76" x2="145" y2="76" stroke="#000" stroke-width="1.2" />
+            <polygon points="145,74 151,76 145,78" fill="#000" />
+            <text x="145" y="88" font-size="10" font-family="'Times New Roman', serif">x</text>
+            <line x1="45" y1="88" x2="45" y2="8" stroke="#000" stroke-width="1.2" />
+            <polygon points="43,8 45,2 47,8" fill="#000" />
+            <text x="36" y="10" font-size="10" font-family="'Times New Roman', serif">y</text>
+            <text x="36" y="87" font-size="10" font-family="'Times New Roman', serif">O</text>
+            <rect x="45" y="34" width="55" height="42" fill="#eaeaea" stroke="#000" stroke-width="1" />
+            <path d="M 54,14 Q 60,54 135,68" fill="none" stroke="#000" stroke-width="1.6" />
+            <circle cx="100" cy="34" r="2.5" fill="#000" />
+            <text x="105" y="32" font-size="10.5" font-family="'Times New Roman', serif" font-weight="bold">P</text>
+            <text x="100" y="89" font-size="10" font-family="'Times New Roman', serif" font-weight="bold" text-anchor="middle">A</text>
+            <text x="35" y="37" font-size="10" font-family="'Times New Roman', serif" font-weight="bold">B</text>
+            <text x="72" y="58" font-size="10" font-family="'KoPubWorldBatang', serif" text-anchor="middle">넓이=16</text>
+            <text x="108" y="20" font-size="10" font-family="'Times New Roman', serif">y=a/x</text>
+          </svg>
+        </div>
+        <div class="options-list options-grid-2">
+          <div>① <span class="math">8</span></div>
+          <div>② <span class="math">16</span></div>
+          <div>③ <span class="math">24</span></div>
+          <div>④ <span class="math">32</span></div>
+          <div>⑤ <span class="math">64</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider-line"></div>
+
+    <!-- 우측 컬럼 (14, 15) -->
+    <div class="column">
+      <!-- 14번 -->
+      <div class="question-block" style="margin-bottom: 20px;">
+        <div class="question-prompt">
+          <span class="question-num">14.</span> 그림과 같이 정비례 관계 <span class="math">y = 3x</span>의 그래프와 반비례 관계 <span class="math">y = a/x</span> (<span class="math">a &gt; 0</span>)의 그래프가 제1사분면의 점 <span class="math">P</span>에서 만난다. 점 <span class="math">P</span>의 <span class="math">x</span>좌표가 <span class="math">2</span>일 때, 점 <span class="math">P</span>의 <span class="math">y</span>좌표를 <span class="math">b</span>, 상수 <span class="math">a</span>에 대하여 <span class="math">a + b</span>의 값은?
+        </div>
+        <div class="fig-box">
+          <svg width="155" height="92" viewBox="0 0 155 92">
+            <line x1="15" y1="74" x2="145" y2="74" stroke="#000" stroke-width="1.2" />
+            <polygon points="145,72 151,74 145,76" fill="#000" />
+            <text x="145" y="86" font-size="10" font-family="'Times New Roman', serif">x</text>
+            <line x1="45" y1="86" x2="45" y2="8" stroke="#000" stroke-width="1.2" />
+            <polygon points="43,8 45,2 47,8" fill="#000" />
+            <text x="36" y="10" font-size="10" font-family="'Times New Roman', serif">y</text>
+            <text x="36" y="86" font-size="10" font-family="'Times New Roman', serif">O</text>
+            <line x1="45" y1="74" x2="105" y2="14" stroke="#000" stroke-width="1.6" />
+            <text x="108" y="18" font-size="10" font-family="'Times New Roman', serif">y=3x</text>
+            <path d="M 58,16 Q 66,54 135,66" fill="none" stroke="#000" stroke-width="1.6" />
+            <text x="116" y="58" font-size="10" font-family="'Times New Roman', serif">y=a/x</text>
+            <line x1="85" y1="74" x2="85" y2="34" stroke="#888" stroke-width="0.8" stroke-dasharray="2,2" />
+            <line x1="45" y1="34" x2="85" y2="34" stroke="#888" stroke-width="0.8" stroke-dasharray="2,2" />
+            <circle cx="85" cy="34" r="2.5" fill="#000" />
+            <text x="89" y="32" font-size="10.5" font-family="'Times New Roman', serif" font-weight="bold">P</text>
+            <text x="85" y="87" font-size="10" font-family="'Times New Roman', serif" text-anchor="middle">2</text>
+            <text x="37" y="37" font-size="10" font-family="'Times New Roman', serif">b</text>
+          </svg>
+        </div>
+        <div class="options-list options-grid-2">
+          <div>① <span class="math">12</span></div>
+          <div>② <span class="math">14</span></div>
+          <div>③ <span class="math">16</span></div>
+          <div>④ <span class="math">18</span></div>
+          <div>⑤ <span class="math">20</span></div>
+        </div>
+      </div>
+
+      <!-- 15번 -->
+      <div class="question-block">
+        <div class="question-prompt">
+          <span class="question-num">15.</span> 그림과 같이 네 점 <span class="math">O(0, 0)</span>, <span class="math">A(6, 0)</span>, <span class="math">B(6, 4)</span>, <span class="math">C(0, 4)</span>를 꼭짓점으로 하는 직사각형 <span class="math">OABC</span>의 넓이를 정비례 관계 <span class="math">y = ax</span>의 그래프가 이등분할 때, 수 <span class="math">a</span>의 값은? (단, <span class="math">a &gt; 0</span>)
+        </div>
+        <div class="fig-box">
+          <svg width="160" height="92" viewBox="0 0 160 92">
+            <line x1="15" y1="74" x2="150" y2="74" stroke="#000" stroke-width="1.2" />
+            <polygon points="150,72 156,74 150,76" fill="#000" />
+            <text x="150" y="86" font-size="10" font-family="'Times New Roman', serif">x</text>
+            <line x1="40" y1="86" x2="40" y2="8" stroke="#000" stroke-width="1.2" />
+            <polygon points="38,8 40,2 42,8" fill="#000" />
+            <text x="32" y="10" font-size="10" font-family="'Times New Roman', serif">y</text>
+            <text x="31" y="86" font-size="10" font-family="'Times New Roman', serif">O</text>
+            <rect x="40" y="26" width="78" height="48" fill="none" stroke="#000" stroke-width="1.2" />
+            <polygon points="40,74 118,74 118,42" fill="#eaeaea" />
+            <line x1="40" y1="74" x2="135" y2="35" stroke="#000" stroke-width="1.6" />
+            <circle cx="118" cy="74" r="2.4" fill="#000" />
+            <circle cx="118" cy="26" r="2.4" fill="#000" />
+            <circle cx="40" cy="26" r="2.4" fill="#000" />
+            <circle cx="118" cy="42" r="2.4" fill="#000" />
+            <text x="118" y="87" font-size="10" font-family="'Times New Roman', serif" font-weight="bold" text-anchor="middle">A(6)</text>
+            <text x="122" y="24" font-size="10" font-family="'Times New Roman', serif" font-weight="bold">B</text>
+            <text x="28" y="26" font-size="10" font-family="'Times New Roman', serif" font-weight="bold">C(4)</text>
+            <text x="122" y="44" font-size="10" font-family="'Times New Roman', serif" font-weight="bold">D</text>
+            <text x="126" y="32" font-size="10" font-family="'Times New Roman', serif">y=ax</text>
+          </svg>
+        </div>
+        <div class="options-list options-grid-2">
+          <div>① <span class="math">1/3</span></div>
+          <div>② <span class="math">1/2</span></div>
+          <div>③ <span class="math">3/5</span></div>
+          <div>④ <span class="math">3/4</span></div>
+          <div>⑤ <span class="math">2/3</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- ================= [4면: 정답 및 해설집 p.1 (총괄표 + 01~05)] ================= -->
+  <div class="header-box">
+    <div class="header-title">2026학년도 1학년 2학기 중간고사 수학 실전 모의고사 [정답 및 해설집]</div>
+    <div style="font-size: 10pt; font-weight: bold; margin-top: 1px;">
+      동아출판 교과서 p.110~135 및 2025 최신 기출 실증 연계 • 난이도 [상8/중5/하2]
+    </div>
+  </div>
+
+  <div class="section-bar">
+    <span>[제 1 교시] 수학 영역 (빠른 정답표 및 심층 해설)</span>
+    <span>해설지 (1/3)</span>
+  </div>
+
+  <!-- 빠른 정답 총괄표 -->
+  <table class="summary-table">
+    <tr>
+      <th>문항</th>
+      <td>01</td><td>02</td><td>03</td><td>04</td><td>05</td>
+      <td>06</td><td>07</td><td>08</td><td>09</td><td>10</td>
+      <td>11</td><td>12</td><td>13</td><td>14</td><td>15</td>
+    </tr>
+    <tr>
+      <th>정답</th>
+      <td class="ans">②</td><td class="ans">③</td><td class="ans">⑤</td><td class="ans">③</td><td class="ans">①</td>
+      <td class="ans">④</td><td class="ans">③</td><td class="ans">⑤</td><td class="ans">①</td><td class="ans">③</td>
+      <td class="ans">④</td><td class="ans">①</td><td class="ans">②</td><td class="ans">④</td><td class="ans">⑤</td>
+    </tr>
+    <tr>
+      <th>난이도</th>
+      <td>[하]</td><td>[중]</td><td>[중]</td><td>[상]</td><td>[중]</td>
+      <td>[상]</td><td>[하]</td><td>[중]</td><td>[상]</td><td>[상]</td>
+      <td>[중]</td><td>[상]</td><td>[상]</td><td>[상]</td><td>[상]</td>
+    </tr>
+  </table>
+
+  <div class="two-column-layout">
+    <!-- 좌측 컬럼 (01, 02) -->
+    <div class="column">
+      <!-- 01번 해설 -->
+      <div class="solution-card">
+        <div class="solution-header">
+          <span>01. [2025 해운대 1번 / 교과서 p.111]</span>
+          <span>정답 <b style="font-size: 10.5pt;">②</b> <span class="badge-diff">난이도 [하]</span></span>
+        </div>
+        <div class="sub-title">정답 도출 과정</div>
+        1. 각 점의 순서쌍 좌표 읽기:<br>
+        &nbsp;&bull; <span class="math">A(-3, 2), B(2, 4), C(-2, -3), D(3, 0), E(0, -2)</span>.<br>
+        2. 따라서 바르게 나타낸 것은 ②번 <span class="math">B(2, 4)</span>입니다.
+        <div class="sub-title">오답 피하기</div>
+        ①, ③ <span class="math">x, y</span> 좌표 위치/부호를 바꾼 오류입니다.<br>
+        ④, ⑤ 축 위의 점의 좌표 축 위치를 혼동한 오답입니다.
+        <div class="sub-title">출제 의도</div>
+        좌표평면 위 점의 순서쌍 좌표 판독력을 확인합니다.
+      </div>
+
+      <!-- 02번 해설 -->
+      <div class="solution-card">
+        <div class="solution-header">
+          <span>02. [2025 충남여 8번 / 교과서 p.112~113]</span>
+          <span>정답 <b style="font-size: 10.5pt;">③</b> <span class="badge-diff">난이도 [중]</span></span>
+        </div>
+        <div class="sub-title">정답 도출 과정</div>
+        1. 원점 <span class="math">O(0, 0)</span>과 좌표축 위의 점은 어느 사분면에도 속하지 않습니다. 따라서 ③번은 참입니다.<br>
+        2. 나머지 보기: ① <span class="math">(0, 5)</span>는 <span class="math">y</span>축 위, ② <span class="math">(-4, 0)</span>은 어느 사분면도 아님, ④ <span class="math">y</span>축 위는 <span class="math">x=0</span>, ⑤ <span class="math">(3, -2)</span>는 제4사분면입니다.
+        <div class="sub-title">오답 피하기</div>
+        좌표축 위의 점을 사분면에 속하는 것으로 착각하지 않아야 합니다.
+        <div class="sub-title">출제 의도</div>
+        사분면의 정의와 좌표축 위의 점의 성질을 점검합니다.
+      </div>
+    </div>
+
+    <div class="divider-line"></div>
+
+    <!-- 우측 컬럼 (03, 04, 05) -->
+    <div class="column">
+      <!-- 03번 해설 -->
+      <div class="solution-card">
+        <div class="solution-header">
+          <span>03. [교과서 p.113 / 요약집 v2]</span>
+          <span>정답 <b style="font-size: 10.5pt;">⑤</b> <span class="badge-diff">난이도 [중]</span></span>
+        </div>
+        <div class="sub-title">정답 도출 과정</div>
+        1. 원점에 대칭인 점은 <span class="math">x, y</span> 부호가 모두 반대로 바뀝니다.<br>
+        2. <span class="math">P(-3, 5)</span>의 원점 대칭점 <span class="math">Q</span>의 좌표는 <span class="math">(3, -5)</span>입니다.<br>
+        3. 점 <span class="math">Q(3, -5)</span>는 <span class="math">x &gt; 0, y &lt; 0</span>이므로 <b>제4사분면</b> 위의 점입니다.
+        <div class="sub-title">오답 피하기</div>
+        ① <span class="math">(-3, -5)</span>는 <span class="math">x</span>축 대칭점, ② <span class="math">(3, 5)</span>는 <span class="math">y</span>축 대칭점입니다.
+        <div class="sub-title">출제 의도</div>
+        점의 대칭이동 공식과 사분면 판정 원리를 점검합니다.
+      </div>
+
+      <!-- 04번 해설 -->
+      <div class="solution-card">
+        <div class="solution-header">
+          <span>04. [2025 한영 서답1번 / 교과서 p.113]</span>
+          <span>정답 <b style="font-size: 10.5pt;">③</b> <span class="badge-diff">난이도 [상]</span></span>
+        </div>
+        <div class="sub-title">정답 도출 과정</div>
+        1. <span class="math">AC</span>는 <span class="math">x = 2</span>로 <span class="math">y</span>축에 평행하고, <span class="math">BC</span>는 <span class="math">y = -1</span>로 <span class="math">x</span>축에 평행하여 직각삼각형입니다.<br>
+        2. 밑변 <span class="math">BC = 2 - (-3) = 5</span>, 높이 <span class="math">AC = 5 - (-1) = 6</span>.<br>
+        3. 삼각형 넓이: <span class="math">(1/2) &times; 5 &times; 6 = 15</span>입니다.
+        <div class="sub-title">오답 피하기</div>
+        ① 밑변과 높이의 합(11)입니다.<br>
+        ⑤ 1/2을 곱하지 않은 직사각형 넓이(30)입니다.
+        <div class="sub-title">출제 의도</div>
+        좌표평면 위 삼각형의 넓이를 선분 길이를 통해 계산합니다.
+      </div>
+
+      <!-- 05번 해설 -->
+      <div class="solution-card">
+        <div class="solution-header">
+          <span>05. [2025 해운대 3번 / 교과서 p.115]</span>
+          <span>정답 <b style="font-size: 10.5pt;">①</b> <span class="badge-diff">난이도 [중]</span></span>
+        </div>
+        <div class="sub-title">정답 도출 과정</div>
+        1. 아랫부분은 구 모양이므로 수면 높이의 증가는 완만해지다가 가파르게 증가하는 곡선 형태를 띱니다.<br>
+        2. 윗부분은 폭이 일정한 좁은 원기둥이므로 일정한 속도로 증가하는 곧은 직선이 됩니다. 따라서 정답은 ①입니다.
+        <div class="sub-title">오답 피하기</div>
+        ② 아랫부분이 직선, 윗부분이 곡선이라는 설명으로 반대입니다.<br>
+        ③ 단일 원기둥일 때의 형태입니다.
+        <div class="sub-title">출제 의도</div>
+        입체도형 단면 폭 변화와 수면 높이 변화 속도의 관계를 해석합니다.
+      </div>
+    </div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- ================= [5면: 정답 및 해설집 p.2 (06~10)] ================= -->
+  <div class="section-bar">
+    <span>[제 1 교시] 수학 영역 (4. 좌표평면과 그래프 종합 15제 심층 해설)</span>
+    <span>해설지 (2/3)</span>
+  </div>
+
+  <div class="two-column-layout">
+    <!-- 좌측 컬럼 (06, 07, 08) -->
+    <div class="column">
+      <!-- 06번 해설 -->
+      <div class="solution-card">
+        <div class="solution-header">
+          <span>06. [2025 한영 21번 / 도곡 18번]</span>
+          <span>정답 <b style="font-size: 10.5pt;">④</b> <span class="badge-diff">난이도 [상]</span></span>
+        </div>
+        <div class="sub-title">정답 도출 과정</div>
+        1. 수현이는 도서관을 향해 편도로 계속 전진하였으므로 실제 이동한 총 거리는 집에서 도서관까지의 거리인 <span class="math">1500</span>입니다. 따라서 2400이라는 ④번 설명은 옳지 않습니다.<br>
+        2. 나머지 보기: ① 도서관 거리 1500, ② 서점 정지 시간 <span class="math">15-10=5</span>분, ③ 집-서점 분속 <span class="math">600/10=60</span>, ⑤ 서점-도서관 분속 <span class="math">900/10=90</span> 모두 참입니다.
+        <div class="sub-title">오답 피하기</div>
+        각 구간의 누적 거리 계산 착오를 유의해야 합니다.
+        <div class="sub-title">출제 의도</div>
+        실생활 시간-거리 그래프의 종합 판독 능력을 평가합니다.
+      </div>
+
+      <!-- 07번 해설 -->
+      <div class="solution-card">
+        <div class="solution-header">
+          <span>07. [2025 한영 3번 / 교과서 p.117]</span>
+          <span>정답 <b style="font-size: 10.5pt;">③</b> <span class="badge-diff">난이도 [하]</span></span>
+        </div>
+        <div class="sub-title">정답 도출 과정</div>
+        1. 정비례는 <span class="math">y = ax</span> (<span class="math">a &ne; 0</span>) 꼴입니다.<br>
+        2. ㄱ(<span class="math">y=4x</span>), ㄷ(<span class="math">y=500x</span>), ㄹ(<span class="math">y=3x</span>)은 정비례입니다.<br>
+        3. ㄴ, ㅁ은 두 변수의 곱이 일정한 반비례(<span class="math">xy=k</span>)입니다. 따라서 정답은 ③입니다.
+        <div class="sub-title">오답 피하기</div>
+        ㄴ, ㅁ의 반비례 관계식을 정비례와 혼동하지 않아야 합니다.
+        <div class="sub-title">출제 의도</div>
+        실생활 대응 관계에서 정비례와 반비례 수식을 구분합니다.
+      </div>
+
+      <!-- 08번 해설 -->
+      <div class="solution-card">
+        <div class="solution-header">
+          <span>08. [2025 충남여 9번 / 교과서 p.123]</span>
+          <span>정답 <b style="font-size: 10.5pt;">⑤</b> <span class="badge-diff">난이도 [중]</span></span>
+        </div>
+        <div class="sub-title">정답 도출 과정</div>
+        1. <span class="math">a = -3/4 &lt; 0</span>이므로 원점 <span class="math">(0, 0)</span>을 지나고 오른쪽 아래로 향하는 직선입니다. (⑤번 참)
+        <div class="sub-title">오답 피하기</div>
+        ① 제2, 4사분면을 지납니다.<br>
+        ② <span class="math">x</span> 증가 시 <span class="math">y</span>는 감소합니다.<br>
+        ③ <span class="math">x = -4</span>일 때 <span class="math">y = 3</span>입니다.<br>
+        ④ <span class="math">|-3/4| &lt; |-2|</span>이므로 <span class="math">y = -2x</span>가 <span class="math">y</span>축에 더 가깝습니다.
+        <div class="sub-title">출제 의도</div>
+        정비례 그래프의 사분면, 증감, 원점 통과를 점검합니다.
+      </div>
+    </div>
+
+    <div class="divider-line"></div>
+
+    <!-- 우측 컬럼 (09, 10) -->
+    <div class="column">
+      <!-- 09번 해설 -->
+      <div class="solution-card">
+        <div class="solution-header">
+          <span>09. [교과서 p.125 4번 / 충남여 10번]</span>
+          <span>정답 <b style="font-size: 10.5pt;">①</b> <span class="badge-diff">난이도 [상]</span></span>
+        </div>
+        <div class="sub-title">정답 도출 과정</div>
+        1. <span class="math">a = -3</span>이므로 관계식은 <span class="math">y = -3x</span>입니다.<br>
+        2. 점 <span class="math">A(m, 12)</span> 대입: <span class="math">12 = -3m &rArr; m = -4</span>.<br>
+        3. 점 <span class="math">B(-2, n)</span> 대입: <span class="math">n = -3 &times; (-2) = 6</span>.<br>
+        4. 구하는 값: <span class="math">m + n = (-4) + 6 = 2</span>입니다.
+        <div class="sub-title">오답 피하기</div>
+        ② 부호 착오로 <span class="math">4 + (-6) = -2</span>를 고른 오답입니다.
+        <div class="sub-title">출제 의도</div>
+        정비례 식 위의 두 점 좌표를 역산하고 정수 덧셈을 완결합니다.
+      </div>
+
+      <!-- 10번 해설 -->
+      <div class="solution-card">
+        <div class="solution-header">
+          <span>10. [2025 충남여 10번 / 해운대 7번]</span>
+          <span>정답 <b style="font-size: 10.5pt;">③</b> <span class="badge-diff">난이도 [상]</span></span>
+        </div>
+        <div class="sub-title">정답 도출 과정</div>
+        1. 점 <span class="math">B(4, 0)</span>이므로 밑변 <span class="math">OB = 4</span>입니다.<br>
+        2. 점 <span class="math">A</span>의 <span class="math">x</span>좌표가 4이므로 직선식에 대입:<br>
+        &nbsp;&nbsp;<span class="math">y = (3/2) &times; 4 = 6 &rArr; A(4, 6)</span>, 높이 <span class="math">AB = 6</span>.<br>
+        3. 삼각형 넓이: <span class="math">(1/2) &times; 4 &times; 6 = 12</span>입니다.
+        <div class="sub-title">오답 피하기</div>
+        ⑤ 1/2을 곱하지 않은 직사각형 넓이(24)를 그대로 적은 오류입니다.
+        <div class="sub-title">출제 의도</div>
+        그래프 위의 점을 선분 길이로 변환하여 도형 넓이를 계산합니다.
+      </div>
+    </div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- ================= [6면: 정답 및 해설집 p.3 (11~15)] ================= -->
+  <div class="section-bar">
+    <span>[제 1 교시] 수학 영역 (4. 좌표평면과 그래프 종합 15제 심층 해설)</span>
+    <span>해설지 (3/3)</span>
+  </div>
+
+  <div class="two-column-layout">
+    <!-- 좌측 컬럼 (11, 12, 13) -->
+    <div class="column">
+      <!-- 11번 해설 -->
+      <div class="solution-card">
+        <div class="solution-header">
+          <span>11. [2025 한영 5번 / 교과서 p.127]</span>
+          <span>정답 <b style="font-size: 10.5pt;">④</b> <span class="badge-diff">난이도 [중]</span></span>
+        </div>
+        <div class="sub-title">정답 도출 과정</div>
+        1. 반비례는 <span class="math">y = a/x</span> (<span class="math">a &ne; 0</span>) 또는 <span class="math">xy = a</span> 꼴입니다.<br>
+        2. ㄱ(<span class="math">y=8/x</span>), ㄴ(<span class="math">xy=-12</span>), ㄹ(<span class="math">y=-3/x</span>)은 반비례입니다.<br>
+        3. ㄷ(<span class="math">y=x/5</span>)은 정비례, ㅁ은 일차식입니다. 따라서 정답은 ④입니다.
+        <div class="sub-title">오답 피하기</div>
+        ㄷ은 분모에 상수가 있으므로 정비례식입니다.
+        <div class="sub-title">출제 의도</div>
+        분수 형태의 식에서 <span class="math">x</span>의 위치에 따른 정비례/반비례 구조를 점검합니다.
+      </div>
+
+      <!-- 12번 해설 -->
+      <div class="solution-card">
+        <div class="solution-header">
+          <span>12. [2025 충남여 11번 / 교과서 p.131]</span>
+          <span>정답 <b style="font-size: 10.5pt;">①</b> <span class="badge-diff">난이도 [상]</span></span>
+        </div>
+        <div class="sub-title">정답 도출 과정</div>
+        1. 반비례 관계식은 <span class="math">xy = a</span>입니다.<br>
+        2. 점 <span class="math">P(2, -6)</span> 대입: <span class="math">a = 2 &times; (-6) = -12</span>.<br>
+        3. 점 <span class="math">Q(b, 4)</span> 대입: <span class="math">b &times; 4 = -12 &rArr; b = -3</span>.<br>
+        4. 구하는 값: <span class="math">a - b = -12 - (-3) = -9</span>입니다.
+        <div class="sub-title">오답 피하기</div>
+        ② 덧셈 착오로 <span class="math">-12 + (-3) = -15</span>를 고른 오답입니다.
+        <div class="sub-title">출제 의도</div>
+        반비례 곱 일정 법칙(<span class="math">xy = a</span>)을 활용한 미지수 계산력을 평가합니다.
+      </div>
+
+      <!-- 13번 해설 -->
+      <div class="solution-card">
+        <div class="solution-header">
+          <span>13. [2025 도곡 19번 / 교과서 p.134 12번]</span>
+          <span>정답 <b style="font-size: 10.5pt;">②</b> <span class="badge-diff">난이도 [상]</span></span>
+        </div>
+        <div class="sub-title">정답 도출 과정</div>
+        1. 점 <span class="math">P(p, q)</span>에서 직사각형의 넓이는 <span class="math">p &times; q</span>입니다.<br>
+        2. 점 <span class="math">P</span>가 곡선 <span class="math">y = a/x</span> 위의 점이므로 <span class="math">pq = a</span>가 성립합니다.<br>
+        3. 따라서 직사각형의 넓이는 항상 <span class="math">a</span>이므로 <span class="math">a = 16</span>입니다.
+        <div class="sub-title">오답 피하기</div>
+        ① 넓이를 2로 나눈 8을 선택한 오류입니다.
+        <div class="sub-title">출제 의도</div>
+        반비례 직사각형의 넓이 불변 법칙(<span class="math">S = |a|</span>)을 점검합니다.
+      </div>
+    </div>
+
+    <div class="divider-line"></div>
+
+    <!-- 우측 컬럼 (14, 15) -->
+    <div class="column">
+      <!-- 14번 해설 -->
+      <div class="solution-card">
+        <div class="solution-header">
+          <span>14. [2025 충남여 12번 / 교과서 p.135 15번]</span>
+          <span>정답 <b style="font-size: 10.5pt;">④</b> <span class="badge-diff">난이도 [상]</span></span>
+        </div>
+        <div class="sub-title">정답 도출 과정</div>
+        1. 점 <span class="math">P</span>는 직선 <span class="math">y = 3x</span> 위의 점이며 <span class="math">x = 2</span>이므로:<br>
+        &nbsp;&nbsp;<span class="math">y = 3 &times; 2 = 6 &rArr; b = 6, P(2, 6)</span>.<br>
+        2. 점 <span class="math">P(2, 6)</span>은 곡선 <span class="math">y = a/x</span> 위의 점이기도 하므로:<br>
+        &nbsp;&nbsp;<span class="math">6 = a/2 &rArr; a = 12</span>.<br>
+        3. 구하는 값: <span class="math">a + b = 12 + 6 = 18</span>입니다.
+        <div class="sub-title">오답 피하기</div>
+        ① <span class="math">a</span>의 값인 12만을 구한 오류입니다.<br>
+        ② <span class="math">a + x = 12 + 2 = 14</span>로 잘못 더한 오답입니다.
+        <div class="sub-title">출제 의도</div>
+        정비례와 반비례의 교점 성질을 이용한 비례상수 융합 해결 능력을 평가합니다.
+      </div>
+
+      <!-- 15번 해설 -->
+      <div class="solution-card">
+        <div class="solution-header">
+          <span>15. [2025 해운대 19번 / 도곡 21번]</span>
+          <span>정답 <b style="font-size: 10.5pt;">⑤</b> <span class="badge-diff">난이도 [상]</span></span>
+        </div>
+        <div class="sub-title">정답 도출 과정</div>
+        1. 직사각형 <span class="math">OABC</span>의 전체 넓이: <span class="math">6 &times; 4 = 24</span>.<br>
+        2. 직선 <span class="math">y = ax</span>가 오른쪽 변 <span class="math">AB(x = 6)</span>와 만나는 점을 <span class="math">D</span>라 하면 <span class="math">D(6, 6a)</span>입니다.<br>
+        3. 직선이 직사각형의 넓이를 이등분하므로 직각삼각형 <span class="math">OAD</span>의 넓이는 전체의 절반인 <span class="math">12</span>가 되어야 합니다.<br>
+        4. <span class="math">(1/2) &times; 6 &times; 6a = 12 &rArr; 18a = 12 &rArr; a = 12/18 = 2/3</span>입니다.
+        <div class="sub-title">오답 피하기</div>
+        ① <span class="math">6a = 2 &rArr; a = 1/3</span> 등 연산 착오입니다.<br>
+        ② <span class="math">a = 1/2</span>이면 넓이가 9가 되어 이등분하지 못합니다.
+        <div class="sub-title">출제 의도</div>
+        정비례 직선을 이용한 도형의 넓이 이등분 문제를 통해 기하와 대수의 융합적 최고난도 문제 해결력을 변별합니다.
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
